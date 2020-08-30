@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CS654:Digital Image Analysis</title>
+    <script src="tabcontent.js" type="text/javascript"></script>
+    <link href="template2/tabcontent.css" rel="stylesheet" type="text/css" />
+</head>
+<body style="background:#F6F9FC; font-family:Arial;">
+<div align="right" style="position:relative"> Click <a href="index.html">here</a> to go to the home page</div>
+    <div style="width: 800px; margin: 0 auto; padding: 120px 0 40px;">
+	  <p><font face="Arial, Helvetica, sans-serif" size="+2" color="#990000">CS654: Digital Image Analysis</font>      </p>
+	  <p>&nbsp;</p>
+	  <ul class="tabs" data-persist="true">
+	  <li><a href="#obj">Course objective</a></li>
+            <li><a href="#view1">Course Contents</a></li>
+            <li><a href="#view2">References</a></li>
+            <li><a href="#view3">Lecture Slides</a></li>
+			<li><a href="#view4">Assignments</a></li>
+      </ul>
+        <div class="tabcontents">
+		<div id="obj">
+                <b>Objectives</b>
+                <p>
+				<ol>
+				<li>
+				To introduce the origin and formation of digital imaging.
+				</li>
+				<li>
+				To develop the understanding of different types of imaging techniques for different purposes.
+				</li>
+				<li>
+				To equip the students with various possible applications of the image analysis.
+				</li>
+				</ol>
+				</p>
+				<b>Learning outcomes</b>
+                <p>
+				<ol>
+				<li>
+				Ability to enhance image in spatial and frequency domain.
+				</li>
+				<li>
+				Ability to implement various aspects of image segmentation and compression. 
+				</li>
+				</ol>
+				</p>
+          </div>
+            <div id="view1">
+                <b>Course content</b>
+                <p>
+				<ul>
+				<li> <strong>Digital Image Fundamentals:</strong> Image modeling, Sampling and Quantization, Imaging Geometry, Digital Geometry, Image Acquisition Systems, Different types of digital images. </li>
+				<li><strong>Bi-level Image Processing:</strong> Basic concepts of digital distances, distance transform, medial axis transform, component labeling, Histogram of grey level images, Optimal thresh holding.</li>
+				<li><strong>Images Enhancement:</strong> Point processing, enhancement in spatial domain, enhancement in frequency domain.</li>
+				<li><strong>Detection of edges and lines in 2D images:</strong> First order and second order edge operators, multi-scale edge detection, Canny's edge detection algorithm, Hough transform for detecting lines and curves.</li>
+				<li><strong>Color Image Processing:</strong> Color Representation, Laws of color matching, chromaticity diagram, color enhancement, color image segmentation, color edge detection.
+				<li><strong>Image compression:</strong> Lossy and lossless compression schemes, prediction based compression schemes, vector quantization, sub-band encoding schemes, JPEG compression standard.</li>
+				<li><strong>Segmentation:</strong> Segmentation of grey level images, Watershed algorithm for segmenting grey level image.</li>
+				<li><strong>Morphology:</strong> Dilation, erosion, opening, closing, hit and miss transform, thinning, extension to grey scale morphology.</li>
+				<li><strong>Feature Detection:</strong> Fourier descriptors, shape features, object matching/features.
+				</ul>
+				</p>
+            </div>
+            <div id="view2">
+                <b>References</b>
+                <p>
+				<ul>
+				<li>
+				R1: Gonzalez, C. and Woods, R. E., Digital Image Processing, Prentice Hall, 2008				</li>
+				<li>
+				R2: Jain, A. K., Fundamentals of Digital Image Processing, Prentice Hall, 2001				</li>
+				<li>R3: Milan Sonka, Vaclav Hlavac, Roger Boyle, Image Procesing, Analysis and Machine Vision, Thomson,2008 </li>
+				</ul>
+				</p>               
+            </div>
+            <div id="view3">
+                <p>
+				<table width="100%" border="1">
+  <tr>
+    <td><strong>Lecture No.</strong></td>
+    <td><strong>Topic</strong></td>
+    <td><strong>Reading</strong></td>
+    <td><strong>Lecture slide </strong></td>
+  </tr>
+  <tr>
+    <td>1.</td>
+    <td>Introduction</td>
+    <td>R1: Chapter 1, R2: Chapter 1</td>
+    <td><a href="courses/cs654/CS654_L1_Introduction.pptx"><img src="images/download.png" alt="download" width="37" height="35" border="0"></a></td>
+  </tr>
+  <tr>
+    <td>2.</td>
+    <td>Image Digitization</td>
+    <td>&nbsp;</td>
+    <td><a href="courses/cs654/CS654_L2_Image_Digitization.pptx"><img src="images/download.png" alt="download" width="37" height="35"></a></td>
+  </tr>
+  <tr>
+    <td>3.</td>
+    <td>Data structures for Image Analysis</td>
+    <td>R3: Chapter 4 </td>
+    <td><a href="courses/cs654/CS654_L3_Data_Structure_Image_Analysis.pptx"><img src="images/download.png" alt="download" width="37" height="35"></a></td>
+  </tr>
+  <tr>
+    <td>4.</td>
+    <td>Pixel Relationships</td>
+    <td>R3: Chapter 2, R1: Chapter 2 </td>
+    <td><a href="courses/cs654/CS654_L4_Pixel_Relationship.pptx"><img src="images/download.png" alt="download" width="37" height="35"></a></td>
+  </tr>
+  <tr>
+    <td>5.</td>
+    <td>Distance measures and its applications </td>
+    <td>R3: Chapter 2, R1: Chapter 2 </td>
+    <td><a href="courses/cs654/CS654_L5_Distance_Measures_Application.pptx"><img src="images/download.png" alt="download" width="37" height="35"></a></td>
+  </tr>
+  <tr>
+    <td>6.</td>
+    <td>Basic Transformations</td>
+    <td>R1: Chapter 2</td>
+    <td><a href="courses/cs654/CS654_L6_Basic_Transformations.pptx"><img src="images/download.png" alt="download" width="37" height="35"></a></td>
+  </tr>
+  <tr>
+    <td>7.</td>
+    <td>Camera Model and Imaging Geometry</td>
+    <td>&nbsp;</td>
+    <td><a href="courses/cs654/CS654_L7_Camera_Model_Image_Geometry.pptx"><img src="images/download.png" alt="download" width="37" height="35"></a></td>
+  </tr>
+  <tr>
+    <td>8.</td>
+    <td>Stereo Imaging</td>
+    <td>R3: Chapter 11</td>
+    <td><a href="courses/cs654/CS654_L8_Stereo_Imaging.pptx"><img src="images/download.png" alt="download" width="37" height="35"></a></td>
+  </tr>
+  <tr>
+    <td>9.</td>
+    <td>Image Interpolation</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>10.</td>
+    <td>Image Interpolation</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>11.</td>
+    <td>Image Transforms</td>
+    <td>R2: Chapter 5</td>
+    <td><a href="courses/cs654/CS654_L11_Image_Transforms.pptx"><img src="images/download.png" alt="download" width="37" height="35"></a></td>
+  </tr>
+  <tr>
+    <td>12.</td>
+    <td>Separable Transforms</td>
+    <td>R2: Chapter 5</td>
+    <td><a href="courses/cs654/CS654_L12_Separable_Transforms.pptx"><img src="images/download.png" alt="download" width="37" height="35"></a></td>
+  </tr>
+  <tr>
+    <td>13.</td>
+    <td>Discrete Fourier Transformation-I</td>
+	<td>R2: Chapter 5</td>
+    <td><a href="courses/cs654/CS654_L13_DFT.pptx"><img src="images/download.png" alt="download" width="37" height="35"></a></td>
+  </tr>
+  <tr>
+    <td>14.</td>
+    <td>Discrete Fourier Transformation-II</td>
+    <td>R2: Chapter 5</td>
+    <td><a href="courses/cs654/CS654_L14_Prop_DFT.pptx"><img src="images/download.png" alt="download" width="37" height="35"></a></td>
+  </tr>
+  <tr>
+    <td>15.</td>
+    <td>Image Transforms with Real Basis Functions</td>
+    <td>R2: Chapter 5</td>
+    <td><a href="courses/cs654/CS654_L15_Image_Transform_Real.pptx"><img src="images/download.png" alt="download" width="37" height="35"></a></td>
+  </tr>
+  <tr>
+    <td>16.</td>
+    <td>Convolution and Correlation</td>
+    <td>-</td>
+    <td><a href="courses/cs654/CS654_L16_Convolution_Correlation.pptx"><img src="images/download.png" alt="download" width="37" height="35"></a></td>
+  </tr>
+  <tr>
+    <td>17.</td>
+    <td>Image Enhancement: Point Processing</td>
+    <td>R1: Chapter 3</td>
+    <td><a href="courses/cs654/CS654_L17_Image_Enhancement_Point_Processing.pptx"><img src="images/download.png" alt="download" width="37" height="35"></a></td>
+  </tr>
+  <tr>
+    <td>18.</td>
+    <td>Image Enhancement: Histogram Processing</td>
+    <td>R1: Chapter 3</td>
+    <td><a href="courses/cs654/CS654_L18_Image_Enhancement_Histogram_Processing.pptx"><img src="images/download.png" alt="download" width="37" height="35"></a></td>
+  </tr>
+  <tr>
+    <td>19.</td>
+    <td>Image Enhancement: Spatial Filtering</td>
+    <td>R1: Chapter 3</td>
+    <td><a href="courses/cs654/CS654_L19_Image_Enhancement_Spatial_Operation.pptx"><img src="images/download.png" alt="download" width="37" height="35"></a></td>
+  </tr>
+  <tr>
+    <td>20.</td>
+    <td>Image Enhancement: Frequency Domain</td>
+    <td>R1: Chapter 3</td>
+    <td><a href="courses/cs654/CS654_L20_Image_Enhancement_Freq_Domain.pptx"><img src="images/download.png" alt="download" width="37" height="35"></a></td>
+  </tr>
+  <tr>
+    <td>21.</td>
+    <td>Image Restoration</td>
+    <td>R1: Chapter 5</td>
+    <td><a href="courses/cs654/CS654_L21_Image_Restoration.pptx"><img src="images/download.png" alt="download" width="37" height="35"></a></td>
+  </tr>
+  <tr>
+    <td>22.</td>
+    <td>Image Restoration</td>
+    <td>R1: Chapter 5</td>
+    <td><a href="courses/cs654/CS654_L22_Image_Restoration.pptx"><img src="images/download.png" alt="download" width="37" height="35"></a></td>
+  </tr>
+  <tr>
+    <td>23.</td>
+    <td>Image Restoration</td>
+   <td>R1: Chapter 5</td>
+    <td><a href="courses/cs654/CS654_L23_Image_Restoration.pptx"><img src="images/download.png" alt="download" width="37" height="35"></a></td>
+  </tr>
+    <td>24.</td>
+    <td>Edge Detection</td>
+    <td>R1: Chapter 10</td>
+    <td><a href="courses/cs654/CS654_L24_Image-Segmentation_Edge_Detection.pptx"><img src="images/download.png" alt="download" width="37" height="35"></a></td>
+  </tr>
+  <tr>
+    <td>25.</td>
+    <td>Hough Transform</td>
+    <td>R1: Chapter 10,R3: Chapter 6</td>
+    <td><a href="courses/cs654/CS654_L25_Hough_Transform.pptx"><img src="images/download.png" alt="download" width="37" height="35"></a></td>
+  </tr>
+  <tr>
+    <td>26.</td>
+    <td>Thresholding and Region Based Segmentation</td>
+    <td>R1: Chapter 10,R3: Chapter 6</td>
+    <td><a href="courses/cs654/CS654_L26_Image_Segmentation_Thresholding.pptx"><img src="images/download.png" alt="download" width="37" height="35"></a></td>
+  </tr>
+  <tr>
+    <td>27.</td>
+    <td>Image Segmentation: Clustering</td>
+    <td>R3: Chapter 6, 7</td>
+    <td><a href="courses/cs654/CS654_L27_Image_Segmentation_Clustering.pptx"><img src="images/download.png" alt="download" width="37" height="35"></a></td>
+  </tr>
+  <tr>
+    <td>28.</td>
+    <td>Image Segmentation: Advanced Topics</td>
+    <td>R3: Chapter 6, 7</td>
+    <td><a href="courses/cs654/CS654_L28_Image_Segmentation_Advanced_Topics.pptx"><img src="images/download.png" alt="download" width="37" height="35"></a></td>
+  </tr>
+  <tr>
+    <td>29.</td>
+    <td>Color Image Processing</td>
+    <td>R1: Chapter 6</td>
+    <td><a href="courses/cs654/CS654_L29_Color_Image_Processing_I.pptx"><img src="images/download.png" alt="download" width="37" height="35"></a></td>
+  </tr>
+  <tr>
+    <td>30.</td>
+    <td>Color Model Conversion</td>
+    <td>R1: Chapter 6</td>
+    <td><a href="courses/cs654/CS654_L30_Color_Image_Processing_II.pptx"><img src="images/download.png" alt="download" width="37" height="35"></a></td>
+  </tr>
+  <tr>
+    <td>31.</td>
+    <td>Image Morphology: Dialation and Erosion</td>
+    <td>R1: Chapter 9</td>
+    <td><a href="courses/cs654/CS654_L31_Image_Morphology_Dilation_Erosion.pptx"><img src="images/download.png" alt="download" width="37" height="35"></a></td>
+  </tr>
+  <tr>
+    <td>32.</td>
+    <td>Image Morphology: Algorithms and Applications</td>
+    <td>R1: Chapter 9</td>
+    <td><a href="courses/cs654/CS654_L32_Image_Morphology_open_close_transforms.pptx"><img src="images/download.png" alt="download" width="37" height="35"></a><a href="courses/cs654/CS654_L32_Image_Morphology_Algoritm_Application.pptx"><img src="images/download.png" alt="download" width="37" height="35"></a></td>
+  </tr>
+  <tr>
+    <td>33.</td>
+    <td>Introduction to Image Compression</td>
+    <td>R1: Chapter 8</td>
+    <td><a href="courses/cs654/CS654_L33_Image_Compression_Coding.pptx"><img src="images/download.png" alt="download" width="37" height="35"></a></td>
+  </tr>
+  <tr>
+    <td>34.</td>
+    <td>Different Coding Techniques</td>
+    <td>R1: Chapter 8</td>
+    <td><a href="courses/cs654/CS654_L34_Coding_Techniques.pptx"><img src="images/download.png" alt="download" width="37" height="35"></a></td>
+  </tr>
+  <tr>
+    <td>35.</td>
+    <td>JPEG Compression</td>
+    <td>R1: Chapter 8</td>
+    <td><a href="courses/cs654/CS654_L35_DCT_JPEG.pptx"><img src="images/download.png" alt="download" width="37" height="35"></a></td>
+  </tr>
+  <tr>
+    <td>36.</td>
+    <td>Feature Represenataion: Shape</td>
+    <td>R1: Chapter 11</td>
+    <td><a href="courses/cs654/CS654_L36_Feature_Shape.pptx"><img src="images/download.png" alt="download" width="37" height="35"></a></td>
+  </tr>
+    <tr>
+    <td>37.</td>
+    <td>Feature Descriptor and Matching</td>
+    <td>-</td>
+    <td><a href="courses/cs654/CS654_L37_Features.pptx"><img src="images/download.png" alt="download" width="37" height="35"></a></td>
+  </tr>
+   <tr>
+    <td>38.</td>
+    <td>Texture and Histogram Features</td>
+    <td>-</td>
+    <td><a href="courses/cs654/CS654_L38_Texture_BOW.pptx"><img src="images/download.png" alt="download" width="37" height="35"></a></td>
+  </tr>
+   <tr>
+    <td>39.</td>
+    <td>Miscellaneous Topics</td>
+    <td>-</td>
+    <td><a href="courses/cs654/CS654_L39_Misc_Topics.pptx"><img src="images/download.png" alt="download" width="37" height="35"></a></td>
+  </tr>
+   <tr>
+    <td>40.</td>
+    <td>Miscellaneous Topics</td>
+    <td>-</td>
+    <td><a href="courses/cs654/CS654_L40_Misc_Topics.pptx"><img src="images/download.png" alt="download" width="37" height="35"></a></td>
+  </tr>
+</table>
+
+				</p>
+            </div>
+			<div id="view4">
+                <b>Assignments</b>
+                <p>
+				<table width="100%" border="1">
+  <tr>
+    <td>No.</td>
+    <td>Topic</td>
+    <td>Download</td>
+  </tr>
+  <tr>
+    <td>1.</td>
+    <td>Pixel Neighborhood, arithmatic and logical operations.</td>
+    <td><a href="courses/cs654/Assignment1.zip"><img src="images/download.png" alt="download" width="37" height="35"></a></td>
+  </tr>
+<!--
+   <tr>
+    <td>2.</td>
+    <td>Geometric transformation and interpolation.</td>
+    <td><a href="courses/cs654/Assignment2.zip"><img src="images/download.png" alt="download" width="37" height="35"></a></td>
+  </tr>
+  <tr>
+    <td>3.</td>
+    <td>Mask Processingn.</td>
+    <td><a href="courses/cs654/Assignment3.zip"><img src="images/download.png" alt="download" width="37" height="35"></a></td>
+  </tr>
+    <tr>
+    <td>4.</td>
+    <td>Image Enhancement and Segmentation.</td>
+    <td><a href="courses/cs654/Assignment4.zip"><img src="images/download.png" alt="download" width="37" height="35"></a></td>
+  </tr>
+    <tr>
+    <td>5.</td>
+    <td>Numerical problems.</td>
+    <td><a href="courses/cs654/Assignment5.zip"><img src="images/download.png" alt="download" width="37" height="35"></a></td>
+  </tr>
+-->
+</table>
+
+				</p>
+            </div>
+        </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CS552: Computer Graphics</title>
+    <script src="tabcontent.js" type="text/javascript"></script>
+    <link href="template2/tabcontent.css" rel="stylesheet" type="text/css" />
+</head>
+<body style="background:#F6F9FC; font-family:Arial;">
+<div align="right" style="position:relative"> Click <a href="index.html">here</a> to go to the home page</div>
+    <div style="width: 800px; margin: 0 auto; padding: 120px 0 40px;">
+      <p><font face="Arial, Helvetica, sans-serif" size="+2" color="#990000">CS552: Computer Graphics</font>      </p>
+      <strong>July - November, 2017</strong>  
+	  <p>&nbsp;</p>
+	  <ul class="tabs" data-persist="true">
+	  <li><a href ="#obj">Objectives and Outcomes</a></li>
+            <li><a href="#view1">Contents</a></li>
+            <li><a href="#view2">Readings</a></li>
+            <li><a href="#view3">Lecture Slides</a></li>
+      </ul>
+        <div class="tabcontents">
+		<div id="obj">
+                <b>Objectives</b>
+                <p>
+				<ul>
+				<li>To introduce computer graphics techniques</li>
+				<li>To develop algorithms for 2D and 3D modeling</li>
+				<li>To render and synthesise images and videos</li>
+				</ul>
+				</p>
+				<b>Learning Outcomes</b>
+                <p>
+				<ul>
+				<li>Explain and create interactive graphics application in C++.</li>
+				<li>Implement graphics primitives.</li>
+				<li>Demonstrate computer graphics animation.</li>
+				<li>Synthesise and render images for visualization</li>
+				</ul>
+				</p>
+          </div>
+            <div id="view1">
+                <b>Course content</b>
+                <p>
+				<ul>
+				<li><strong>Introduction to computer graphics & graphics system:</strong> Overview of computer graphics, representing pictures, preparing, presenting & interacting with pictures for presentations</li>
+				<li><strong>Scan conversion: </strong>Points & lines, Line drawing algorithms, Circle generation algorithm; Ellipse generating algorithm; scan line polygon, fill algorithm, boundary fill algorithm, flood fill algorithm.  Clipping algorithms: line and polygon, anti-aliasing</li>
+				<li><strong>Transformations and viewing:</strong> Basic transformations: translation, rotation, scaling; Matrix representations & homogeneous coordinates, transformations between coordinate systems; reflection shear. Viewing pipeline, Window to viewport co-ordinate transformation, clipping operations, viewport clipping, 3D viewing.</li>
+				<li><strong>Curves and Surfaces:</strong> Conics, parametric and non-parametric forms; Bezier (Bernstein Polynomials) Curves, Cubic-Splines, B-Splines; Quadratic surfaces, Bezier surfaces and NURBS, 3-D modelling</li>
+				<li><strong>Hidden surfaces:</strong> Depth comparison, Z-buffer algorithm, Back face detection, BSP tree method, the Painter&#39;s Algorithm algorithm, scan-line algorithm; Hidden line elimination, wire frame methods , fractal - geometry</li>
+				<li><strong>Color & shading models:</strong> Phong's shading model, Gouraud shading, Shadows and background, Color models, Photo-realistic rendering</li>
+				<li><strong>Animation and OpenGL primitives:</strong> Functions, pipeline, sample programs for drawing 2-D, 3-D objects; event handling and view manipulation, Introduction to GPU and animation</li>
+				</ul>
+				</p>
+            </div>
+            <div id="view2">
+                <b>Text Books</b>
+                <p>
+				<ul>
+				<li>
+				T1. Computer Graphics with Open GL, Hearn, Baker, Carithers, Fourth Edition, 2014.
+				</li>
+				<li>
+				T2. J. D. Foley, A. Van Dam, S. K. Feiner and J. F. Hughes, Computer Graphics; Principles and practice; Second Edition in C; Addison Wesley, 1997.
+				</li>
+				<li>
+				T3. D. F. Rogers and J. A. Adams, Mathematical elements for Computer Graphics; 2nd edn.; McGraw-Hill International. Edn., 1990.
+				</li>
+				<li>
+				T4. Shreiner, Woo, Neider, Davis, OpenGL Programming Guide, 6th. Edition, Pearson Education, 2008.
+				</li>
+                <li>
+                 T5. J. D. Foley, A. Van Dam, S. K. Feiner and J. F. Hughes,Computer Graphics PRINCIPLES AND PRACTICE, SECOND EDITION IN C, ADDISON-WESLEY, 1996
+                </li>
+				</ul>
+				</p>
+				 <b>Reference Books</b>
+                <p>
+				<ul>
+				<li>
+				R1. Z. Xiang, R. Plastock; Schaum&#39;s outlines Computer Graphics (2nd Ed.), TMH.
+				</li>
+				<li>
+				R3. Computer Graphics using OpenGL; 2nd edn.; F. S. Hill Jr.; Pearson Education, 2003.  
+				</li>
+				</ul>
+				</p>               
+            </div>
+            <div id="view3">
+                <b>Lecture slides</b>
+               <p>
+			  <table width="100%" border="1">
+  <tr>
+    <td><strong>Lecture No.</strong></td>
+    <td><strong>Topic</strong></td>
+    <td><strong>Reading</strong></td>
+    <td><strong>Lecture slide </strong></td>
+  </tr>
+  <tr>
+    <td>1.</td>
+    <td>Introduction</td>
+    <td>T1: Chapter 1, T2: Chapter 1</td>
+    <td><a href="courses/cs552/CS552_L1_Introduction.pptx"><img src="images/ppt-icon-small.png" alt="download" width="37" height="35" border="0"></a></td>
+  </tr>
+  <tr>
+    <td>2.</td>
+    <td>Raster Graphics and Scan Conversion </td>
+    <td>T5: Chapter 3</td>
+    <td><a href="courses/cs552/CS552_L13_Raster_Graphics.pptx"><img src="images/ppt-icon-small.png" alt="download" width="37" height="35" border="0"></a></td>
+  </tr>
+  <tr>
+    <td>3.</td>
+    <td>Scan Conversion </td>
+    <td>T5: Chapter 3</td>
+    <td><a href="courses/cs552/CS552_L14_Raster_Graphics.pptx"><img src="images/ppt-icon-small.png" alt="download" width="37" height="35" border="0"></a></td>
+  </tr>
+  <tr>
+    <td>4.</td>
+    <td>Scan Conversion </td>
+    <td>T5: Chapter 3</td>
+    <td><a href="courses/cs552/CS552_L15_Raster_Graphics.pptx"><img src="images/ppt-icon-small.png" alt="download" width="37" height="35" border="0"></a></td>
+  </tr>
+  <tr>
+    <td>5.</td>
+    <td>Scan Conversion </td>
+    <td>T5: Chapter 3</td>
+    <td><a href="courses/cs552/CS552_L15_Raster_Graphics.pptx"><img src="images/ppt-icon-small.png" alt="download" width="37" height="35" border="0"></a></td>
+  </tr>
+  <tr>
+    <td>6.</td>
+    <td>Polygon Filling </td>
+    <td>T5: Chapter 3</td>
+    <td><a href="courses/cs552/CS552_L16_Polygon_Filling.pptx"><img src="images/ppt-icon-small.png" alt="download" width="37" height="35" border="0"></a></td>
+  </tr>
+  <tr>
+    <td>7-8 (a).</td>
+    <td>Polygon Filling </td>
+    <td>T5: Chapter 3</td>
+    <td><a href="courses/cs552/CS552_L17_Polygon_Filling.pptx"><img src="images/ppt-icon-small.png" alt="download" width="37" height="35" border="0"></a></td>
+  </tr>
+  <tr>
+    <td>9.</td>
+    <td>2D Transformations</td>
+    <td>T1. Chapter 6 </td>
+    <td><a href="courses/cs552/CS552_L4_2D.pptx"><img src="images/ppt-icon-small.png" alt="download" width="37" height="35"></a></td>
+  </tr>
+  <tr>
+    <td>10.</td>
+    <td>2D Transformations</td>
+    <td>T1. Chapter 6 </td>
+    <td><a href="courses/cs552/CS552_L4_2D.pptx"><img src="images/ppt-icon-small.png" alt="download" width="37" height="35"></a></td>
+  </tr>
+  <tr>
+    <td>11.</td>
+    <td>2D Viewing </td>
+    <td>T1: Chapter 7</td>
+    <td><a href="courses/cs552/CS552_L6_2D_Viewing.pptx"><img src="images/ppt-icon-small.png" alt="download" width="37" height="35" border="0"></a></td>
+  </tr>
+  <tr>
+    <td>12.</td>
+    <td>2D Clipping </td>
+    <td>T1: Chapter 7, R1: Chapter 5 </td>
+    <td><a href="courses/cs552/CS552_L7_2D_clipping.pptx"><img src="images/ppt-icon-small.png" alt="download" width="37" height="35" border="0"></a></td>
+  </tr>
+  <tr>
+    <td>13.</td>
+    <td>2D Clipping </td>
+    <td>T1: Chapter 7, R1: Chapter 5 </td>
+    <td><a href="courses/cs552/CS552_L7_2D_clipping.pptx"><img src="images/ppt-icon-small.png" alt="download" width="37" height="35" border="0"></a></td>
+  </tr>
+  <tr>
+    <td>14.</td>
+    <td>3D Viewing </td>
+    <td>T1: Chapter 9</td>
+    <td><a href="courses/cs552/CS552_L8_3D_Viewing.pptx"><img src="images/ppt-icon-small.png" alt="download" width="37" height="35" border="0"></a></td>
+  </tr>
+  <tr>
+    <td>15.</td>
+    <td>Projection Geometry </td>
+    <td>T1: Chapter 9</td>
+    <td><a href="courses/cs552/CS552_L9_3D_Projection.pptx"><img src="images/ppt-icon-small.png" alt="download" width="37" height="35" border="0"></a></td>
+  </tr>
+  <tr>
+    <td>16.</td>
+    <td>Projection Geometry </td>
+    <td>T1: Chapter 9</td>
+    <td><a href="courses/cs552/CS552_L10_3D_Projection.pptx"><img src="images/ppt-icon-small.png" alt="download" width="37" height="35" border="0"></a></td>
+  </tr>
+  <tr>
+    <td>17.</td>
+    <td>Projection Geometry </td>
+    <td>T1: Chapter 9</td>
+    <td><a href="courses/cs552/CS552_L11_Parallel_Projection.pptx"><img src="images/ppt-icon-small.png" alt="download" width="37" height="35" border="0"></a></td>
+  </tr>
+  <tr>
+    <td>18.</td>
+    <td>3D Clipping </td>
+    <td>T1: Chapter 9</td>
+    <td><a href="courses/cs552/CS552_L12_3D_Clipping.pptx"><img src="images/ppt-icon-small.png" alt="download" width="37" height="35" border="0"></a></td>
+  </tr>
+  <tr>
+    <td>19.</td>
+    <td>3D Clipping </td>
+    <td>T1: Chapter 9</td>
+    <td><a href="courses/cs552/CS552_L12_3D_Clipping.pptx"><img src="images/ppt-icon-small.png" alt="download" width="37" height="35" border="0"></a></td>
+  </tr>
+    <tr>
+    <td>20.</td>
+    <td>Cubic polynomial </td>
+    <td>T3: Chapter 4</td>
+    <td><a href="courses/cs552/CS552_L17_Space_Curve.pptx"><img src="images/ppt-icon-small.png" alt="download" width="37" height="35" border="0"></a></td>
+  </tr>
+  <tr>
+    <td>21.</td>
+    <td>Cubic polynomial</td>
+    <td>T3: Chapter 4</td>
+    <td><a href="courses/cs552/CS552_L18_Repesenting_Curve.pptx"><img src="images/ppt-icon-small.png" alt="download" width="37" height="35" border="0"></a></td>
+  </tr>
+  <tr>
+    <td>22.</td>
+    <td>Bezier curve</td>
+    <td>T3: Chapter 4</td>
+    <td><a href="courses/cs552/CS552_L19_Beizer.pptx"><img src="images/ppt-icon-small.png" alt="download" width="37" height="35" border="0"></a></td>
+  </tr>
+  <tr>
+    <td>23.</td>
+    <td>Bezier curve</td>
+    <td>T3: Chapter 4</td>
+    <td>
+        <a href="courses/cs552/CS552_L20_Beizer.pptx"><img src="images/ppt-icon-small.png" alt="download" width="37" height="35" border="0"></a>
+        <a href="courses/cs552/L_20.zip"><img src="images/zip.png" alt="download" width="37" height="35" border="0"></a>
+        <a href="courses/cs552/bezier_video.avi"><img src="images/video_icon.png" alt="download" width="37" height="35" border="0"></a>
+    </td>
+  </tr>
+  <tr>
+    <td>24.</td>
+    <td>B-Spline curve</td>
+    <td>T3: Chapter 4</td>
+    <td><a href="courses/cs552/CS552_L21_BSpline.pptx"><img src="images/ppt-icon-small.png" alt="download" width="37" height="35" border="0"></a>
+        <a href="courses/cs552/L_21.zip"><img src="images/zip.png" alt="download" width="37" height="35" border="0"></a>
+    </td>
+  </tr>
+  <tr>
+    <td>25.</td>
+    <td>B-Spline curve</td>
+    <td>T3: Chapter 4</td>
+    <td><a href="courses/cs552/CS552_L22_BSpline.pptx"><img src="images/ppt-icon-small.png" alt="download" width="37" height="35" border="0"></a></td>
+  </tr>
+   <tr>
+    <td>26.</td>
+    <td>Surface Representation</td>
+    <td>-</td>
+    <td><a href="courses/cs552/CS552_L23_Surface1.pptx"><img src="images/ppt-icon-small.png" alt="download" width="37" height="35" border="0"></a></td>
+  </tr>
+   <tr>
+    <td>27.</td>
+    <td>Surface Representation</td>
+    <td>-</td>
+    <td><a href="courses/cs552/CS552_L24_Surface2.pptx"><img src="images/ppt-icon-small.png" alt="download" width="37" height="35" border="0"></a></td>
+  </tr>
+   <tr>
+    <td>28.</td>
+    <td>Surface Representation</td>
+    <td>-</td>
+    <td><a href="courses/cs552/CS552_L25_Surface3.pptx"><img src="images/ppt-icon-small.png" alt="download" width="37" height="35" border="0"></a></td>
+  </tr>
+   <tr>
+    <td>29.</td>
+    <td>Surface Representation</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+   <tr>
+    <td>30.</td>
+    <td>Solid Modeling</td>
+    <td>T2: Chapter 12</td>
+    <td><a href="courses/cs552/CS552_L27_Solid_Modeling.pptx"><img src="images/ppt-icon-small.png" alt="download" width="37" height="35" border="0"></a></td>
+  </tr>
+   <tr>
+    <td>31.</td>
+    <td>Solid Modeling</td>
+    <td>T2: Chapter 12</td>
+    <td><a href="courses/cs552/CS552_L28_Solid_Modeling.pptx"><img src="images/ppt-icon-small.png" alt="download" width="37" height="35" border="0"></a>
+    <a href="courses/cs552/L_28.zip"><img src="images/zip.png" alt="download" width="37" height="35" border="0"></a></td>
+  </tr>
+     <tr>
+    <td>32.</td>
+    <td>Visible Surface Detection</td>
+    <td>T2: Chapter 15, T1: Chapter 14</td>
+    <td>
+        <a href="courses/cs552/CS552_L29_VSD1.pptx"><img src="images/ppt-icon-small.png" alt="download" width="37" height="35" border="0"></a>
+    </td>
+  </tr>
+     <tr>
+    <td>33.</td>
+    <td>Visible Surface Detection</td>
+    <td>T2: Chapter 15, T1: Chapter 14</td>
+    <td>
+        <a href="courses/cs552/CS552_L30_VSD2.pptx"><img src="images/ppt-icon-small.png" alt="download" width="37" height="35" border="0"></a>
+    </td>
+  </tr>
+     <tr>
+    <td>34.</td>
+    <td>Visible Surface Detection</td>
+    <td>T2: Chapter 15, T1: Chapter 14</td>
+    <td>
+        <a href="courses/cs552/CS552_L31_VSD3.pptx"><img src="images/ppt-icon-small.png" alt="download" width="37" height="35" border="0"></a>
+   </td>
+  </tr>
+  <tr>
+    <td>35.</td>
+    <td>Visible Surface Detection</td>
+    <td>T2: Chapter 15, T1: Chapter 14</td>
+    <td>
+        <a href="courses/cs552/CS552_L32_VSD4.pptx"><img src="images/ppt-icon-small.png" alt="download" width="37" height="35" border="0"></a>
+    </td>
+  </tr>
+  <tr>
+    <td>36.</td>
+    <td>Rendering</td>
+    <td>T2: Chapter 16, T1: Chapter 15</td>
+    <td>
+        <a href="courses/cs552/CS552_L33_Rendering.pptx"><img src="images/ppt-icon-small.png" alt="download" width="37" height="35" border="0"></a>
+    </td>
+  </tr>
+  <tr>
+    <td>37.</td>
+    <td>Rendering</td>
+    <td>T2: Chapter 16, T1: Chapter 15</td>
+    <td>
+        <a href="courses/cs552/CS552_L34_Rendering.pptx"><img src="images/ppt-icon-small.png" alt="download" width="37" height="35" border="0"></a>
+    </td>
+  </tr>
+  <tr>
+    <td>38.</td>
+    <td>Rendering</td>
+    <td>T2: Chapter 16</td>
+    <td>
+        <a href="courses/cs552/CS552_L35_Rendering.pptx"><img src="images/ppt-icon-small.png" alt="download" width="37" height="35" border="0"></a>
+    </td>
+  </tr>
+  <tr>
+    <td>39.</td>
+    <td>Ray Tracing</td>
+    <td>T2: Chapter 16</td>
+    <td>
+        <a href="courses/cs552/CS552_L36_Rendering.pptx"><img src="images/ppt-icon-small.png" alt="download" width="37" height="35" border="0"></a>
+    </td>
+  </tr>
+  <tr>
+    <td>40.</td>
+    <td>Ray Tracing</td>
+    <td>T2: Chapter 16</td>
+    <td>
+        --
+    </td>
+  </tr>
+  <tr>
+    <td>41.</td>
+    <td>Ray Tracing</td>
+    <td>T2: Chapter 16</td>
+    <td>
+       --
+    </td>
+  </tr>
+  <tr>
+    <td>42.</td>
+    <td>Texture Mapping</td>
+    <td>T2: Chapter 16, , T1: Chapter 16</td>
+    <td>
+       --
+    </td>
+  </tr>
+  </table>
+  </p>
+            </div>
+            <!--
+		  <div id="view4">
+                <b>Term Project Assignments (TPA)</b>
+				<p>
+				Students will be asked to form groups and choose from a set of predefined projects. There will be two evaluations for each TPA. One before the midsemester break, and another before the end semester exam.
+                <table width="100%" border="1">
+                    <tr>
+                        <td>
+                            <strong>Sl. no.</strong>
+                        </td>
+                        <td>
+                            <strong>Title</strong>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            1.
+                        </td>
+                        <td>
+                            Realistic rendering of indoor scene.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            2.
+                        </td>
+                        <td>
+                            Understanding architectural floor plan in 2D.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            3.
+                        </td>
+                        <td>
+                           Interactive game development.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            4.
+                        </td>
+                        <td>
+                           Simulation of deformations of soft 3D objects.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            5.
+                        </td>
+                        <td>
+                           Virtual Cuts of Deformable Objects.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            6.
+                        </td>
+                        <td>
+                           3D visualizer for android platform.
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                Tentative dates for TPA evaluation are as follows
+                <br>
+                <table width="100%" border="1">
+                    <tr>
+                        <td>
+                            <b>Evaluation type</b>
+                        </td>
+                        <td>
+                            <b>Date</b>
+                        </td>
+                        <td>
+                            <b>Time</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Mid-term review
+                        </td>
+                        <td>
+                            14 March, 2016
+                        </td>
+                        <td>
+                            TBA
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Final review
+                        </td>
+                        <td>
+                            TBA
+                        </td>
+                        <td>
+                            TBA
+                        </td>
+                    </tr>
+                </table>
+				</p>
+				</div>
+				
+        </div>
+    -->
+</div>
+</body>
+</html>

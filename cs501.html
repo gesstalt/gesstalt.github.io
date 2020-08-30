@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CS501: Computer Graphics</title>
+    <script src="tabcontent.js" type="text/javascript"></script>
+    <link href="template2/tabcontent.css" rel="stylesheet" type="text/css" />
+</head>
+<body style="background:#F6F9FC; font-family:Arial;">
+<div align="right" style="position:relative"> Click <a href="index.html">here</a> to go to the home page</div>
+    <div style="width: 800px; margin: 0 auto; padding: 120px 0 40px;">
+	  <p><font face="Arial, Helvetica, sans-serif" size="+2" color="#990000">CS501: Computer Graphics</font>      </p>
+	  <p>&nbsp;</p>
+	  <ul class="tabs" data-persist="true">
+	  <li><a href ="#obj">Objectives and Outcomes</a></li>
+            <li><a href="#view1">Contents</a></li>
+            <li><a href="#view2">Readings</a></li>
+            <li><a href="#view3">Lecture Slides</a></li>
+			<li><a href="#view4">Term Project</a></li>
+			<li><a href="#view5">Assignments</a></li>
+      </ul>
+        <div class="tabcontents">
+		<div id="obj">
+                <b>Objectives</b>
+                <p>
+				<ul>
+				<li>To introduce computer graphics techniques</li>
+				<li>To develop algorithms for 2D and 3D modeling</li>
+				<li>To render and synthesise images and videos</li>
+				</ul>
+				</p>
+				<b>Learning Outcomes</b>
+                <p>
+				<ul>
+				<li>Explain and create interactive graphics application in C++.</li>
+				<li>Implement graphics primitives.</li>
+				<li>Demonstrate computer graphics animation.</li>
+				<li>Synthesise and render images for visualization</li>
+				</ul>
+				</p>
+          </div>
+            <div id="view1">
+                <b>Course content</b>
+                <p>
+				<ul>
+				<li><strong>Introduction to computer graphics & graphics system:</strong> Overview of computer graphics, representing pictures, preparing, presenting & interacting with pictures for presentations</li>
+				<li><strong>Scan conversion: </strong>Points & lines, Line drawing algorithms, Circle generation algorithm; Ellipse generating algorithm; scan line polygon, fill algorithm, boundary fill algorithm, flood fill algorithm.  Clipping algorithms: line and polygon, anti-aliasing</li>
+				<li><strong>Transformations and viewing:</strong> Basic transformations: translation, rotation, scaling; Matrix representations & homogeneous coordinates, transformations between coordinate systems; reflection shear. Viewing pipeline, Window to viewport co-ordinate transformation, clipping operations, viewport clipping, 3D viewing.</li>
+				<li><strong>Curves and Surfaces:</strong> Conics, parametric and non-parametric forms; Bezier (Bernstein Polynomials) Curves, Cubic-Splines, B-Splines; Quadratic surfaces, Bezier surfaces and NURBS, 3-D modelling</li>
+				<li><strong>Hidden surfaces:</strong> Depth comparison, Z-buffer algorithm, Back face detection, BSP tree method, the Painter&#39;s Algorithm algorithm, scan-line algorithm; Hidden line elimination, wire frame methods , fractal - geometry</li>
+				<li><strong>Color & shading models:</strong> Phong's shading model, Gouraud shading, Shadows and background, Color models, Photo-realistic rendering</li>
+				<li><strong>Animation and OpenGL primitives:</strong> Functions, pipeline, sample programs for drawing 2-D, 3-D objects; event handling and view manipulation, Introduction to GPU and animation</li>
+				</ul>
+				</p>
+            </div>
+            <div id="view2">
+                <b>Text Books</b>
+                <p>
+				<ul>
+				<li>
+				T1. J. D. Foley, A. Van Dam, S. K. Feiner and J. F. Hughes, Computer Graphics; Principles and practice; Second Edition in C; Addison Wesley, 1997.
+				</li>
+				<li>
+				T2. D. F. Rogers and J. A. Adams, Mathematical elements for Computer Graphics; 2nd edn.; McGraw-Hill International. Edn., 1990.
+				</li>
+				<li>
+				T3. Shreiner, Woo, Neider, Davis, OpenGL Programming Guide, 6th. Edition, Pearson Education, 2008.
+				</li>
+				</ul>
+				</p>
+				 <b>Reference Books</b>
+                <p>
+				<ul>
+				<li>
+				R1. Z. Xiang, R. Plastock; Schaum&#39;s outlines Computer Graphics (2nd Ed.), TMH.
+				</li>
+				<li>
+				R2. Computer Graphics C version; D. Hearn and M. P. Baker; Pearson Education, 2004.  
+				</li>
+				<li>
+				R3. Computer Graphics using OpenGL; 2nd edn.; F. S. Hill Jr.; Pearson Education, 2003.  
+				</li>
+				</ul>
+				</p>               
+            </div>
+            <div id="view3">
+                <b>Lecture slides</b>
+				<!--
+                <p>
+				<table width="100%" border="1">
+  				<tr>
+				    <td><strong>Lecture No.</strong></td>
+				    <td><strong>Topic</strong></td>
+				    <td><strong>Lecture slide </strong></td>
+					<td><strong>Demo </strong></td>
+			    </tr>
+				<tr>
+					<td>1.</td>
+					<td>Introduction</td>
+					<td><a href="courses/cs212/CS212_L1_Introduction.pptx"><img src="images/ppt-icon-small.png" alt="download" width="41" height="43" border="0"></a></td>
+					<td>-</td>
+				</tr>
+				<tr>
+				  <td>2.</td>
+				  <td>Introduction to C++ </td>
+				  <td><a href="courses/cs212/CS212_L2_Intro_To_C++.pptx"><img src="images/ppt-icon-small.png" alt="download" width="41" height="43" border="0"></a></td>
+				  <td><a href="courses/cs212/day2.zip"><img src="images/sourcecode.png" alt="source code for demos shown in classroom" width="39" height="39" border="0"></a></td>
+				  </tr>
+				<tr>
+				  <td>3.</td>
+				  <td>Object Oriented Analysis </td>
+				  <td><a href="courses/cs212/CS212_L3_Object_Oriented_Analysis.pptx"><img src="images/ppt-icon-small.png" alt="download" width="41" height="43" border="0"></a></td>
+				  <td><a href="courses/cs212/day3.zip"><img src="images/sourcecode.png" alt="source code for demos shown in classroom" width="39" height="39" border="0"></a></td>
+				  </tr>
+				<tr>
+				  <td>4.</td>
+				  <td>Classes and Object - I </td>
+				  <td><a href="courses/cs212/CS212_L4_Classes_Objects.pptx"><img src="images/ppt-icon-small.png" alt="download" width="41" height="43" border="0"></td>
+				  <td><a href="courses/cs212/day4.zip"><a href="courses/cs212/day4.zip"><img src="images/sourcecode.png" alt="source code for demos shown in classroom" width="39" height="39" border="0"></a></td>
+				  </tr>
+				<tr>
+				  <td>5.</td>
+				  <td>Classes and Object using C++ </td>
+				  <td><a href="courses/cs212/CS212_L5_Class_Object_C++.pptx"><img src="images/ppt-icon-small.png" alt="download" width="41" height="43" border="0"></a></td>
+				  <td><a href="courses/cs212/day5.zip"><img src="images/sourcecode.png" alt="source code for demos shown in classroom" width="39" height="39" border="0"></a></td>
+				  </tr>
+				  <tr>
+				  <td>6.</td>
+				  <td>Constructors and Destructors </td>
+				  <td><a href="courses/cs212/CS212_L6_Ctor_Dtor.pptx"><img src="images/ppt-icon-small.png" alt="download" width="41" height="43" border="0"></a></td>
+				  <td><a href="courses/cs212/day6.zip"><img src="images/sourcecode.png" alt="source code for demos shown in classroom" width="39" height="39" border="0"></a></td>
+				  </tr>
+				  <tr>
+				  <td>7.</td>
+				  <td>Pointers and Dynamic Memory Allocation </td>
+				  <td><a href="courses/cs212/CS212_L7_Array_Pointers.pptx"><img src="images/ppt-icon-small.png" alt="download" width="41" height="43" border="0"></a></td>
+				  <td><a href="courses/cs212/day7.zip"><img src="images/sourcecode.png" alt="source code for demos shown in classroom" width="39" height="39" border="0"></a></td>
+				  </tr>
+				  <td>8.</td>
+				  <td>GRASP Design Principles</td>
+				  <td><a href="courses/cs212/CS212_L8_GRASP.pptx"><img src="images/ppt-icon-small.png" alt="download" width="41" height="43" border="0"></a></td>
+				  <td>-</td>
+				  </tr>
+				  <tr>
+				  <td>9.</td>
+				  <td>Polymorphism: Function overloading</td>
+				  <td><a href="courses/cs212/CS212_L9_Function_Overloading.pptx"><img src="images/ppt-icon-small.png" alt="download" width="41" height="43" border="0"></a></td>
+				  <td><a href="courses/cs212/day9.zip"><img src="images/sourcecode.png" alt="source code for demos shown in classroom" width="39" height="39" border="0"></a></td>
+				  </tr>
+				  </tr>
+				  <td>10.</td>
+				  <td>Copy constructor</td>
+				  <td><a href="courses/cs212/CS212_L10_Copy.pptx"><img src="images/ppt-icon-small.png" alt="download" width="41" height="43" border="0"></a><a href="courses/cs212/CS212_L10_Copy_II.pptx"><img src="images/ppt-icon-small.png" alt="download" width="41" height="43" border="0"></a></td>
+				  <td><a href="courses/cs212/day10.zip"><img src="images/sourcecode.png" alt="source code for demos shown in classroom" width="39" height="39" border="0"></a></td>
+				  </tr>
+				  <tr>
+				  <td>11.</td>
+				  <td>Polymorphism: Operator Overload-I</td>
+				  <td><a href="courses/cs212/CS212_L11_Operator_Overloading.pptx"><img src="images/ppt-icon-small.png" alt="download" width="41" height="43" border="0"></a></td>
+				  <td><a href="courses/cs212/day11.zip"><img src="images/sourcecode.png" alt="source code for demos shown in classroom" width="39" height="39" border="0"></a></td>
+				  </tr>
+				  <tr>
+				  <td>12.</td>
+				  <td>Polymorphism: Operator Overload-II</td>
+				  <td><a href="courses/cs212/CS212_L12_Operator_OverloadingII.pptx"><img src="images/ppt-icon-small.png" alt="download" width="41" height="43" border="0"></a></td>
+				  <td><a href="courses/cs212/day12.zip"><img src="images/sourcecode.png" alt="source code for demos shown in classroom" width="39" height="39" border="0"></a></td>
+				  </tr>
+				  <tr>
+				  <td>13.</td>
+				  <td>Relationship between classes</td>
+				  <td><a href="courses/cs212/CS212_L13_Relationshio_Betwn_Classes.pptx"><img src="images/ppt-icon-small.png" alt="download" width="41" height="43" border="0"></a></td>
+				  <td>-</a></td>
+				  </tr>
+				  <tr>
+				  <td>14.</td>
+				  <td>Inheritance in C++ - I</td>
+				  <td><a href="courses/cs212/CS212_L14_Inheritance_C++.pptx"><img src="images/ppt-icon-small.png" alt="download" width="41" height="43" border="0"></a></td>
+				  <td><a href="courses/cs212/day14.zip"><img src="images/sourcecode.png" alt="source code for demos shown in classroom" width="39" height="39" border="0"></a></td>
+				  </tr>
+				  <tr>
+				  <td>15.</td>
+				  <td>Inheritance in C++ - II</td>
+				  <td><a href="courses/cs212/CS212_L15_Inheritance_C++_II.pptx"><img src="images/ppt-icon-small.png" alt="download" width="41" height="43" border="0"></a></td>
+				  <td><a href="courses/cs212/day15.zip"><img src="images/sourcecode.png" alt="source code for demos shown in classroom" width="39" height="39" border="0"></a></td>
+				  </tr>
+				  <tr>
+				  <td>16.</td>
+				  <td>Run Time Polymorphism</td>
+				  <td><a href="courses/cs212/CS212_L16_Virtual_Function.pptx"><img src="images/ppt-icon-small.png" alt="download" width="41" height="43" border="0"></a></td>
+				  <td><a href="courses/cs212/day16.zip"><img src="images/sourcecode.png" alt="source code for demos shown in classroom" width="39" height="39" border="0"></a></td>
+				  </tr>
+				  <tr>
+				  <td>17.</td>
+				  <td>Virtual Functions</td>
+				  <td><a href="courses/cs212/CS212_L17_Virtual_Function-II.pptx"><img src="images/ppt-icon-small.png" alt="download" width="41" height="43" border="0"></a></td>
+				  <td><a href="courses/cs212/day17.zip"><img src="images/sourcecode.png" alt="source code for demos shown in classroom" width="39" height="39" border="0"></a></td>
+				  </tr>
+				  <tr>
+				  <td>18.</td>
+				  <td>Dispatching</td>
+				  <td><a href="courses/cs212/CS212_L18_Polymorphism_Despatching.pptx"><img src="images/ppt-icon-small.png" alt="download" width="41" height="43" border="0"></a></td>
+				  <td><a href="courses/cs212/day18.zip"><img src="images/sourcecode.png" alt="source code for demos shown in classroom" width="39" height="39" border="0"></a></td>
+				  </tr>
+				  <tr>
+				  <td>19.</td>
+				  <td>Exception Handling</td>
+				  <td><a href="courses/cs212/CS212_L19_Exception_Handling_I.pptx"><img src="images/ppt-icon-small.png" alt="download" width="41" height="43" border="0"></a></td>
+				  <td><a href="courses/cs212/day19.zip"><img src="images/sourcecode.png" alt="source code for demos shown in classroom" width="39" height="39" border="0"></a></td>
+				  </tr>
+				  <tr>
+				  <td>20.</td>
+				  <td>Exception Handling</td>
+				  <td><a href="courses/cs212/CS212_L20_Exception_Handling_II.pptx"><img src="images/ppt-icon-small.png" alt="download" width="41" height="43" border="0"></a></td>
+				  <td><a href="courses/cs212/day20.zip"><img src="images/sourcecode.png" alt="source code for demos shown in classroom" width="39" height="39" border="0"></a></td>
+				  </tr>
+				  <tr>
+				  <td>21.</td>
+				  <td>Templates</td>
+				  <td><a href="courses/cs212/CS212_L21_Templates.pptx"><img src="images/ppt-icon-small.png" alt="download" width="41" height="43" border="0"></a></td>
+				  <td><a href="courses/cs212/day21.zip"><img src="images/sourcecode.png" alt="source code for demos shown in classroom" width="39" height="39" border="0"></a></td>
+				  </tr>
+				  <tr>
+				  <td>22.</td>
+				  <td>Generic Class Design</td>
+				  <td><a href="courses/cs212/CS212_L22_Generic_Classes.pptx"><img src="images/ppt-icon-small.png" alt="download" width="41" height="43" border="0"></a></td>
+				  <td><a href="courses/cs212/day22.zip"><img src="images/sourcecode.png" alt="source code for demos shown in classroom" width="39" height="39" border="0"></a></td>
+				  </tr>
+				  <tr>
+				  <td>23.</td>
+				  <td>Working with Streams</td>
+				  <td><a href="courses/cs212/CS212_L23_Streams.pptx"><img src="images/ppt-icon-small.png" alt="download" width="41" height="43" border="0"></a></td>
+				  <td><a href="courses/cs212/day23.zip"><img src="images/sourcecode.png" alt="source code for demos shown in classroom" width="39" height="39" border="0"></a></td>
+				  </tr>
+				  <tr>
+				  <td>24.</td>
+				  <td>Introduction to STL</td>
+				  <td><a href="courses/cs212/CS212_L24_STL_I.pptx"><img src="images/ppt-icon-small.png" alt="download" width="41" height="43" border="0"></a></td>
+				  <td><a href="courses/cs212/day24.zip"><img src="images/sourcecode.png" alt="source code for demos shown in classroom" width="39" height="39" border="0"></a></td>
+				  </tr>
+				  <tr>
+				  <td>25.</td>
+				  <td>Iterators</td>
+				  <td><a href="courses/cs212/CS212_L25_Iterator.pptx"><img src="images/ppt-icon-small.png" alt="download" width="41" height="43" border="0"></a></td>
+				  <td><a href="courses/cs212/day25.zip"><img src="images/sourcecode.png" alt="source code for demos shown in classroom" width="39" height="39" border="0"></a></td>
+				  </tr>
+				  <tr>
+				  <td>26.</td>
+				  <td>STL Containers</td>
+				  <td><a href="courses/cs212/CS212_L26_Lists_Maps.pptx"><img src="images/ppt-icon-small.png" alt="download" width="41" height="43" border="0"></a></td>
+				  <td><a href="courses/cs212/day26.zip"><img src="images/sourcecode.png" alt="source code for demos shown in classroom" width="39" height="39" border="0"></a></td>
+				  </tr>
+				  <tr>
+				  <td>27.</td>
+				  <td>STL Algorithms</td>
+				  <td><a href="courses/cs212/CS212_L27_STL_Algorithms.pptx"><img src="images/ppt-icon-small.png" alt="download" width="41" height="43" border="0"></a></td>
+				  <td><a href="courses/cs212/day27.zip"><img src="images/sourcecode.png" alt="source code for demos shown in classroom" width="39" height="39" border="0"></a></td>
+				  </tr>
+				  <tr>
+				  <td>28.</td>
+				  <td>Function Objects</td>
+				  <td><a href="courses/cs212/CS212_L28_STL_Functors-I.pptx"><img src="images/ppt-icon-small.png" alt="download" width="41" height="43" border="0"></a></td>
+				  <td><a href="courses/cs212/day28.zip"><img src="images/sourcecode.png" alt="source code for demos shown in classroom" width="39" height="39" border="0"></a></td>
+				  </tr>
+				  <tr>
+				  <td>29.</td>
+				  <td>Function Objects and Binders</td>
+				  <td><a href="courses/cs212/CS212_L29_STL_Functors-II.pptx"><img src="images/ppt-icon-small.png" alt="download" width="41" height="43" border="0"></a></td>
+				  <td><a href="courses/cs212/day29.zip"><img src="images/sourcecode.png" alt="source code for demos shown in classroom" width="39" height="39" border="0"></a></td>
+				  </tr>
+				  <tr>
+				  <td>30.</td>
+				  <td>Namespace and Design by Contract</td>
+				  <td><a href="courses/cs212/CS212_L30_Namespace_Advanced.pptx"><img src="images/ppt-icon-small.png" alt="download" width="41" height="43" border="0"></a></td>
+				  <td><a href="courses/cs212/day30.zip"><img src="images/sourcecode.png" alt="source code for demos shown in classroom" width="39" height="39" border="0"></a></td>
+				  </tr>
+				  <tr>
+				  <td>-</td>
+				  <td>Introduction to Makefile</td>
+				  <td><a href="courses/cs212/CS212_Makefile.pptx"><img src="images/ppt-icon-small.png" alt="download" width="41" height="43" border="0"></a></td>
+				  <td>-</td>
+				  </tr>
+				  <tr>
+				  <td>31.</td>
+				  <td>Introduction to Modeling</td>
+				  <td><a href="courses/cs212/CS212_L31_Introduction_Modeling.pptx"><img src="images/ppt-icon-small.png" alt="download" width="41" height="43" border="0"></a></td>
+				  <td>-</td>
+				  </tr>
+				  <tr>
+				  <td>32.</td>
+				  <td>UML: Diagram 1</td>
+				  <td><a href="courses/cs212/CS212_L32_UML1.pptx"><img src="images/ppt-icon-small.png" alt="download" width="41" height="43" border="0"></a></td>
+				  <td>-</td>
+				  </tr>
+				  <tr>
+				  <td>33.</td>
+				  <td>UML: Diagram 2</td>
+				  <td><a href="courses/cs212/CS212_L33_UML2.pptx"><img src="images/ppt-icon-small.png" alt="download" width="41" height="43" border="0"></a></td>
+				  <td>-</td>
+				  </tr>
+				  <tr>
+				  <td>34.</td>
+				  <td>UML: Diagram 3</td>
+				  <td><a href="courses/cs212/CS212_L34_UML3.pptx"><img src="images/ppt-icon-small.png" alt="download" width="41" height="43" border="0"></a></td>
+				  <td>-</td>
+				  </tr>
+				  <tr>
+				  <td>35.</td>
+				  <td>UML: Modeling a real world problem</td>
+				  <td>-</td>
+				  <td>-</td>
+				  </tr>
+				  <tr>
+				  <td>36.</td>
+				  <td>UML: Modeling a real world problem</td>
+				  <td>-</td>
+				  <td>-</td>
+				  </tr>
+				  <tr>
+				  <td>37.</td>
+				  <td>Design Patterns</td>
+				  <td><a href="courses/cs212/CS212_L34_UML3.pptx"><img src="images/ppt-icon-small.png" alt="download" width="41" height="43" border="0"></a></td>
+				  <td>-</td>
+				  </tr>
+				</table>
+				</p>
+				-->
+            </div>
+		  <div id="view4">
+                <b>Term Project Assignments (TPA)</b>
+				<p>
+				Students will be asked to form groups and choose from a set of predefined projects. There will be two evaluations for each TPA. One before the midsemester break, and another before the end semester exam.
+				</p>
+				<!--
+                <p>General instructions related to the lab assignments can be downloaded from <a href="courses/cs212/Lab_Manual_CS212_Jul_Nov_2015_instr.pdf">here</a>. </p>
+				<p>
+			  <table width="100%" border="1">
+  				<tr>
+					<td><strong>Assignment No.</strong></td>
+					<td><strong>Topic</strong></td>
+					<td><strong>Problem Statement</strong></td>
+				</tr>
+				<tr>
+					<td>1.</td>
+					<td>Recap of Prgramming concepts</td>
+					<td><a href="courses/cs212/assgn1.pdf"><img src="images/pdf_icon.png" alt="Download problem statement" width="39" height="40" border="0"></a></td>
+				</tr>
+				<tr>
+				  <td>2.</td>
+				  <td>Class and Objects </td>
+				  <td><a href="courses/cs212/Assignment2.pdf"><img src="images/pdf_icon.png" alt="Download problem statement" width="39" height="40" border="0"></a></td>
+				  </tr>
+				<tr>
+				  <td>3.</td>
+				  <td>Pointers and Dynamic Allocations </td>
+				  <td><a href="courses/cs212/Assignment3.pdf"><img src="images/pdf_icon.png" alt="Download problem statement" width="39" height="40"></a><a href="courses/cs212/Assignment3_2.pdf"><img src="images/pdf_icon.png" alt="Download problem statement" width="39" height="40"></a></td>
+				  </tr>
+				<tr>
+				  <td>4.</td>
+				  <td>Function and Operator Overloading </td>
+				  <td><a href="courses/cs212/Assignment4.pdf"><img src="images/pdf_icon.png" alt="Download problem statement" width="39" height="40"></a><a href="courses/cs212/Assignment4_2.pdf"><img src="images/pdf_icon.png" alt="Download problem statement" width="39" height="40"></a></td>
+				  </tr>
+				<tr>
+				  <td>5.</td>
+				  <td>Inheritance</td>
+				  <td><a href="courses/cs212/Assignment5.pdf"><img src="images/pdf_icon.png" alt="Download problem statement" width="39" height="40"></a><a href="courses/cs212/Assignment5_2.pdf"><img src="images/pdf_icon.png" alt="Download problem statement" width="39" height="40"></a></td>
+				  </tr>
+				<tr>
+				  <td>6.</td>
+				  <td>Lab exam 1</td>
+				  <td>
+				  <a href="courses/cs212/exam1_1.zip">
+				  	<img src="images/pdf_icon.png" alt="Download problem statement" width="39" height="40">
+					</a>
+					<a href="courses/cs212/exam1_2.zip">
+				  	<img src="images/pdf_icon.png" alt="Download problem statement" width="39" height="40">
+					</a>
+				  </tr>
+				<tr>
+				  <td>7.</td>
+				  <td>Templates and Exception Handling </td>
+				  <td><a href="courses/cs212/Assignment_7_1.pdf"><img src="images/pdf_icon.png" alt="Download problem statement" width="39" height="40"></a><a href="courses/cs212/Assignment_7_2.pdf"><img src="images/pdf_icon.png" alt="Download problem statement" width="39" height="40"></a></td>
+				  </tr>
+				  <!--
+				<tr>
+				  <td>8.</td>
+				  <td>File Handling </td>
+				  <td><img src="images/pdf_icon.png" alt="Download problem statement" width="39" height="40"></td>
+				  </tr>
+				<tr>
+				  <td>9.</td>
+				  <td>Use of STL </td>
+				  <td><img src="images/pdf_icon.png" alt="Download problem statement" width="39" height="40"></td>
+				  </tr>
+				<tr>
+				  <td>10.</td>
+				  <td>Use of Design Patterns </td>
+				  <td><img src="images/pdf_icon.png" alt="Download problem statement" width="39" height="40"></td>
+			    </tr>
+				
+				</table>
+-->
+				</div>
+				<div id="view5">
+				<b>Home Assignments</b>
+				<p>
+				Home assignments will be given to check the ability of the students to solve numerical problems. Students have to solve the problem sheet and submit the hard copy.
+				</p>
+				</div>
+        </div>
+</div>
+</body>
+</html>
