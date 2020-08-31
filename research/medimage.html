@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Research work on Medical Image Analysis</title>
+    <script src="tabcontent.js" type="text/javascript"></script>
+    <link href="template2/tabcontent.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+.style1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: medium;
+	font-weight: bold;
+}
+.style3 {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #990000;
+	font-weight: bold;
+}
+.style4 {font-family: Arial, Helvetica, sans-serif; font-size: larger; font-weight: bold; color:#990000; }
+
+li:not(:last-child) {
+    margin-bottom: 15px;
+}
+-->
+div {
+    width:840px;
+    padding: 10px;
+    border: 0px;
+    margin: 0 auto;
+}
+sup {
+    vertical-align: super;
+    font-size: smaller;
+}
+</style>
+</head>
+<body style="background:#F6F9FC; font-family:Arial;">
+    <div align="right"> 
+        Click <a href="../index.html">here</a> to go to the home page
+    </div>
+<h1 align="center"> Research work on Medical Image Analysis</h1>
+<hr color="tomato">
+<br>
+        <strong>
+            <h2 align="center">
+                Medical Image Segmentation Tool (MIST)
+            </h2>
+        </strong>
+        <div>
+        <h3 align="center">
+            Pratik Kalshetti<sup>+</sup>, Manas Bundele<sup>+</sup>, Parag Rahangdale<sup>+</sup>, Dinesh Jangra<sup>+</sup>, Chiranjoy Chattopadhyay<sup>+</sup>, Gaurav Harit<sup>+</sup>, Abhay Elhence<sup>*</sup>
+        </h3>     
+        +: Department of Computer Science and Engineering, Indian Institute of Technology, Jodhpur.<br>
+        *: Department of Orthopaedics, All India Institute of Medical Science, Jodhpur.
+        <center>
+            <br>
+            <strong>  Abstract  </strong>
+        </center>
+        <br>
+            <i>
+                In order to obtain the most suitable method for medical image segmentation, we propose MIST (Medical Image Segmentation Tool), a two stage algorithm. The first stage automatically generates a binary marker image of the region of interest using mathematical morphology. This marker serves as the mask image for the second stage which uses GrabCut to yield an efficient segmented result. The obtained result can be further refined by user interaction. </i>
+                </i>
+        <br><br>
+        <strong>Published</strong> in Computers in Biology and Medicine, Volume 83, pp 22-33, 2017. Available <a href="http://dx.doi.org/10.1016/j.compbiomed.2017.02.002">online</a>
+        <br>
+        <hr>
+        <br>
+        <h2>Framework</h2>
+        Segmentation is often performed on medical images for identifying diseases in clinical evaluation. Hence it has become one of the major research areas. Conventional image segmentation techniques are unable to provide satisfactory segmentation results for medical images as they contain irregularities. They need to be pre-processed before segmentation. In order to obtain the most suitable method for medical image segmentation, we propose MIST (Medical Image Segmentation Tool), a two stage algorithm. The first stage automatically generates a binary marker image of the region of interest using mathematical morphology. This marker serves as the mask image for the second stage which uses GrabCut to yield an efficient segmented result. The obtained result can be further refined by user interaction, which can be done using the proposed Graphical User Interface (GUI). Experimental results show that the proposed method is accurate and provides satisfactory segmentation results with minimum user interaction on medical as well as natural images.
+            <br><br>
+            <img width="720" height=310" src=./diag1a.png>
+        <br>
+       <hr>
+        <br>
+         <h2>Screencast of the MIST GUI</h2>
+        <iframe align="center" width="560" height="315" src="https://www.youtube.com/embed/Fxed5itw7l0" frameborder="0" allowfullscreen></iframe>
+        <br><br>
+        <a href="./mist_gui.avi"><img width="50" height="50" src="../images/video_icon.png"></a>Download demonstration video by clicking on the icon.
+        <br>
+        <hr>
+        <br>
+<h2>Results</h2>
+The medical images used in the dataset consist of images in Digital Imaging and Communication in Medicine (DICOM) format. In the dataset used for experiments, there are mainly MRI and X-Ray images of different anatomical regions. Also, natural images have been included in the dataset to check the efficiency of MIST in other domains. The MR images in the data set consist of knee images and are provided by <strong>All India Institute of Medical Sciences, Jodhpur, India</strong>. The MR images are of size 512 X 512 pixels and their intensity is measured in 16 bits. The X-Ray image dataset is a set of images of different anatomical regions and is a collection of images from the internet. The code is written in MATLAB and C++ using MEX compiler.
+    <img width="720" height=300" src=./dice.png>
+    <br><br>
+    <i>Comparison of Dice coefficient for given input images between MIST and other conventional methods. The bar marked with red color represent the best value among the results of other conventional methods and MIST.</i>
+</div>
+            </body>
+</html>

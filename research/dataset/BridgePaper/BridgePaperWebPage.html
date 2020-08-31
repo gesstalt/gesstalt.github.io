@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+	
+	<!--stylesheet-->
+	<link rel="stylesheet" type="text/css" href="img/BridgePaper.css">
+	
+	<title>BRIDGE</title>
+</head>
+
+<body>
+<div class="whole-page">
+<div class="page-intro">
+<table class="main-table" width=100% align=center >
+	 <tr>
+	   <td>
+		 <h2 class="paper-name">BRIDGE: Building plan Repository for Image Description Generation, and Evaluation</h2>
+		</td>
+	  </tr>
+
+
+	<table class="paper-details-table">
+		<tr>
+		<td>Paper:</td>
+		<td><a href="pdf/ICDAR_2019.pdf">BRIDGE: Building plan Repository for Image Description Generation, and Evaluation</a></td>
+		</tr>
+		<tr>
+		<td>Slides:</td>
+		<td><a href="pdf/ICDAR_final.pdf">Click here</a></td>
+		</tr>
+		<tr>
+		<td>Contact:</td>
+		<td><a href="http://home.iitj.ac.in/~goyal.3/">Shreya Goyal</a>, <a href="chiranjoychattopadhyay.in">Chiranjoy Chattopadhyay</a></td>
+		</tr>
+	</table>  
+	
+</table>
+</div>
+
+<hr>
+
+<div class="page-content">
+<table class="page-content-table">
+
+<tr><td>
+	<h2 class="sub-heading">Abstract</h2>
+</td></tr>
+
+	<tr><td>
+	<p>Abstract—In this paper, a large scale public dataset containing ﬂoor plan images and their annotations is presented. BRIDGE (Building plan Repository for Image Description Generation, and Evaluation) dataset contains more than 13000 images of the ﬂoor plan and annotations collected from various websites, as well as publicly available ﬂoor plan images in the research domain. The images in BRIDGE also has annotations for symbols, region graphs, and paragraph descriptions. The BRIDGE dataset will be useful for symbol spotting, caption and description generation, scene graph synthesis, retrieval and many other tasks involving building plan parsing. In this paper, we also present an extensive experimental study for tasks like furniture localization in a ﬂoor plan, caption and description generation, on the proposed dataset showing the utility of BRIDGE.
+Index Terms—Floor Plan; Dataset; Evaluation; Captioning
+	</p>
+	<hr>
+	</td></tr>
+	
+	<tr><td>
+	<h2 class="sub-heading">Literature Survey</h2>
+	</td></tr>
+	
+	<tr><td>
+	<p>
+	Various ﬂoor plan datasets have been proposed in past for purposes such as symbol spotting, retrieval, semantic and layout segmentation. Table I lists out the details of the publicly available datasets, number of samples present in them, and a brief description. There are several techniques in the literature [1], which have used one or more of these four datasets.
+	</p>
+	</td></tr>
+	
+	<tr>
+		<td width=100% align=center>
+			<img src="img/fig1.jpg">
+	</td></tr>
+		
+	<tr><td>
+	<p>
+	images and over one and a half million captions (5 captions per image). The dataset is currently being used for caption generation, object segmentation tasks.
+	</p>
+	<hr>
+	</td></tr>
+	
+	<tr><td>
+	<h2 class="sub-heading">Construction Of Bridge</h2>
+	<p>
+	To construct the BRIDGE dataset we have followed two approaches. First, we have collected ﬂoor plan images from the publicly available datasets (i.e., ROBIN, SESYD etc.). In the second approach, we have collected the remaining ﬂoor plan images from the internet. In total, we have over 13000 ﬂoor plan images in this dataset. Along with the images BRIDGE also has object annotations, region descriptions, and paragraph description for the ﬂoor plans. Till date, this is the largest annotated ﬂoor plan dataset created for the document analysis and research (DAR) community. For creating annotations we asked volunteers for marking bounding boxes around each decor items. We used LableImg graphical annotation tool [13] for marking the bounding boxes in the images. For generating region descriptions also we used the same tool and later converted them in the JSON format.
+	</p>
+	</td></tr>
+	
+			<tr>
+			<td width=100% align=center>
+			<img src="img/fig3.jpg">
+	</td></tr>
+	
+	<tr><td>
+	<p>
+	A. Floor Plan images<br>
+Along with the images obtained from available public datasets, images were collected from two websites, <a href="www. architecturalhouseplans.com">www. architecturalhouseplans.com</a> and <a href="www.houseplans.com">www.houseplans.com</a> These websites contain multiple ﬂoor plan images for a single house design for both single storied and multi-storied buildings. The similarity between the images taken from both websites is that the ﬂoor plans belong to real homes, available for a customer to use and they are not generated for any speciﬁc task for example retrieval or segmentation.
+	</p>
+	</td></tr>
+
+	<tr><td>
+	<p>B. Symbol Annotations<br>
+Detection of several decor items is an important step when for parsing a ﬂoor plan image and information extraction. Object detection schemes have been used in the context of objects in natural images. In the line of architectural drawings, techniques involving handcrafted features is used multiple times in the literature. 
+	</p>
+	</td></tr>
+	
+	<tr><td><p>
+	C. Caption Annotations<br>
+In the literature, there are image datasets with image cap- tions (MS-COCO) and region wise captions (visual genome). For a ﬂoor plan, region wise caption generation is an important step. In [14], [15], authors have used handcrafted features for identifying decor symbol, room information and generating region wise caption generation.
+	</p>
+	<hr>
+	</td></tr>
+	
+	<tr><td>
+	<h2 class="sub-heading">Experiments</h2>
+	<p>
+	All the experiments on the proposed dataset were performed on a system with NVIDIA GPU Quadro P 6000, with 24 GB GPU memory, 256 GB RAM.<br><br>
+	A. Symbol Spotting<br>
+	The symbol spotting algorithms are needed when it comes to identifying the decor and other symbols in the ﬂoor plan images.Figure 5 shows the distribution of various symbols over the training dataset. Results of the symbol spotting on BRIDGE are described next.<br>
+	1)YOLO:<br>     YOLO is a single Convolutional network, which simultaneously predicts multiple bounding boxes and class probabilities (conﬁdence value) of those boxes.<br>
+		 			 
+	2)Faster RCNN: There are two modules in Faster RCNN;<br>
+	      (i)A deep fully convolutional region proposal network, which proposes regions, (ii) a Fast-RCNN detector. The proposed regions are used for their classiﬁcation.
+	</p></td></tr>
+	
+	<tr>
+			<td width=100% align=center>
+			<img src="img/fig5.jpg">
+	</td></tr>
+	
+	<tr><td><p>
+	B. Caption generation<br>
+Captioning an entire image is a task which has been ex- plored widely on natural images. A caption is a single line sen- tence consisting of information of the entire image. 
+	</p></td></tr>
+
+	<tr>
+			<td width=100% align=center>
+			<img src="img/fig7.jpg">
+			<img src="img/fig9.jpg">
+			</td>
+	</tr>
+	<tr><td><p>
+	C. Description synthesis<br>
+	It is insufﬁcient to describe an image by a single caption. Hence we need a system which could generate paragraph based descriptions and has variability. There are many state- of-the-art techniques which have generated paragraphs in the context of natural images. However, these models need anno- tated images to be used to train the deep neural networks and further test and evaluate the models. There is no such publicly available ﬂoor plan dataset to support this task. We have generated paragraphs by using two techniques and evaluated them with the annotations in BRIDGE.<br>
+	1)Template based<br>
+	2)Densecap-concat
+	</p></td></tr>
+	<tr>
+			<td width=100% align=center>
+			<img src="img/fig10.jpg">
+			</td>
+	</tr>
+	
+	<tr><td><hr><h2 class="sub-heading">Conclusion</h2>
+<p>In this paper, we presented, for the ﬁrst time, a novel large scale (13000+ images) ﬂoor plan dataset BRIDGE, 
+which has images and metadata. This dataset could be used for various tasks on ﬂoor plan analysis using deep learning model.
+</p>
+<hr>
+<br><br>
+
+</table>
+
+</div>	
+</body>
+</html>
+
+
+
+
+
+
