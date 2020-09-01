@@ -10,49 +10,52 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
 <title>Chiranjoy's Home Page</title>
 <style>
-.fa {
-  padding: 20px;
-  font-size: 20px;
-  width: 30px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+
+.buttonHeading,
+.buttonContainer 
+{
+  text-align:center;
+  font-family: 'Poiret One', cursive;
+}
+h4{
+ color:#3eb991;
+  font-weight:bold;
+ 
+}
+p{ font-size: 15px;}
+.btn {
+  height: 30px;
+  width:30px;
+  -moz-border-radius: 50px; 
+  webkit-border-radius: 50px; 
+  border-radius: 50px;
+  margin: 3px;
+
+}
+.fa{
+  background-color: ;
+  margin-left: -4px;  
 }
 
-.fa:hover {
-    opacity: 0.7;
+.fa.fa-twitter{ 
+  color:#00aced;
 }
-
-.fa-facebook {
-  background: #3B5998;
-  color: white;
+.fa.fa-dribbble{ 
+  color: #ea4c89;
 }
-
-.fa-twitter {
-  background: #55ACEE;
-  color: white;
+.fa.fa-dropbox{
+  color:#007ee5;
 }
-
-.fa-linkedin {
-  background: #007bb5;
-  color: white;
+.fa.fa-code{ color: #db4437;}
+.fa.fa-slack{ color:#3eb991;}
+.fa.fa-stack-overflow{color:#fe7a15;}
+.fa.fa-github-alt{ color:#999999;}
+.fa.fa-jsfiddle{ color:#5ba4e5;margin-left:-3.5px;
 }
-
-.fa-instagram {
-  background: #125688;
-  color: white;
-}
-
-.fa-skype {
-  background: #00aff0;
-  color: white;
-}
-
-.fa-reddit {
-  background: #ff5700;
-  color: white;
-}
-
+.btn:hover{
+   border: none;
+  background-color: #FFFFFF;
 }
 </style>
 </head>
@@ -85,13 +88,15 @@
 						Jodhpur: 342037 </br>
 						Rajasthan, India.
 					</p>
-						<!-- Add font awesome icons -->
-					<a href="#" class="fa fa-facebook"></a>
-					<a href="#" class="fa fa-twitter"></a>
-					<a href="#" class="fa fa-linkedin"></a>
-					<a href="#" class="fa fa-instagram"></a>
-					<a href="#" class="fa fa-skype"></a>
-					<a href="#" class="fa fa-reddit"></a>
+					<div class="buttonContainer">
+					   	<a class="btn btn-default" type= "button" href="#"><i class="fa fa-twitter"></i> </a>
+					    	<a class="btn btn-default" type= "button" href="#"> <i class="fa fa-slack"></i> </a>
+					  	<a class="btn btn-default" type= "button" href="#"> <i class="fa fa-github-alt"></i> </a>
+					   	<a class="btn btn-default" type= "button" href="#"><i class="fa fa-stack-overflow "></i> </a>
+					    	<a class="btn btn-default" type= "button" href="#"><i class="fa fa-dropbox"></i></a>
+					    	<a class="btn btn-default" type= "button" href="#"> <i class="fa fa-dribbble"> </i> </a>
+					    	<a class="btn btn-default" type= "button" href="#"><i class="fa fa-codepen"></i> </a>
+					</div>
 				</td>
 			</tr>
 		</table>
