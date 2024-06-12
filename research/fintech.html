@@ -31,6 +31,25 @@ li:not(:last-child) {
     margin-bottom: 15px;
 }
 -->
+	 #scrollToTopBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 99;
+      border: none;
+      outline: none;
+      background-color: #000;
+      color: white;
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 10px;
+      font-size: 18px;
+      display: none; /* Hidden by default */
+    }
+
+    #scrollToTopBtn:hover {
+      background-color: #555;
+    }
 </style>
 </head>
 <body style="background:#F6F9FC; font-family:Arial;">
@@ -128,5 +147,27 @@ li:not(:last-child) {
 		</div>
 	
 	</div>
+	<!-- Add this at the end of your body section -->
+	<button id="scrollToTopBtn" title="Go to top">↑</button>
+	  <script>
+    // Add your JavaScript here
+    let mybutton = document.getElementById("scrollToTopBtn");
+
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    mybutton.onclick = function() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+
 </body>
 </html>
