@@ -18,8 +18,8 @@
             color: white;
         }
         .slider {
-            max-width: 600px;
-            margin: 20px auto;
+            width: 100%;
+            overflow: hidden;
             position: relative;
         }
         .slides {
@@ -64,18 +64,18 @@
 <body>
 
 <header>
-    <h1>Video Document Analysis for Education 4.0</h1>
+    <h1>Research Project Title</h1>
 </header>
 
 <div class="slider">
-    <img class="slides active" src="../images/vid_doc_1.png" alt="Image 1">
-    <img class="slides" src="../images/vid_doc_2.jpg" alt="Image 2">
-    <img class="slides" src="../images/vid_doc_3.jpg" alt="Image 3">
+    <img class="slides active" src="image1.jpg" alt="Image 1">
+    <img class="slides" src="image2.jpg" alt="Image 2">
+    <img class="slides" src="image3.jpg" alt="Image 3">
 </div>
 
 <div class="section">
     <h2>Project Description</h2>
-    <p>This is a short description of the research project. It highlights the main goals, methodologies, and findings.</p>
+    <p>This research project focuses on optimizing text visibility and enhancing document digitization from videos. Through predictive analysis, feature fusion, and advanced text recognition techniques, the project aims to improve the accuracy and efficiency of book digitization processes. Significant outcomes include the development of a comprehensive model for frame-of-interest prediction, a novel approach for feature fusion in digitization, and insights into text recognition in the context of Education 4.0.</p>
 </div>
 
 <div class="section">
@@ -89,22 +89,33 @@
     <div class="paper">
         <img src="thumbnail1.jpg" alt="Paper 1">
         <div class="paper-details">
-            <h3>Paper Title 1</h3>
-            <p>This is a short abstract of the first paper. It summarizes the key points and findings.</p>
+            <h3>Predictive Analysis for Optimal Text Visibility: A Comprehensive Study on Frame-of-Interest Prediction in Book Digitization Videos</h3>
+            <p>Gaurav Buddhawar, Dharin Dave, Krupa Jariwala, and Chiranjoy Chattopadhyay; Accepted for publication in International Journal of Engineering, April, 2024</p>
             <p><a href="paper_link1">Read Full Paper</a></p>
         </div>
     </div>
     <div class="paper">
         <img src="thumbnail2.jpg" alt="Paper 2">
         <div class="paper-details">
-            <h3>Paper Title 2</h3>
-            <p>This is a short abstract of the second paper. It summarizes the key points and findings.</p>
+            <h3>Enhancing Book And Document Digitization From Videos: A Feature Fusion-based Approach</h3>
+            <p>Gaurav Buddhawar, Krupa Jariwala, Chiranjoy Chattopadhyay; International Journal of Engineering, Vol. 37, No. 3, pp. 538-545, DOI: 10.5829/IJE.2024.37.03C.11, March, 2024</p>
             <p><a href="paper_link2">Read Full Paper</a></p>
         </div>
     </div>
-    <!-- Add more papers as needed -->
+    <div class="paper">
+        <img src="thumbnail3.jpg" alt="Paper 3">
+        <div class="paper-details">
+            <h3>Some Aspects of Text Recognition from Video Document in Education 4.0</h3>
+            <p>Gaurav Buddhawar, Krupa N. Jariwala, Chiranjoy Chattopadhyay; 2021 Emerging Trends in Industry 4.0 (ETI 4.0), 2021, pp. 1-5, DOI: 10.1109/ETI4.051663.2021.9619427</p>
+            <p><a href="paper_link3">Read Full Paper</a></p>
+        </div>
+    </div>
 </div>
 
+<div class="section">
+    <h2>Patent</h2>
+    <p>Gaurav Uday Buddhawar, Jariwala Krupa, Sudeep Dilip Thepade, Chiranjoy Chattopadhyay; Mobile Stand for Document Digitization, Design No: 373169-001, Indian Patent Office, Date of Issue: 13 January 2023</p>
+</div>
 <script>
     let currentIndex = 0;
     const slides = document.querySelectorAll('.slides');
