@@ -31,7 +31,7 @@ li:not(:last-child) {
     margin-bottom: 15px;
 }
 -->
-	 #scrollToTopBtn {
+#scrollToTopBtn {
       position: fixed;
       bottom: 20px;
       right: 20px;
@@ -50,13 +50,21 @@ li:not(:last-child) {
     #scrollToTopBtn:hover {
       background-color: #555;
     }
+	header {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
 </style>
 </head>
 <body style="background:#F6F9FC; font-family:Arial;">
 <div align="right" style="position:relative"> Click <a href="../index.html">here</a> to go to the home page</div>
-  <h1 align="center"> 
-    Research work on Financial Technology
-  </h1>
+  <header>
+    <h1>
+	    Research work on Financial Technology
+    </h1>
+</header>
 <hr color="tomato">
 <br>
 <!-- Begining of slider div -->
@@ -147,9 +155,9 @@ li:not(:last-child) {
 		</div>
 	
 	</div>
-	<!-- Add this at the end of your body section -->
-	<button id="scrollToTopBtn" title="Go to top">↑</button>
-	  <script>
+<!-- Add this at the end of your body section -->
+<button id="scrollToTopBtn" title="Go to top">↑</button>
+<script>
     // Add your JavaScript here
     let mybutton = document.getElementById("scrollToTopBtn");
 
