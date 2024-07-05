@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+        .slider {
+            max-width: 600px;
+            margin: 20px auto;
+            position: relative;
+        }
+        .slides {
+            display: none;
+            width: 100%;
+            height: auto;
+        }
+        .active {
+            display: block;
+        }
+        .description {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .papers {
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        .paper {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            background-color: white;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .paper img {
+            width: 100px;
+            height: auto;
+            margin-right: 20px;
+        }
+        .paper-details {
+            max-width: calc(100% - 120px);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Research Project Title</h1>
+</header>
+
+<div class="slider">
+    <img class="slides active" src="image1.jpg" alt="Image 1">
+    <img class="slides" src="image2.jpg" alt="Image 2">
+    <img class="slides" src="image3.jpg" alt="Image 3">
+</div>
+
+<div class="description">
+    <h2>Project Description</h2>
+    <p>This is a short description of the research project. It highlights the main goals, methodologies, and findings.</p>
+    <p><a href="dataset_link">Download Dataset</a></p>
+</div>
+
+<div class="papers">
+    <h2>Publications</h2>
+    <div class="paper">
+        <img src="thumbnail1.jpg" alt="Paper 1">
+        <div class="paper-details">
+            <h3>Paper Title 1</h3>
+            <p>This is a short abstract of the first paper. It summarizes the key points and findings.</p>
+            <p><a href="paper_link1">Read Full Paper</a></p>
+        </div>
+    </div>
+    <div class="paper">
+        <img src="thumbnail2.jpg" alt="Paper 2">
+        <div class="paper-details">
+            <h3>Paper Title 2</h3>
+            <p>This is a short abstract of the second paper. It summarizes the key points and findings.</p>
+            <p><a href="paper_link2">Read Full Paper</a></p>
+        </div>
+    </div>
+    <!-- Add more papers as needed -->
+</div>
+
+<script>
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.slides');
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === index);
+        });
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+    }
+
+    setInterval(nextSlide, 3000);
+</script>
+
+</body>
+</html>
