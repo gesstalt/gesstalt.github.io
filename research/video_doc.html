@@ -59,6 +59,25 @@
         .paper-details {
             max-width: calc(100% - 120px);
         }
+        #scrollToTopBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 99;
+      border: none;
+      outline: none;
+      background-color: #000;
+      color: white;
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 10px;
+      font-size: 18px;
+      display: none; /* Hidden by default */
+    }
+
+    #scrollToTopBtn:hover {
+      background-color: #555;
+    }
     </style>
 </head>
 <body>
@@ -136,6 +155,27 @@
 
     setInterval(nextSlide, 3000);
 </script>
+<!-- Add this at the end of your body section -->
+<button id="scrollToTopBtn" title="Go to top">Top</button>
+<script>
+    // Add your JavaScript here
+    let mybutton = document.getElementById("scrollToTopBtn");
+
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    mybutton.onclick = function() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
 
 </body>
 </html>
