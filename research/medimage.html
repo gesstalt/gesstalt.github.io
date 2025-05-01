@@ -1,90 +1,354 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>Research work on Medical Image Analysis</title>
-    <script src="tabcontent.js" type="text/javascript"></script>
-    <link href="template2/tabcontent.css" rel="stylesheet" type="text/css" />
-<style type="text/css">
-<!--
-.style1 {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: medium;
-	font-weight: bold;
-}
-.style3 {
-	font-family: Arial, Helvetica, sans-serif;
-	color: #990000;
-	font-weight: bold;
-}
-.style4 {font-family: Arial, Helvetica, sans-serif; font-size: larger; font-weight: bold; color:#990000; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research work on Medical Image Analysis: MIST</title>
+    <link rel="stylesheet" href="template2/tabcontent.css"> <style>
+        /* --- General Styles --- */
+        body {
+            margin: 0;
+            padding: 0; /* Reset default body padding */
+            background: #F6F9FC; /* Keep original background */
+            font-family: Arial, Helvetica, sans-serif; /* Keep original font stack */
+            line-height: 1.6; /* Improve readability */
+            color: #333; /* Darker text for better contrast */
+            font-size: 1rem; /* Base font size */
+        }
 
-li:not(:last-child) {
-    margin-bottom: 15px;
-}
--->
-div {
-    width:840px;
-    padding: 10px;
-    border: 0px;
-    margin: 0 auto;
-}
-sup {
-    vertical-align: super;
-    font-size: smaller;
-}
-</style>
+        .container {
+            max-width: 960px; /* Set a max width for content */
+            margin: 0 auto; /* Center the container */
+            padding: 0 20px; /* Add horizontal padding for smaller screens */
+        }
+
+        /* --- Header --- */
+        header {
+            padding: 15px 0;
+            border-bottom: 1px solid #ddd; /* Subtle separator */
+            margin-bottom: 30px; /* Space below header */
+        }
+
+        .header-container {
+            display: flex; /* Use flexbox for layout */
+            justify-content: flex-end; /* Align items to the right */
+            align-items: center;
+        }
+
+        .home-link {
+            text-decoration: none;
+            color: #007bff; /* Standard link color */
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Typography --- */
+        h1, h2, h3 {
+            color: #333; /* Consistent heading color */
+            margin-top: 25px;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2em; /* Larger main title */
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            text-align: center; /* Keep project title centered */
+            font-size: 1.7em;
+            margin-top: 30px; /* More space above section titles */
+        }
+
+        h3 {
+             text-align: center; /* Keep author list centered */
+             font-size: 1.3em;
+             margin-bottom: 10px;
+        }
+
+        p {
+             margin-bottom: 1em; /* Standard paragraph spacing */
+        }
+
+        /* --- Authors and Affiliations --- */
+        .authors {
+             text-align: center;
+             margin-bottom: 5px; /* Less space between authors and affiliations */
+        }
+
+        .affiliations {
+             text-align: center;
+             font-size: 0.95em; /* Slightly smaller font for affiliations */
+             color: #555;
+             margin-top: 0; /* Remove top margin */
+             margin-bottom: 30px;
+        }
+
+        sup {
+             vertical-align: super;
+             font-size: 0.75em; /* Relative font size */
+             line-height: 0; /* Prevent line height issues */
+        }
+
+        /* --- Abstract --- */
+        .abstract-section {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            /* Optional: Add a border or background for emphasis */
+            /* border: 1px solid #ddd;
+            padding: 20px;
+            background-color: #f9f9f9; */
+        }
+
+         .abstract-section h3 {
+             margin-bottom: 15px;
+         }
+
+        .abstract-text {
+             font-style: italic; /* Keep italic */
+             text-align: justify; /* Justify abstract text */
+             margin-top: 0; /* Remove default top margin if any */
+             padding-top: 0;
+        }
+
+        /* --- Publication --- */
+        .publication-section {
+             margin-bottom: 30px;
+             font-weight: bold;
+             text-align: center; /* Center publication info */
+        }
+
+        .publication-section a {
+            color: #990000; /* Keep original link color */
+            text-decoration: none;
+        }
+
+        .publication-section a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Horizontal Rule --- */
+        hr {
+            border: none; /* Remove default border */
+            height: 1px; /* Set height */
+            background-color: #ccc; /* Light grey line */
+            margin: 40px 0; /* Space above and below */
+        }
+
+        /* --- Sections --- */
+        section {
+            margin-bottom: 40px; /* Space between main sections */
+        }
+
+        /* --- Images and Figures --- */
+        img {
+            max-width: 100%; /* Images are never wider than their container */
+            height: auto; /* Maintain aspect ratio */
+            display: block; /* Prevents extra space below image */
+            margin: 20px auto; /* Center images if they are smaller than container */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: subtle shadow */
+        }
+
+        figure {
+             margin: 0; /* Reset default figure margin */
+             text-align: center; /* Center content within figure */
+             margin-bottom: 20px; /* Space below figure */
+        }
+
+        figcaption {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: 10px;
+            text-align: center; /* Ensure caption is centered */
+        }
+
+        /* --- Video Embed - Responsive Container --- */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio (for standard YouTube embeds) */
+            height: 0;
+            overflow: hidden;
+            max-width: 800px; /* Optional: Set a max width for the video */
+            margin: 20px auto; /* Center the video container */
+            background: #000; /* Placeholder background */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: subtle shadow */
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .download-link {
+             text-align: center;
+             margin-top: 20px;
+             margin-bottom: 40px;
+        }
+
+        .download-link a {
+             text-decoration: none; /* Remove underline from download link */
+             color: inherit; /* Inherit text color */
+             display: inline-block; /* Allow margin/padding if needed */
+             vertical-align: middle;
+        }
+
+        .download-link a img {
+            display: inline-block; /* Allow text next to icon */
+            vertical-align: middle; /* Align icon with text */
+            margin: 0 10px 0 0; /* Space between icon and text */
+             box-shadow: none; /* Remove shadow from small icon */
+             width: 50px; /* Ensure original size */
+             height: 50px; /* Ensure original size */
+        }
+
+         .download-link a:hover {
+             text-decoration: none; /* Prevent underline on hover */
+         }
+
+
+        /* --- Responsive Adjustments (Media Queries) --- */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px 0; /* Less vertical padding on smaller screens */
+            }
+
+            .container {
+                padding: 0 15px; /* Adjust horizontal padding */
+            }
+
+            h1 {
+                font-size: 1.6em;
+            }
+
+            h2 {
+                font-size: 1.4em;
+            }
+
+            h3 {
+                font-size: 1.1em;
+            }
+
+            hr {
+                margin: 30px 0;
+            }
+
+            section {
+                margin-bottom: 30px;
+            }
+
+            .video-container {
+                 max-width: 100%; /* Allow video to take full container width */
+            }
+        }
+
+        @media (max-width: 480px) {
+             h1 {
+                 font-size: 1.4em;
+             }
+             h2 {
+                 font-size: 1.2em;
+             }
+             h3 {
+                 font-size: 1em;
+             }
+             .abstract-text {
+                 text-align: left; /* Justify can look awkward on very narrow screens */
+             }
+         }
+
+    </style>
 </head>
-<body style="background:#F6F9FC; font-family:Arial;">
-    <div align="right"> 
-        Click <a href="../index.html">here</a> to go to the home page
-    </div>
-<h1 align="center"> Research work on Medical Image Analysis</h1>
-<hr color="tomato">
-<br>
-        <strong>
-            <h2 align="center">
-                Medical Image Segmentation Tool (MIST)
-            </h2>
-        </strong>
-        <div>
-        <h3 align="center">
-            Pratik Kalshetti<sup>+</sup>, Manas Bundele<sup>+</sup>, Parag Rahangdale<sup>+</sup>, Dinesh Jangra<sup>+</sup>, Chiranjoy Chattopadhyay<sup>+</sup>, Gaurav Harit<sup>+</sup>, Abhay Elhence<sup>*</sup>
-        </h3>     
-        +: Department of Computer Science and Engineering, Indian Institute of Technology, Jodhpur.<br>
-        *: Department of Orthopaedics, All India Institute of Medical Science, Jodhpur.
-        <center>
-            <br>
-            <strong>  Abstract  </strong>
-        </center>
-        <br>
-            <i>
-                In order to obtain the most suitable method for medical image segmentation, we propose MIST (Medical Image Segmentation Tool), a two stage algorithm. The first stage automatically generates a binary marker image of the region of interest using mathematical morphology. This marker serves as the mask image for the second stage which uses GrabCut to yield an efficient segmented result. The obtained result can be further refined by user interaction. </i>
-                </i>
-        <br><br>
-        <strong>Published</strong> in Computers in Biology and Medicine, Volume 83, pp 22-33, 2017. Available <a href="http://dx.doi.org/10.1016/j.compbiomed.2017.02.002">online</a>
-        <br>
+<body>
+
+    <header>
+        <div class="container header-container">
+             <a href="../index.html" class="home-link">Home</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1 class="page-title">Research work on Medical Image Analysis</h1>
+
+        <section class="project-title-section">
+            <h2>Medical Image Segmentation Tool (MIST)</h2>
+        </section>
+
+        <section class="authors-section">
+            <p class="authors">
+                Pratik Kalshetti<sup>+</sup>, Manas Bundele<sup>+</sup>, Parag Rahangdale<sup>+</sup>, Dinesh Jangra<sup>+</sup>, Chiranjoy Chattopadhyay<sup>+</sup>, Gaurav Harit<sup>+</sup>, Abhay Elhence<sup>*</sup>
+            </p>
+            <p class="affiliations">
+                <sup>+</sup>: Department of Computer Science and Engineering, Indian Institute of Technology, Jodhpur.<br>
+                <sup>*</sup>: Department of Orthopaedics, All India Institute of Medical Science, Jodhpur.
+            </p>
+        </section>
+
+        <section class="abstract-section">
+            <h3>Abstract</h3>
+            <p class="abstract-text">
+                <em>
+                    In order to obtain the most suitable method for medical image segmentation, we propose MIST (Medical Image Segmentation Tool), a two stage algorithm. The first stage automatically generates a binary marker image of the region of interest using mathematical morphology. This marker serves as the mask image for the second stage which uses GrabCut to yield an efficient segmented result. The obtained result can be further refined by user interaction.
+                </em>
+            </p>
+        </section>
+
+        <section class="publication-section">
+            <p>
+                <strong>Published</strong> in Computers in Biology and Medicine, Volume 83, pp 22-33, 2017. Available <a href="http://dx.doi.org/10.1016/j.compbiomed.2017.02.002">online</a>
+            </p>
+        </section>
+
         <hr>
-        <br>
-        <h2>Framework</h2>
-        Segmentation is often performed on medical images for identifying diseases in clinical evaluation. Hence it has become one of the major research areas. Conventional image segmentation techniques are unable to provide satisfactory segmentation results for medical images as they contain irregularities. They need to be pre-processed before segmentation. In order to obtain the most suitable method for medical image segmentation, we propose MIST (Medical Image Segmentation Tool), a two stage algorithm. The first stage automatically generates a binary marker image of the region of interest using mathematical morphology. This marker serves as the mask image for the second stage which uses GrabCut to yield an efficient segmented result. The obtained result can be further refined by user interaction, which can be done using the proposed Graphical User Interface (GUI). Experimental results show that the proposed method is accurate and provides satisfactory segmentation results with minimum user interaction on medical as well as natural images.
-            <br><br>
-            <img width="720" height=310" src=./diag1a.png>
-        <br>
-       <hr>
-        <br>
-         <h2>Screencast of the MIST GUI</h2>
-        <iframe align="center" width="560" height="315" src="https://www.youtube.com/embed/Fxed5itw7l0" frameborder="0" allowfullscreen></iframe>
-        <br><br>
-        <a href="./mist_gui.avi"><img width="50" height="50" src="../images/video_icon.png"></a>Download demonstration video by clicking on the icon.
-        <br>
+
+        <section class="framework-section">
+            <h2>Framework</h2>
+            <p>
+                Segmentation is often performed on medical images for identifying diseases in clinical evaluation. Hence it has become one of the major research areas. Conventional image segmentation techniques are unable to provide satisfactory segmentation results for medical images as they contain irregularities. They need to be pre-processed before segmentation. In order to obtain the most suitable method for medical image segmentation, we propose MIST (Medical Image Segmentation Tool), a two stage algorithm. The first stage automatically generates a binary marker image of the region of interest using mathematical morphology. This marker serves as the mask image for the second stage which uses GrabCut to yield an efficient segmented result. The obtained result can be further refined by user interaction, which can be done using the proposed Graphical User Interface (GUI). Experimental results show that the proposed method is accurate and provides satisfactory segmentation results with minimum user interaction on medical as well as natural images.
+            </p>
+            <figure>
+                <img src="./diag1a.png" alt="Framework Diagram">
+                <figcaption>Framework diagram illustrating the two stages of the MIST algorithm.</figcaption>
+            </figure>
+        </section>
+
         <hr>
-        <br>
-<h2>Results</h2>
-The medical images used in the dataset consist of images in Digital Imaging and Communication in Medicine (DICOM) format. In the dataset used for experiments, there are mainly MRI and X-Ray images of different anatomical regions. Also, natural images have been included in the dataset to check the efficiency of MIST in other domains. The MR images in the data set consist of knee images and are provided by <strong>All India Institute of Medical Sciences, Jodhpur, India</strong>. The MR images are of size 512 X 512 pixels and their intensity is measured in 16 bits. The X-Ray image dataset is a set of images of different anatomical regions and is a collection of images from the internet. The code is written in MATLAB and C++ using MEX compiler.
-    <img width="720" height=300" src=./dice.png>
-    <br><br>
-    <i>Comparison of Dice coefficient for given input images between MIST and other conventional methods. The bar marked with red color represent the best value among the results of other conventional methods and MIST.</i>
-</div>
-            </body>
+
+        <section class="screencast-section">
+             <h2>Screencast of the MIST GUI</h2>
+             <div class="video-container">
+                 <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+             </div>
+             <p class="download-link">
+                 <a href="./mist_gui.avi">
+                     <img src="../images/video_icon.png" alt="Download video icon">
+                     Download demonstration video by clicking on the icon.
+                 </a>
+             </p>
+        </section>
+
+        <hr>
+
+        <section class="results-section">
+            <h2>Results</h2>
+            <p>
+                The medical images used in the dataset consist of images in Digital Imaging and Communication in Medicine (DICOM) format. In the dataset used for experiments, there are mainly MRI and X-Ray images of different anatomical regions. Also, natural images have been included in the dataset to check the efficiency of MIST in other domains. The MR images in the data set consist of knee images and are provided by <strong>All India Institute of Medical Sciences, Jodhpur, India</strong>. The MR images are of size 512 X 512 pixels and their intensity is measured in 16 bits. The X-Ray image dataset is a set of images of different anatomical regions and is a collection of images from the internet. The code is written in MATLAB and C++ using MEX compiler.
+            </p>
+            <figure>
+                 <img src="./dice.png" alt="Dice coefficient comparison chart">
+                 <figcaption>Comparison of Dice coefficient for given input images between MIST and other conventional methods. The bar marked with red color represent the best value among the results of other conventional methods and MIST.</figcaption>
+            </figure>
+        </section>
+
+    </main>
+
+    <script src="tabcontent.js" type="text/javascript"></script> </body>
 </html>
