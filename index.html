@@ -85,6 +85,129 @@
             border-color: #7C3906;
             color: #000000;
         }
+        /* Research Publications Section Styles */
+.publication-list {
+    list-style: none;
+    padding: 0;
+}
+
+.publication-list li {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline; /* Align title and details to the baseline */
+}
+
+.publication-title {
+    font-weight: bold;
+    color: #333;
+    flex-basis: 60%; /* Adjust as needed */
+}
+
+.publication-details {
+    color: #777;
+    flex-basis: 35%; /* Adjust as needed */
+    font-size: 0.9rem;
+}
+
+.publication-list li a {
+    color: #007bff;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.publication-list li a:hover {
+    text-decoration: underline;
+}
+
+.publication-list h3 {
+    font-size: 1.75rem;
+    color: #004085;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+.publication-entry {
+    border: 1px solid #eee; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 15px; /* Inner space */
+    margin-bottom: 20px; /* Space between entries */
+    background-color: #fff; /* White background */
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.05); /* Subtle shadow */
+}
+
+.publication-title {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: #333; /* Darker color */
+}
+
+.publication-authors {
+    font-size: 0.95em;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.publication-venue,
+.publication-details {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 3px;
+}
+
+.publication-links {
+    margin-top: 10px;
+}
+
+.publication-links a {
+    margin-right: 15px; /* Space between links */
+    text-decoration: none; /* Remove underline */
+    color: #007bff; /* Link color */
+}
+
+.publication-links a:hover {
+    text-decoration: underline;
+}
+
+/* Example: Style authors' name */
+.publication-authors strong {
+    color: #000; /* Or a specific highlight color */
+}
+.publication-entry {
+    display: flex;
+    flex-direction: column; // Stack content by default
+}
+
+.publication-links {
+    margin-top: 10px; // Adjust spacing
+    align-self: flex-end; // Align links to the end (right if container is wide)
+}
+
+// Media query to change layout on larger screens
+@media (min-width: 768px) {
+    .publication-entry {
+        flex-direction: row; // Side-by-side on larger screens
+        justify-content: space-between; // Distribute space
+        align-items: center; // Vertically align
+    }
+
+    .publication-content { // Wrap title, authors, venue in another div
+        flex-grow: 1; // Let content take available space
+        margin-right: 20px;
+    }
+
+    .publication-links {
+         margin-top: 0;
+    }
+}
     </style>
 </head>
 
