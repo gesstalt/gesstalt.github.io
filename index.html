@@ -208,6 +208,74 @@
          margin-top: 0;
     }
 }
+    /* Education Section Styles */
+.education-entry {
+    border: 1px solid #eee; /* Light border, similar to publication-entry */
+    border-radius: 5px; /* Rounded corners, similar to publication-entry */
+    padding: 15px; /* Inner space, similar to publication-entry */
+    margin-bottom: 20px; /* Space between entries, similar to publication-entry */
+    background-color: #fff; /* White background, similar to publication-entry */
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.05); /* Subtle shadow, similar to publication-entry */
+    display: flex; /* Use flexbox for side-by-side layout of logo and text */
+    align-items: center; /* Vertically align items in the flex container */
+}
+
+.education-logo {
+    margin-right: 20px; /* Space between the logo and the text details */
+    flex-shrink: 0; /* Prevent the logo image container from shrinking */
+    /* Add max-width or width if you need to control logo container size beyond image size */
+}
+
+/* Style for the image within the logo container */
+.education-logo img {
+    display: block; /* Remove extra space below the image */
+    /* The style="height: 150px;" from your HTML will control the image size */
+    /* You might want to add max-width: 100%; and height: auto; for responsiveness */
+}
+
+
+.education-details-text {
+    flex-grow: 1; /* Allow the text content area to take up available space */
+    /* Add padding-left if needed, though margin-right on education-logo often suffices */
+}
+
+.education-degree {
+    font-size: 1.1em; /* Similar to publication-title */
+    font-weight: bold; /* Bold degree name */
+    margin-top: 0; /* Remove default top margin */
+    margin-bottom: 5px; /* Space below the degree name */
+    color: #333; /* Darker color, similar to publication-title */
+}
+
+.education-institution {
+    font-size: 0.95em; /* Slightly smaller than degree, similar to publication-authors */
+    color: #555; /* Slightly lighter color */
+    margin-bottom: 5px; /* Space below institution */
+}
+
+.education-specialization {
+    font-size: 0.9em; /* Smaller font size, similar to publication-venue/details */
+    color: #777; /* Lighter color */
+    margin-bottom: 0; /* No margin below the last text element */
+}
+
+/* Optional: Add a media query to stack items on smaller screens */
+@media (max-width: 768px) {
+    .education-entry {
+        flex-direction: column; // Stack items vertically on small screens
+        align-items: flex-start; // Align items to the start (left)
+    }
+
+    .education-logo {
+        margin-right: 0; // Remove right margin
+        margin-bottom: 10px; // Add bottom margin
+    }
+
+    .education-details-text {
+        width: 100%; // Allow text to take full width
+    }
+}
+
     </style>
 </head>
 
@@ -435,37 +503,34 @@
             </div>
             <!-- End of about -->
             <div class="tab-pane fade" id="qualification" role="tabpanel" aria-labelledby="qualification-tab">
-                <br>
-                <div class="row">
-                    <div class="col">
-                        <div class="well bg-light text-dark" align="center">
-                            <img class="img-thumbnail" style="height: 150px;" src="images/iitm.png" alt="IITM" />
-                            <div class="caption">
-                                <h5>Doctor of Philosophy</h5>
-                                <p class="card-text">Indian Institute of Technology Madras, India</p>
-                                <p class="card-text">Specialization: Content Based Video Retrieval</p>
-                            </div>
-                        </div>
+                <div class="education-entry">
+                    <div class="education-logo">
+                        <img class="img-thumbnail" style="height: 150px;" src="images/iitm.png" alt="IITM" />
                     </div>
-                    <div class="col">
-                        <div class="well bg-light text-dark" align="center">
-                            <img class="img-thumbnail" style="height: 150px;" src="images/ju-logo.png" alt="JU" />
-                            <div class="caption">
-                                <h5>Master of Technology</h5>
-                                <p class="card-text">Jadavpur University, India</p>
-                                <p class="card-text">Specialization: Information Technology (Courseware Engineering)</p>
-                            </div>
-                        </div>
+                    <div class="education-details-text">
+                        <h4 class="education-degree">Doctor of Philosophy</h4>
+                        <p class="education-institution">Indian Institute of Technology Madras, India</p>
+                        <p class="education-specialization">Specialization: Content Based Video Retrieval</p>
                     </div>
-                    <div class="col">
-                        <div class="well bg-light text-dark" align="center">
-                            <img class="img-thumbnail" style="height: 150px;" src="images/bu-logo.jpeg" alt="UITB" />
-                            <div class="caption">
-                                <h5>Bachelor of Technology</h5>
-                                <p class="card-text">University Institute of Technology Burdwan, India</p>
-                                <p class="card-text">Specialization: Information Technology</p>
-                            </div>
-                        </div>
+                </div>
+                <div class="education-entry">
+                    <div class="education-logo">
+                        <img class="img-thumbnail" style="height: 150px;" src="images/ju-logo.png" alt="JU" />
+                    </div>
+                    <div class="education-details-text">
+                        <h4 class="education-degree">Master of Technology</h4>
+                        <p class="education-institution">Jadavpur University, India</p>
+                        <p class="education-specialization">Specialization: Information Technology (Courseware Engineering)</p>
+                    </div>
+                </div>
+                <div class="education-entry">
+                    <div class="education-logo">
+                        <img class="img-thumbnail" style="height: 150px;" src="images/bu-logo.jpeg" alt="UITB" />
+                    </div>
+                    <div class="education-details-text">
+                        <h4 class="education-degree">Bachelor of Technology</h4>
+                        <p class="education-institution">University Institute of Technology Burdwan, India</p>
+                        <p class="education-specialization">Specialization: Information Technology</p>
                     </div>
                 </div>
             </div>
