@@ -3,20 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ACM Summer School on AR-VR at FLAME</title>
+    <title>Canva Embed</title>
+    <style>
+        .canva-embed-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-top: 562.2255%; /* Adjust based on your Canva design's aspect ratio if needed */
+            padding-bottom: 0;
+            box-shadow: 0 2px 8px 0 rgba(63, 69, 81, 0.16);
+            margin-top: 1.6em;
+            margin-bottom: 0.9em;
+            overflow: hidden;
+            border-radius: 8px;
+            will-change: transform;
+        }
+
+        .canva-iframe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            border: none;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
 
-   <div style="position: relative; width: 100%; height: 0; padding-top: 562.2255%;
- padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
- border-radius: 8px; will-change: transform;">
-  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
-    src="https://www.canva.com/design/DAGnBCjiAgA/4dQURCU3WS3VvBdyg2DuUQ/watch?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
-  </iframe>
-</div>
-<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGnBCjiAgA&#x2F;4dQURCU3WS3VvBdyg2DuUQ&#x2F;watch?utm_content=DAGnBCjiAgA&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">
-    Immersive Realities: Demystifying AR, VR, and HCI
-</a> 
-    by Chiranjoy Chattopadhyay
+    <div id="canva-embed-container" class="canva-embed-container">
+        <iframe id="canva-iframe" loading="lazy" class="canva-iframe" allowfullscreen="allowfullscreen" allow="fullscreen">
+        </iframe>
+    </div>
+    <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGnBCjiAgA&#x2F;4dQURCU3WS3VvBdyg2DuUQ&#x2F;watch?utm_content=DAGnBCjiAgA&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Immersive Realities: Demystifying AR, VR, and HCI</a> by Chiranjoy Chattopadhyay
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const iframe = document.getElementById('canva-iframe');
+            iframe.src = "https://www.canva.com/design/DAGnBCjiAgA/4dQURCU3WS3VvBdyg2DuUQ/watch?embed";
+        });
+    </script>
+
 </body>
 </html>
