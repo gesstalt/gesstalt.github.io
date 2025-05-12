@@ -4,6 +4,152 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ACM Women Only Summer School at FLAME University</title>
+    <!-- Bootstrap & FontAwesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+      background: #151a23;
+      color: #eaf1fb;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      min-height: 100vh;
+    }
+    header {
+      background: linear-gradient(90deg, #0f2027 0%, #2c5364 100%);
+      padding: 2rem 0 1rem 0;
+      text-align: center;
+      color: #fff;
+      letter-spacing: 1px;
+      box-shadow: 0 2px 16px rgba(44,83,100,0.18);
+    }
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #5fd3f3;
+      margin-bottom: 2rem;
+      margin-top: 2rem;
+      text-align: left;
+      letter-spacing: 0.5px;
+    }
+    .carousel-inner img {
+      border-radius: 18px;
+      max-height: 340px;
+      object-fit: cover;
+      background: #232b38;
+    }
+    .card {
+      background: #232b38;
+      border: none;
+      border-radius: 16px;
+      box-shadow: 0 2px 14px rgba(44,83,100,0.22);
+      margin-bottom: 2rem;
+      transition: transform 0.18s, box-shadow 0.18s;
+      color: #eaf1fb;
+    }
+    .card:hover {
+      transform: translateY(-4px) scale(1.012);
+      box-shadow: 0 8px 28px rgba(95,211,243,0.18);
+    }
+    .card-title {
+      color: #5fd3f3;
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .card-text {
+      font-size: 0.97rem;
+    }
+    .img-card-logo {
+      max-width: 80px;
+      max-height: 80px;
+      border-radius: 10px;
+      margin-right: 1.2rem;
+      background: #151a23;
+      object-fit: cover;
+    }
+    .btn-primary, .btn-info {
+      background: linear-gradient(90deg, #5fd3f3 0%, #1e90ff 100%);
+      border: none;
+      color: #fff;
+      font-weight: 500;
+      box-shadow: 0 2px 8px rgba(95,211,243,0.10);
+      transition: background 0.18s;
+    }
+    .btn-primary:hover, .btn-info:hover {
+      background: linear-gradient(90deg, #1e90ff 0%, #5fd3f3 100%);
+      color: #fff;
+    }
+    .img-thumbnail {
+      background: #232b38;
+      border: 2px solid #5fd3f3;
+      border-radius: 12px;
+      object-fit: cover;
+      width: 100%;
+      max-width: 120px;
+      max-height: 120px;
+    }
+    .project-list .row {
+      margin-bottom: 2.2rem;
+    }
+    .project-list ul {
+      padding-left: 1.2rem;
+      margin-bottom: 0.4rem;
+    }
+    .project-list li {
+      margin-bottom: 0.5rem;
+    }
+    #scrollToTopBtn {
+      position: fixed;
+      bottom: 22px;
+      right: 22px;
+      z-index: 99;
+      border: none;
+      outline: none;
+      background: linear-gradient(90deg, #5fd3f3 0%, #1e90ff 100%);
+      color: white;
+      cursor: pointer;
+      padding: 14px 18px;
+      border-radius: 50%;
+      font-size: 22px;
+      display: none;
+      box-shadow: 0 2px 8px rgba(95,211,243,0.16);
+      transition: background 0.18s;
+    }
+    #scrollToTopBtn:hover {
+      background: linear-gradient(90deg, #1e90ff 0%, #5fd3f3 100%);
+    }
+    .home-link {
+      color: #5fd3f3;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: color 0.18s;
+    }
+    .home-link:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+    @media (max-width: 576px) {
+      header {
+        padding: 1rem 0 0.5rem 0;
+        font-size: 1.1rem;
+      }
+      .carousel-inner img {
+        max-height: 180px;
+      }
+      .img-card-logo,
+      .img-thumbnail {
+        max-width: 60px;
+        max-height: 60px;
+      }
+      .section-title {
+        font-size: 1.1rem;
+        text-align: center;
+      }
+      .card-title {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
     <div class="d-flex justify-content-end p-2">
