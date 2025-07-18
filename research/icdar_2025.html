@@ -156,6 +156,54 @@
         tr:nth-child(even) {
             background-color: #f2f2f2;
         }
+
+        .algorithm-box {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+    font-family: 'Courier New', monospace;
+}
+
+.algorithm-box h3 {
+    color: var(--flameb);
+    border-bottom: 2px solid var(--flamey);
+    padding-bottom: 8px;
+    margin-top: 0;
+}
+
+.algorithm-steps {
+    counter-reset: step;
+    padding-left: 0;
+}
+
+.algorithm-steps > li {
+    list-style: none;
+    position: relative;
+    padding-left: 2em;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.algorithm-steps > li:before {
+    counter-increment: step;
+    content: counter(step) ".";
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    color: var(--flameb);
+}
+
+.algorithm-steps ul {
+    padding-left: 1.5em;
+    margin-top: 8px;
+}
+
+.algorithm-steps ul li {
+    list-style-type: disc;
+    margin-bottom: 5px;
+}
         
         @media (max-width: 768px) {
             .results-grid {
@@ -179,10 +227,10 @@
 <body>
     <header>
         <div class="logos">
-            <img src="https://via.placeholder.com/150x80?text=FLAME+Univ" alt="FLAME University">
-            <img src="https://via.placeholder.com/150x80?text=IITJ" alt="IIT Jodhpur">
-            <img src="https://via.placeholder.com/150x80?text=RKM" alt="RKM">
-            <img src="https://via.placeholder.com/150x80?text=Monash" alt="Monash University">
+            <img src="flame_logo.png" alt="FLAME University">
+            <img src="iitj_logo.png" alt="IIT Jodhpur">
+            <img src="rkm_logo.png" alt="RKM">
+            <img src="monash_logo.png" alt="Monash University">
         </div>
         <h1>From Notes to Keys</h1>
         <h2>A VR Learning Environment for Sheet Music Interpretation</h2>
@@ -202,8 +250,6 @@
         <p>International Conference on Document Analysis and Recognition. September 16-21, 2025. Wuhan, Hubei, China.</p>
     </header>
     
-    <img src="https://via.placeholder.com/800x1200?text=Poster+Image" alt="Research Poster" class="poster-image">
-    
     <div class="container">
         <div class="section">
             <div class="section-title">Summary</div>
@@ -222,15 +268,54 @@
         
         <div class="section">
             <div class="section-title">OMR Architecture</div>
-            <img src="https://via.placeholder.com/400x300?text=OMR+Architecture" alt="OMR Architecture" style="width:100%; margin-bottom:15px;">
+            <img src="omr_architecture.pnge" style="width:100%; margin-bottom:15px;">
             <p>Unified framework for music sheet segmentation: pre-processing (rotation correction, enhancement), U-Net-based staff and symbol segmentation.</p>
         </div>
         
         <div class="section">
-            <div class="section-title">System Schematic</div>
-            <img src="https://via.placeholder.com/400x300?text=System+Schematic" alt="System Schematic" style="width:100%; margin-bottom:15px;">
-            <p>Schematic of the system: OMR converts sheet music to MusicXML, which drives key highlighting in a Unity VR piano for real-time, interactive learning with Meta Quest 3.</p>
-        </div>
+    <div class="section-title">System Schematic</div>
+    <img src="vr_image.png" alt="System Schematic" style="width:100%; margin-bottom:15px;">
+    <p>Schematic of the system: OMR converts sheet music to MusicXML, which drives key highlighting in a Unity VR piano for real-time, interactive learning with Meta Quest 3.</p>
+    
+    <div class="algorithm-box">
+        <h3>MusicXML Generation Algorithm</h3>
+        <ol class="algorithm-steps">
+            <li><strong>Input:</strong> Musical symbols 𝒮 = {sᵢ = (tᵢ, xᵢ, τᵢ, dᵢ, 𝒜ᵢ)}</li>
+            <li><strong>Phase I: Symbol Processing</strong>
+                <ul>
+                    <li>Sort 𝒮 by track tᵢ and position xᵢ</li>
+                    <li>Partition into tracks 𝒯ₖ for k ∈ {1..m}</li>
+                </ul>
+            </li>
+            <li><strong>Phase II: Temporal Quantization</strong>
+                <ul>
+                    <li>Apply quantization 𝒬 to positions xᵢ</li>
+                    <li>Set time signature σ = (n, 2ᵖ)</li>
+                    <li>Compute measure duration μ = (n·4)/2ᵖ</li>
+                </ul>
+            </li>
+            <li><strong>Phase III: Alignment</strong>
+                <ul>
+                    <li>Build alignment graph 𝒢_B between positions and symbols</li>
+                    <li>Compute maximum matching ℳ</li>
+                </ul>
+            </li>
+            <li><strong>Phase IV: Measure Filling</strong>
+                <ul>
+                    <li>For each measure l and track k:</li>
+                    <li>Add rests where ∑dᵢ < μ</li>
+                </ul>
+            </li>
+            <li><strong>Phase V: XML Generation</strong>
+                <ul>
+                    <li>Transform symbols to XML elements 𝒯_XML</li>
+                    <li>Structure document 𝒳 = (𝒳_head, 𝒳_part)</li>
+                </ul>
+            </li>
+            <li><strong>Return</strong> MusicXML 𝒳</li>
+        </ol>
+    </div>
+</div>
         
         <div class="section">
             <div class="section-title">Contributions</div>
