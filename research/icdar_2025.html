@@ -306,6 +306,20 @@
                 margin: 0 10px;
             }
         }
+        .video-row {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: black; /* Fallback if video fails */
+}
+
+.video-row video {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover; /* Makes the video fill the container */
+}
+
     </style>
 </head>
 <body>
@@ -339,7 +353,14 @@
             <div class="footer-border"></div>
         </div>
 
-    
+    <!-- After your <header> and before your summary section -->
+<div class="video-row">
+    <video autoplay loop muted playsinline>
+        <source src="your-video-file.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
     <div class="container">
         <div class="section">
             <div class="section-title">Summary</div>
