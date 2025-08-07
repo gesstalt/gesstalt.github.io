@@ -486,15 +486,15 @@
         text-align: center;
     }
 }
-            .curriculum-change-banner {
-    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+.curriculum-change-banner-cs {
+    background: linear-gradient(135deg, #ea580c 0%, #f97316 100%);
     color: white;
     padding: 2rem 0;
-    border-bottom: 3px solid #1e3a8a;
+    border-bottom: 3px solid #c2410c;
     position: relative;
 }
 
-.curriculum-change-banner::before {
+.curriculum-change-banner-cs::before {
     content: '';
     position: absolute;
     top: 0;
@@ -511,13 +511,13 @@
     100% { opacity: 0.7; }
 }
 
-.change-content {
+.curriculum-change-banner-cs .change-content {
     display: flex;
     align-items: center;
     gap: 1.5rem;
 }
 
-.change-icon {
+.curriculum-change-banner-cs .change-icon {
     font-size: 3rem;
     color: #fbbf24;
     animation: rotate 3s linear infinite;
@@ -528,20 +528,20 @@
     to { transform: rotate(360deg); }
 }
 
-.change-text h3 {
+.curriculum-change-banner-cs .change-text h3 {
     font-size: 1.4rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
     color: #fbbf24;
 }
 
-.change-text p {
+.curriculum-change-banner-cs .change-text p {
     font-size: 1.1rem;
     line-height: 1.6;
     margin: 0;
 }
 
-.highlight-warning {
+.curriculum-change-banner-cs .highlight-warning {
     background: rgba(251, 191, 36, 0.2);
     padding: 0.2rem 0.4rem;
     border-radius: 4px;
@@ -549,23 +549,25 @@
 }
 
 @media (max-width: 768px) {
-    .change-content {
+    .curriculum-change-banner-cs .change-content {
         flex-direction: column;
         text-align: center;
         gap: 1rem;
     }
     
-    .change-icon {
+    .curriculum-change-banner-cs .change-icon {
         font-size: 2rem;
     }
     
-    .change-text h3 {
+    .curriculum-change-banner-cs .change-text h3 {
         font-size: 1.2rem;
     }
     
-    .change-text p {
+    .curriculum-change-banner-cs .change-text p {
         font-size: 1rem;
     }
+}
+
 
 }
 
@@ -576,13 +578,13 @@
         <div class="container">
             <div class="header-content">
                 <h1>Is Computer Science Right for You?</h1>
-                <p>Understanding what CS really involves at our university</p>
+                <p>Understanding what CS really involves at FLAME university</p>
             </div>
         </div>
     </header>
 
-    <!-- Add this section right after the header and before the warning-banner -->
-<div class="curriculum-change-banner">
+<!-- CS-specific curriculum change banner with orange gradient -->
+<div class="curriculum-change-banner-cs">
     <div class="container">
         <div class="change-content">
             <div class="change-icon">
@@ -595,6 +597,7 @@
         </div>
     </div>
 </div>
+
 
 
     <div class="warning-banner">
