@@ -572,6 +572,91 @@
             font-size: 1.1rem;
             line-height: 1.7;
         }
+        .curriculum-change-banner-dse {
+    background: linear-gradient(135deg, #a7f3d0 0%, #d1fae5 100%);
+    color: #047857;
+    padding: 2rem 0;
+    border-bottom: 3px solid #059669;
+    position: relative;
+    border: 1px solid #6ee7b7;
+}
+
+.curriculum-change-banner-dse::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #10b981 0%, #059669 50%, #10b981 100%);
+    animation: shimmer 2s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+    0% { opacity: 0.7; }
+    50% { opacity: 1; }
+    100% { opacity: 0.7; }
+}
+
+.curriculum-change-banner-dse .change-content {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.curriculum-change-banner-dse .change-icon {
+    font-size: 3rem;
+    color: #047857;
+    animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.curriculum-change-banner-dse .change-text h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #047857;
+}
+
+.curriculum-change-banner-dse .change-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0;
+    color: #065f46;
+}
+
+.curriculum-change-banner-dse .highlight-warning {
+    background: rgba(4, 120, 87, 0.15);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-weight: 600;
+    color: #047857;
+}
+
+@media (max-width: 768px) {
+    .curriculum-change-banner-dse .change-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .curriculum-change-banner-dse .change-icon {
+        font-size: 2rem;
+    }
+    
+    .curriculum-change-banner-dse .change-text h3 {
+        font-size: 1.2rem;
+    }
+    
+    .curriculum-change-banner-dse .change-text p {
+        font-size: 1rem;
+    }
+}
+
     </style>
 </head>
 <body>
@@ -583,6 +668,22 @@
             </div>
         </div>
     </header>
+
+    <!-- DS&E-specific curriculum change banner with pastel background -->
+<div class="curriculum-change-banner-dse">
+    <div class="container">
+        <div class="change-content">
+            <div class="change-icon">
+                <i class="fas fa-sync-alt"></i>
+            </div>
+            <div class="change-text">
+                <h3>IMPORTANT: New Curriculum in Effect</h3>
+                <p><strong>Starting this academic year (2025-26), the Computing and Data Sciences curriculum has been completely updated.</strong> Course selections, prerequisites, and program structures described below reflect the NEW curriculum. <span class="highlight-warning">Advice from seniors following the old curriculum may not apply—follow the guidance on this page instead.</span></p>
+            </div>
+        </div>
+    </div>
+</div>
+
 
     <div class="warning-banner">
         <div class="container">
