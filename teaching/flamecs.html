@@ -485,6 +485,88 @@
         gap: 0.5rem;
         text-align: center;
     }
+    .curriculum-change-banner {
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+    color: white;
+    padding: 2rem 0;
+    border-bottom: 3px solid #1e3a8a;
+    position: relative;
+}
+
+.curriculum-change-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #fbbf24 0%, #f59e0b 50%, #fbbf24 100%);
+    animation: shimmer 2s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+    0% { opacity: 0.7; }
+    50% { opacity: 1; }
+    100% { opacity: 0.7; }
+}
+
+.change-content {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.change-icon {
+    font-size: 3rem;
+    color: #fbbf24;
+    animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.change-text h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #fbbf24;
+}
+
+.change-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.highlight-warning {
+    background: rgba(251, 191, 36, 0.2);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .change-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .change-icon {
+        font-size: 2rem;
+    }
+    
+    .change-text h3 {
+        font-size: 1.2rem;
+    }
+    
+    .change-text p {
+        font-size: 1rem;
+    }
+}
+
 }
 
     </style>
@@ -498,6 +580,22 @@
             </div>
         </div>
     </header>
+
+    <!-- Add this section right after the header and before the warning-banner -->
+<div class="curriculum-change-banner">
+    <div class="container">
+        <div class="change-content">
+            <div class="change-icon">
+                <i class="fas fa-sync-alt"></i>
+            </div>
+            <div class="change-text">
+                <h3>IMPORTANT: New Curriculum in Effect</h3>
+                <p><strong>Starting this academic year (2025-26), the Computing and Data Sciences curriculum has been completely updated.</strong> Course selections, prerequisites, and program structures described below reflect the NEW curriculum. <span class="highlight-warning">Advice from seniors following the old curriculum may not apply—follow the guidance on this page instead.</span></p>
+            </div>
+        </div>
+    </div>
+</div>
+
 
     <div class="warning-banner">
         <div class="container">
