@@ -1,1 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Is Computer Science and Design Right for You? | FLAME University CS&D Program</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8fafc;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #ea580c 0%, #f97316 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .header-content h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .header-content p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+
+        .warning-banner {
+            background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
+            color: white;
+            padding: 1.5rem 0;
+            text-align: center;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        .warning-banner i {
+            margin-right: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .misconception-banner {
+            background: linear-gradient(135deg, #b91c1c 0%, #dc2626 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.3rem;
+            border-bottom: 4px solid #991b1b;
+        }
+
+        .misconception-banner i {
+            margin-right: 0.75rem;
+            font-size: 1.5rem;
+            color: #fbbf24;
+        }
+
+        main {
+            padding: 3rem 0;
+        }
+
+        .section {
+            background: white;
+            margin-bottom: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .section-header {
+            background: #f1f5f9;
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .section-header h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #ea580c;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-header h2 i {
+            margin-right: 0.75rem;
+            font-size: 1.3rem;
+        }
+
+        .section-content {
+            padding: 2rem;
+        }
+
+        .pathway-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .pathway-card {
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #f97316;
+        }
+
+        .pathway-card h4 {
+            color: #ea580c;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .checklist {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .checklist li {
+            padding: 0.75rem 0;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .checklist li i {
+            color: #10b981;
+            margin-right: 0.75rem;
+            margin-top: 0.1rem;
+        }
+
+        .math-requirement {
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .math-requirement h4 {
+            color: #dc2626;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .math-requirement h4 i {
+            margin-right: 0.5rem;
+        }
+
+        .key-dimensions {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .dimension-card {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: transform 0.2s ease;
+        }
+
+        .dimension-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px -8px rgba(0, 0, 0, 0.15);
+        }
+
+        .dimension-card h4 {
+            color: #ea580c;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .dimension-card .topics {
+            color: #6b7280;
+            font-size: 0.9rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            color: white;
+            text-align: center;
+            padding: 3rem 2rem;
+            margin-top: 2rem;
+        }
+
+        .cta-section h3 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary {
+            background: white;
+            color: #6366f1;
+        }
+
+        .btn-primary:hover {
+            background: #f9fafb;
+            transform: translateY(-1px);
+        }
+
+        .btn i {
+            margin-right: 0.5rem;
+        }
+
+        footer {
+            background: #1f2937;
+            color: #9ca3af;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .header-content h1 {
+                font-size: 2rem;
+            }
+            
+            .section-content {
+                padding: 1.5rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .misconception-banner {
+                font-size: 1.1rem;
+            }
+        }
+
+        .highlight {
+            background: #fef3c7;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        .accordion {
+            margin-top: 1rem;
+        }
+
+        .accordion-item {
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            margin-bottom: 0.5rem;
+        }
+
+        .accordion-header {
+            background: #f9fafb;
+            padding: 1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: between;
+            align-items: center;
+            font-weight: 500;
+            color: #374151;
+        }
+
+        .accordion-header:hover {
+            background: #f3f4f6;
+        }
+
+        .accordion-content {
+            padding: 1rem;
+            display: none;
+        }
+
+        .accordion-content.active {
+            display: block;
+        }
+
+        .accordion-header i {
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-header.active i {
+            transform: rotate(180deg);
+        }
+
+        .core-requirement-dramatic {
+            background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+            color: white;
+            border-radius: 12px;
+            margin: 2rem 0;
+            box-shadow: 0 8px 25px -8px rgba(220, 38, 38, 0.4);
+            overflow: hidden;
+            border: 3px solid #991b1b;
+        }
+
+        .core-warning-header {
+            background: #991b1b;
+            padding: 1rem;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .core-warning-header h3 {
+            margin: 0;
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .core-warning-header i {
+            font-size: 1.5rem;
+            color: #fbbf24;
+            animation: pulse 2s infinite;
+        }
+
+        .core-content {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .core-content h4 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .core-message {
+            font-size: 1.2rem;
+            font-weight: 700;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            border: 2px dashed rgba(255, 255, 255, 0.5);
+            letter-spacing: 0.5px;
+        }
+
+        .core-availability {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .term-highlight {
+            background: #fbbf24;
+            color: #1f2937;
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            font-weight: 600;
+            margin: 0 0.2rem;
+        }
+
+        .core-warning-box {
+            background: rgba(0, 0, 0, 0.2);
+            border: 2px solid #fbbf24;
+            border-radius: 8px;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .core-warning-box i {
+            font-size: 1.3rem;
+            color: #fbbf24;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.1);
+                opacity: 0.7;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .term-block {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .term-block h4 {
+            color: #ea580c;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            border-bottom: 2px solid #f97316;
+            padding-bottom: 0.5rem;
+        }
+
+        .course-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .course-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #e5e7eb;
+            line-height: 1.4;
+        }
+
+        .course-list li:last-child {
+            border-bottom: none;
+        }
+
+        .core-course {
+            background: #fef3c7;
+            padding: 0.75rem;
+            border-radius: 4px;
+            margin: 0.25rem 0;
+        }
+
+        .core-badge {
+            background: #dc2626;
+            color: white;
+            padding: 0.2rem 0.5rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .pathway-note {
+            background: #f0f9ff;
+            border: 1px solid #bae6fd;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .pathway-note h4 {
+            color: #0c4a6e;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .pathway-note h4 i {
+            margin-right: 0.5rem;
+            color: #fbbf24;
+        }
+
+        .pathway-note ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+        }
+
+        .pathway-note li {
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+        }
+
+        .focus-split {
+            display: grid;
+            grid-template-columns: 8fr 2fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .focus-split {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+
+        .focus-card {
+            background: #f8fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .focus-card.primary {
+            border-color: #f97316;
+            background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+        }
+
+        .focus-card.secondary {
+            border-color: #8b5cf6;
+            background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);
+        }
+
+        .focus-percentage {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .focus-card.primary .focus-percentage {
+            color: #ea580c;
+        }
+
+        .focus-card.secondary .focus-percentage {
+            color: #7c3aed;
+        }
+
+        .redirection-box {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .redirection-box h4 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .redirection-box p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1>Is Computer Science and Design Right for You?</h1>
+                <p>This interdisciplinary program is Computer Science first, Design applications second</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="warning-banner">
+        <div class="container">
+            <i class="fas fa-exclamation-triangle"></i>
+            <strong>Reality Check:</strong> This is NOT a design program with some programming. Read everything below before making your decision.
+        </div>
+    </div>
+
+    <div class="misconception-banner">
+        <div class="container">
+            <i class="fas fa-times-circle"></i>
+            <strong>CRITICAL MISCONCEPTION:</strong> This is NOT a Design program with CS tools. This is HARDCORE COMPUTER SCIENCE with design applications. If you want Design-focused studies, look for traditional Design programs.
+        </div>
+    </div>
+
+    <main>
+        <div class="container">
+            <!-- Section 1: What CS&D Actually Involves -->
+            <section class="section">
+                <div class="section-header">
+                    <h2><i class="fas fa-laptop-code"></i> What Computer Science and Design Actually Involves Here</h2>
+                </div>
+                <div class="section-content">
+                    <p><strong>Forget traditional design programs.</strong> This program combines the complete Computer Science curriculum with design thinking and applications. You'll take ALL the same CS courses as regular CS students, with identical rigor and expectations.</p>
+                    
+                    <div class="key-dimensions">
+                        <div class="dimension-card">
+                            <h4><i class="fas fa-code"></i> Complete CS Core</h4>
+                            <p class="topics">Algorithms, data structures, programming, software engineering, computer systems</p>
+                            <p>Master all fundamental CS concepts with the same depth and rigor as traditional CS majors.</p>
+                        </div>
+                        
+                        <div class="dimension-card">
+                            <h4><i class="fas fa-calculator"></i> Mathematical Foundations</h4>
+                            <p class="topics">Discrete mathematics, calculus, statistics, linear algebra, mathematical logic</p>
+                            <p>Develop the same mathematical sophistication required for advanced computer science work.</p>
+                        </div>
+                        
+                        <div class="dimension-card">
+                            <h4><i class="fas fa-cogs"></i> Advanced CS Theory</h4>
+                            <p class="topics">Algorithm analysis, complexity theory, machine learning, artificial intelligence</p>
+                            <p>Study theoretical computer science at the same advanced level as regular CS students.</p>
+                        </div>
+                        
+                        <div class="dimension-card">
+                            <h4><i class="fas fa-palette"></i> Design Applications</h4>
+                            <p class="topics">Human-computer interaction, user experience, design thinking, visual computing</p>
+                            <p>Apply CS knowledge to design problems, using computational methods to create user-centered solutions.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 2: Program Focus -->
+            <section class="section">
+                <div class="section-header">
+                    <h2><i class="fas fa-crosshairs"></i> Program Focus: Computer Science First, Design Applications Second</h2>
+                </div>
+                <div class="section-content">
+                    <p>This is a <strong>single interdisciplinary program</strong> with no major/minor options. The curriculum emphasis is:</p>
+                    
+                    <div class="focus-split">
+                        <div class="focus-card primary">
+                            <div class="focus-percentage">80%</div>
+                            <h4><i class="fas fa-laptop-code"></i> Computer Science Core</h4>
+                            <p class="topics">ALL CS subjects: algorithms, data structures, systems, theory, mathematics</p>
+                            <p><strong>Primary Focus:</strong> You'll take the complete CS curriculum with identical rigor and expectations as traditional CS students.</p>
+                        </div>
+                        
+                        <div class="focus-card secondary">
+                            <div class="focus-percentage">20%</div>
+                            <h4><i class="fas fa-palette"></i> Design Applications</h4>
+                            <p class="topics">HCI, UX design, visual computing, design thinking</p>
+                            <p><strong>Application Domain:</strong> Design serves as the context for applying your CS expertise.</p>
+                        </div>
+                    </div>
+
+                    <div class="redirection-box">
+                        <h4><i class="fas fa-route"></i> Wrong Program? Consider This Instead</h4>
+                        <p><strong>If your primary interest is Design</strong> and you want to learn some CS tools as supporting skills, you should look for traditional <strong>Design programs</strong> (Graphic Design, Industrial Design, etc.) with some technology components.</p>
+                        <p><strong>This program puts Computer Science first</strong> with Design as the application area.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 3: Math Requirements -->
+            <section class="section">
+                <div class="section-header">
+                    <h2><i class="fas fa-exclamation-circle"></i> Prerequisite Alert: Mathematics Foundation</h2>
+                </div>
+                <div class="section-content">
+                    <div class="math-requirement">
+                        <h4><i class="fas fa-times-circle"></i> Grade 12 Math = Absolutely Mandatory</h4>
+                        <p>Computer Science requires strong mathematical foundations. You'll be taking the same rigorous math courses as traditional CS students—no exceptions.</p>
+                    </div>
+
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <div class="accordion-header" onclick="toggleAccordion(this)">
+                                <span>Required: Strong Grade 12 Mathematics Background</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="accordion-content">
+                                <p>You need solid performance in Grade 12 calculus, algebra, and trigonometry. CS algorithms require mathematical analysis, discrete math needs logical reasoning, and advanced CS topics need calculus and statistics.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <div class="accordion-header" onclick="toggleAccordion(this)">
+                                <span>Same Standards as Traditional CS Students</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="accordion-content">
+                                <p>You'll take identical CS courses alongside traditional CS students. There are no "easier" or "design-focused" versions of algorithms, data structures, or systems courses. The mathematical rigor and programming demands are exactly the same.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 4: First-Year Pathways -->
+            <section class="section">
+                <div class="section-header">
+                    <h2><i class="fas fa-route"></i> First-Year Course Pathways</h2>
+                </div>
+                <div class="section-content">
+                    <p>Before selecting any other courses, understand this critical requirement:</p>
+
+                    <div class="core-requirement-dramatic">
+                        <div class="core-warning-header">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <h3>MANDATORY CORE REQUIREMENT</h3>
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <div class="core-content">
+                            <h4>CSIT104: Introduction to Computer Science</h4>
+                            <p class="core-message"><strong>WITHOUT THIS COURSE, YOU CANNOT TAKE ANY SECOND-YEAR CS&D COURSES</strong></p>
+                            <p class="core-availability">Available in <span class="term-highlight">Term 2</span> and <span class="term-highlight">Term 4</span> - Choose one offering</p>
+                            <div class="core-warning-box">
+                                <i class="fas fa-ban"></i>
+                                <span>Missing CSIT104 = No progression to CS&D Program</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p><strong>After securing your spot in CSIT104</strong>, choose 3 additional courses from the available offerings by term:</p>
+                    
+                    <div class="pathway-grid">
+                        <div class="term-block">
+                            <h4>Term 1 Courses</h4>
+                            <ul class="course-list">
+                                <li><strong>CSIT101:</strong> Introduction to Python</li>
+                                <li><strong>MATH102:</strong> Precalculus</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="term-block">
+                            <h4>Term 2 Courses</h4>
+                            <ul class="course-list">
+                                <li class="core-course"><strong>CSIT104:</strong> Introduction to Computer Science <span class="core-badge">(Core)</span></li>
+                                <li><strong>CSIT111:</strong> Python Programming for Computing and Data Sciences</li>
+                                <li><strong>CSIT122:</strong> Introduction to Internet of Things</li>
+                                <li><strong>MATH101:</strong> Introduction to Quantitative Reasoning</li>
+                                <li><strong>MATH102:</strong> Precalculus</li>
+                                <li><strong>MATH151:</strong> Introductory Calculus</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="term-block">
+                            <h4>Term 3 Courses</h4>
+                            <ul class="course-list">
+                                <li><strong>CSIT101:</strong> Introduction to Python</li>
+                                <li><strong>CSIT121:</strong> Introduction to Computational Modeling</li>
+                                <li><strong>MATH101:</strong> Introduction to Quantitative Reasoning</li>
+                                <li><strong>MATH103:</strong> Elements of Probability</li>
+                                <li><strong>MATH155:</strong> Introduction to Mathematical Logic and Proofs</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="term-block">
+                            <h4>Term 4 Courses</h4>
+                            <ul class="course-list">
+                                <li><strong>CSIT101:</strong> Introduction to Python</li>
+                                <li class="core-course"><strong>CSIT104:</strong> Introduction to Computer Science <span class="core-badge">(Core)</span></li>
+                                <li><strong>CSIT111:</strong> Python Programming for Computing and Data Sciences</li>
+                                <li><strong>CSIT122:</strong> Introduction to Internet of Things</li>
+                                <li><strong>MATH151:</strong> Introductory Calculus</li>
+                                <li><strong>MATH155:</strong> Introduction to Mathematical Logic and Proofs</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="pathway-note">
+                        <h4><i class="fas fa-lightbulb"></i> Strategic Course Selection Tips for CS&D</h4>
+                        <ul>
+                            <li><strong>CS Foundation:</strong> CSIT104 is essential—it's the gateway to all advanced CS coursework in your program</li>
+                            <li><strong>Programming Skills:</strong> CSIT101 (Introduction to Python) prepares you for more advanced programming courses</li>
+                            <li><strong>Mathematical Preparation:</strong> MATH151 (Introductory Calculus) is crucial for algorithm analysis and advanced CS theory</li>
+                            <li><strong>Logical Thinking:</strong> MATH155 (Mathematical Logic and Proofs) builds the reasoning skills needed for CS theory</li>
+                            <li><strong>Computational Applications:</strong> CSIT121 (Computational Modeling) shows how CS applies to design and visualization</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="math-requirement">
+                        <h4><i class="fas fa-info-circle"></i> Remember: This is Computer Science, Not Traditional Design</h4>
+                        <p>Your coursework will emphasize algorithms, programming, mathematical analysis, and systems thinking over traditional design methods. Expect the same level of technical rigor as traditional Computer Science programs.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 5: Self-Assessment -->
+            <section class="section">
+                <div class="section-header">
+                    <h2><i class="fas fa-clipboard-check"></i> Self-Assessment Checklist</h2>
+                </div>
+                <div class="section-content">
+                    <p>Answer <strong>yes</strong> to <em>every</em> question before declaring Computer Science and Design:</p>
+                    
+                    <ul class="checklist">
+                        <li><i class="fas fa-check-circle"></i> Did I excel in Grade 12 mathematics, including calculus and algebra?</li>
+                        <li><i class="fas fa-check-circle"></i> Am I excited about programming and solving complex computational problems?</li>
+                        <li><i class="fas fa-check-circle"></i> Do I want to learn the complete Computer Science curriculum, not just design tools?</li>
+                        <li><i class="fas fa-check-circle"></i> Am I comfortable with the same mathematical and programming rigor as traditional CS students?</li>
+                        <li><i class="fas fa-check-circle"></i> Am I more interested in <strong>how technology works</strong> than just <strong>how it looks</strong>?</li>
+                        <li><i class="fas fa-check-circle"></i> Do I want to create innovative user experiences through deep technical understanding?</li>
+                        <li><i class="fas fa-check-circle"></i> Can I handle algorithm analysis, data structures, and systems programming alongside design coursework?</li>
+                    </ul> 
+
+                    <div class="math-requirement">
+                        <h4><i class="fas fa-info-circle"></i> If you answered "no" to any item</h4>
+                        <p>Consider traditional Design programs, Digital Media, or other fields. This CS&D program requires exceptional computational and mathematical readiness—there are no shortcuts to avoid the core CS curriculum.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="cta-section">
+                <div class="container">
+                    <h3>Ready to Make an Informed Decision?</h3>
+                    <p>Computer Science and Design is intellectually demanding but prepares you for the future of technology-driven design. You'll graduate with deep CS expertise and the ability to create innovative user experiences—skills that are revolutionizing how we interact with technology.</p>
+                    
+                    <div class="cta-buttons">
+                        <a href="https://www.flame.edu.in/academics/schools-departments/computing-and-data-sciences" class="btn btn-primary" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                            Visit Department Website
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Computer Science and Design Department. Make an informed choice for your future.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleAccordion(element) {
+            const content = element.nextElementSibling;
+            const icon = element.querySelector('i');
+            
+            // Toggle active class on header
+            element.classList.toggle('active');
+            
+            // Toggle content visibility
+            if (content.style.display === 'block' || content.classList.contains('active')) {
+                content.style.display = 'none';
+                content.classList.remove('active');
+            } else {
+                content.style.display = 'block';
+                content.classList.add('active');
+            }
+        }
+
+        // Add smooth scrolling for any anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections for animation
+        document.querySelectorAll('.section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
