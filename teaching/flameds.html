@@ -1,1 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Is Data Science and Economics Right for You? | FLAME University DS&E Program</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8fafc;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .header-content h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .header-content p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+
+        .warning-banner {
+            background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
+            color: white;
+            padding: 1.5rem 0;
+            text-align: center;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        .warning-banner i {
+            margin-right: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .misconception-banner {
+            background: linear-gradient(135deg, #b91c1c 0%, #dc2626 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.3rem;
+            border-bottom: 4px solid #991b1b;
+        }
+
+        .misconception-banner i {
+            margin-right: 0.75rem;
+            font-size: 1.5rem;
+            color: #fbbf24;
+        }
+
+        main {
+            padding: 3rem 0;
+        }
+
+        .section {
+            background: white;
+            margin-bottom: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .section-header {
+            background: #f1f5f9;
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .section-header h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #0f766e;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-header h2 i {
+            margin-right: 0.75rem;
+            font-size: 1.3rem;
+        }
+
+        .section-content {
+            padding: 2rem;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .comparison-table th {
+            background: #f8fafc;
+            font-weight: 600;
+            color: #374151;
+        }
+
+        .comparison-table tr:hover {
+            background: #f9fafb;
+        }
+
+        .pathway-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .pathway-card {
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #14b8a6;
+        }
+
+        .pathway-card h4 {
+            color: #0f766e;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .checklist {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .checklist li {
+            padding: 0.75rem 0;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .checklist li i {
+            color: #10b981;
+            margin-right: 0.75rem;
+            margin-top: 0.1rem;
+        }
+
+        .math-requirement {
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .math-requirement h4 {
+            color: #dc2626;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .math-requirement h4 i {
+            margin-right: 0.5rem;
+        }
+
+        .key-dimensions {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .dimension-card {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: transform 0.2s ease;
+        }
+
+        .dimension-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px -8px rgba(0, 0, 0, 0.15);
+        }
+
+        .dimension-card h4 {
+            color: #0f766e;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .dimension-card .topics {
+            color: #6b7280;
+            font-size: 0.9rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+            color: white;
+            text-align: center;
+            padding: 3rem 2rem;
+            margin-top: 2rem;
+        }
+
+        .cta-section h3 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary {
+            background: white;
+            color: #7c3aed;
+        }
+
+        .btn-primary:hover {
+            background: #f9fafb;
+            transform: translateY(-1px);
+        }
+
+        .btn i {
+            margin-right: 0.5rem;
+        }
+
+        footer {
+            background: #1f2937;
+            color: #9ca3af;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .header-content h1 {
+                font-size: 2rem;
+            }
+            
+            .section-content {
+                padding: 1.5rem;
+            }
+            
+            .comparison-table {
+                font-size: 0.9rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .misconception-banner {
+                font-size: 1.1rem;
+            }
+        }
+
+        .highlight {
+            background: #fef3c7;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        .accordion {
+            margin-top: 1rem;
+        }
+
+        .accordion-item {
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            margin-bottom: 0.5rem;
+        }
+
+        .accordion-header {
+            background: #f9fafb;
+            padding: 1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: between;
+            align-items: center;
+            font-weight: 500;
+            color: #374151;
+        }
+
+        .accordion-header:hover {
+            background: #f3f4f6;
+        }
+
+        .accordion-content {
+            padding: 1rem;
+            display: none;
+        }
+
+        .accordion-content.active {
+            display: block;
+        }
+
+        .accordion-header i {
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-header.active i {
+            transform: rotate(180deg);
+        }
+
+        .core-requirement-dramatic {
+            background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+            color: white;
+            border-radius: 12px;
+            margin: 2rem 0;
+            box-shadow: 0 8px 25px -8px rgba(220, 38, 38, 0.4);
+            overflow: hidden;
+            border: 3px solid #991b1b;
+        }
+
+        .core-warning-header {
+            background: #991b1b;
+            padding: 1rem;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .core-warning-header h3 {
+            margin: 0;
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .core-warning-header i {
+            font-size: 1.5rem;
+            color: #fbbf24;
+            animation: pulse 2s infinite;
+        }
+
+        .core-content {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .core-content h4 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .core-message {
+            font-size: 1.2rem;
+            font-weight: 700;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            border: 2px dashed rgba(255, 255, 255, 0.5);
+            letter-spacing: 0.5px;
+        }
+
+        .core-availability {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .term-highlight {
+            background: #fbbf24;
+            color: #1f2937;
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            font-weight: 600;
+            margin: 0 0.2rem;
+        }
+
+        .core-warning-box {
+            background: rgba(0, 0, 0, 0.2);
+            border: 2px solid #fbbf24;
+            border-radius: 8px;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .core-warning-box i {
+            font-size: 1.3rem;
+            color: #fbbf24;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.1);
+                opacity: 0.7;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .term-block {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .term-block h4 {
+            color: #0f766e;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            border-bottom: 2px solid #14b8a6;
+            padding-bottom: 0.5rem;
+        }
+
+        .course-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .course-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #e5e7eb;
+            line-height: 1.4;
+        }
+
+        .course-list li:last-child {
+            border-bottom: none;
+        }
+
+        .core-course {
+            background: #fef3c7;
+            padding: 0.75rem;
+            border-radius: 4px;
+            margin: 0.25rem 0;
+        }
+
+        .core-badge {
+            background: #dc2626;
+            color: white;
+            padding: 0.2rem 0.5rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .pathway-note {
+            background: #f0f9ff;
+            border: 1px solid #bae6fd;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .pathway-note h4 {
+            color: #0c4a6e;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .pathway-note h4 i {
+            margin-right: 0.5rem;
+            color: #fbbf24;
+        }
+
+        .pathway-note ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+        }
+
+        .pathway-note li {
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1>Is Data Science and Economics Right for You?</h1>
+                <p>Understanding what this hardcore Data Science program really involves</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="warning-banner">
+        <div class="container">
+            <i class="fas fa-exclamation-triangle"></i>
+            <strong>Reality Check:</strong> This is NOT traditional economics with some programming. Read everything below before making your decision.
+        </div>
+    </div>
+
+    <div class="misconception-banner">
+        <div class="container">
+            <i class="fas fa-times-circle"></i>
+            <strong>MAJOR MISCONCEPTION:</strong> This is NOT a BSc Economics where you learn programming. This is a hardcore Data Science program with heavy Math and CS emphasis.
+        </div>
+    </div>
+
+    <main>
+        <div class="container">
+            <!-- Section 1: What DS&E Actually Involves -->
+            <section class="section">
+                <div class="section-header">
+                    <h2><i class="fas fa-chart-bar"></i> What Data Science and Economics Actually Involves Here</h2>
+                </div>
+                <div class="section-content">
+                    <p><strong>Forget traditional economics.</strong> This program combines rigorous mathematical foundations with advanced computational methods and statistical analysis. You'll study alongside CS and Applied Mathematics students with identical expectations.</p>
+                    
+                    <div class="key-dimensions">
+                        <div class="dimension-card">
+                            <h4><i class="fas fa-database"></i> Data Science Core</h4>
+                            <p class="topics">Machine learning, statistical modeling, data structures, algorithms, big data analytics</p>
+                            <p>Master the computational and statistical methods to extract insights from complex datasets at scale.</p>
+                        </div>
+                        
+                        <div class="dimension-card">
+                            <h4><i class="fas fa-calculator"></i> Advanced Mathematics</h4>
+                            <p class="topics">Linear algebra, calculus, probability theory, optimization, mathematical statistics</p>
+                            <p>Develop the mathematical sophistication required for advanced data science and econometric methods.</p>
+                        </div>
+                        
+                        <div class="dimension-card">
+                            <h4><i class="fas fa-code"></i> Programming & Computation</h4>
+                            <p class="topics">Python, R, SQL, algorithms, data structures, computational methods</p>
+                            <p>Build sophisticated computational skills to implement data science algorithms and handle large-scale analysis.</p>
+                        </div>
+                        
+                        <div class="dimension-card">
+                            <h4><i class="fas fa-chart-line"></i> Quantitative Economics</h4>
+                            <p class="topics">Econometrics, time series analysis, behavioral economics, market analysis</p>
+                            <p>Apply data science methods to economic questions, using computational tools to analyze market behavior and policy impact.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 2: Major vs Minor -->
+            <section class="section">
+                <div class="section-header">
+                    <h2><i class="fas fa-balance-scale"></i> Major vs. Minor: The Relationship</h2>
+                </div>
+                <div class="section-content">
+                    <p>The <strong>minor</strong> provides core data science foundations, while the <strong>major</strong> adds advanced specialization and research depth.</p>
+                    
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Attribute</th>
+                                <th>DS&E Major</th>
+                                <th>DS&E Minor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Credits</strong></td>
+                                <td>~50–60</td>
+                                <td>~24–30</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Mathematical Rigor</strong></td>
+                                <td>Full calculus sequence, advanced statistics, optimization theory</td>
+                                <td>Core calculus, probability, introductory statistics</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Programming Depth</strong></td>
+                                <td>Multiple languages, algorithm design, system architecture</td>
+                                <td>Python proficiency with basic data structures</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Specialization</strong></td>
+                                <td>3-4 advanced electives (ML, econometrics, big data, etc.)</td>
+                                <td>1-2 applied data science electives</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Research Component</strong></td>
+                                <td>Capstone data science project required</td>
+                                <td>Not required</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Career Trajectory</strong></td>
+                                <td>Data scientist, quantitative analyst, research economist, ML engineer</td>
+                                <td>Data-informed roles in business, policy analysis, market research</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Section 3: Math Requirements -->
+            <section class="section">
+                <div class="section-header">
+                    <h2><i class="fas fa-exclamation-circle"></i> Prerequisite Alert: Mathematics Foundation</h2>
+                </div>
+                <div class="section-content">
+                    <div class="math-requirement">
+                        <h4><i class="fas fa-times-circle"></i> Grade 12 Math = Absolutely Mandatory</h4>
+                        <p>Data Science is mathematically intensive. You'll be taking the same rigorous math courses as Applied Mathematics and Computer Science students.</p>
+                    </div>
+
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <div class="accordion-header" onclick="toggleAccordion(this)">
+                                <span>Required: Strong Grade 12 Mathematics Background</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="accordion-content">
+                                <p>You need solid performance in Grade 12 calculus, algebra, and statistics. Data science algorithms require calculus for optimization, linear algebra for machine learning, and statistics for inference.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <div class="accordion-header" onclick="toggleAccordion(this)">
+                                <span>Co-taught Classes: Same Standards as CS/Applied Math</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="accordion-content">
+                                <p>Many of your courses will be taught alongside Computer Science and Applied Mathematics students. You'll face identical mathematical rigor, programming assignments, and theoretical depth. There are no "easier" versions for DS&E students.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 4: First-Year Pathways -->
+            <section class="section">
+                <div class="section-header">
+                    <h2><i class="fas fa-route"></i> First-Year Course Pathways</h2>
+                </div>
+                <div class="section-content">
+                    <p>Before selecting any other courses, understand this critical requirement:</p>
+
+                    <div class="core-requirement-dramatic">
+                        <div class="core-warning-header">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <h3>MANDATORY CORE REQUIREMENT</h3>
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <div class="core-content">
+                            <h4>CSIT111: Python Programming for Computing and Data Sciences</h4>
+                            <p class="core-message"><strong>WITHOUT THIS COURSE, YOU CANNOT TAKE ANY SECOND-YEAR DATA SCIENCE COURSES</strong></p>
+                            <p class="core-availability">Available in <span class="term-highlight">Term 2</span> and <span class="term-highlight">Term 4</span> - Choose one offering</p>
+                            <div class="core-warning-box">
+                                <i class="fas fa-ban"></i>
+                                <span>Missing CSIT111 = No progression to DS&E Major/Minor</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p><strong>After securing your spot in CSIT111</strong>, choose 3 additional courses from the available offerings by term:</p>
+                    
+                    <div class="pathway-grid">
+                        <div class="term-block">
+                            <h4>Term 1 Courses</h4>
+                            <ul class="course-list">
+                                <li><strong>CSIT101:</strong> Introduction to Python</li>
+                                <li><strong>MATH102:</strong> Precalculus</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="term-block">
+                            <h4>Term 2 Courses</h4>
+                            <ul class="course-list">
+                                <li><strong>CSIT104:</strong> Introduction to Computer Science</li>
+                                <li class="core-course"><strong>CSIT111:</strong> Python Programming for Computing and Data Sciences <span class="core-badge">(Core)</span></li>
+                                <li><strong>CSIT122:</strong> Introduction to Internet of Things</li>
+                                <li><strong>MATH101:</strong> Introduction to Quantitative Reasoning</li>
+                                <li><strong>MATH102:</strong> Precalculus</li>
+                                <li><strong>MATH151:</strong> Introductory Calculus</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="term-block">
+                            <h4>Term 3 Courses</h4>
+                            <ul class="course-list">
+                                <li><strong>CSIT101:</strong> Introduction to Python</li>
+                                <li><strong>CSIT121:</strong> Introduction to Computational Modeling</li>
+                                <li><strong>MATH101:</strong> Introduction to Quantitative Reasoning</li>
+                                <li><strong>MATH103:</strong> Elements of Probability</li>
+                                <li><strong>MATH155:</strong> Introduction to Mathematical Logic and Proofs</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="term-block">
+                            <h4>Term 4 Courses</h4>
+                            <ul class="course-list">
+                                <li><strong>CSIT101:</strong> Introduction to Python</li>
+                                <li><strong>CSIT104:</strong> Introduction to Computer Science</li>
+                                <li class="core-course"><strong>CSIT111:</strong> Python Programming for Computing and Data Sciences <span class="core-badge">(Core)</span></li>
+                                <li><strong>CSIT122:</strong> Introduction to Internet of Things</li>
+                                <li><strong>MATH151:</strong> Introductory Calculus</li>
+                                <li><strong>MATH155:</strong> Introduction to Mathematical Logic and Proofs</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="pathway-note">
+                        <h4><i class="fas fa-lightbulb"></i> Strategic Course Selection Tips for DS&E</h4>
+                        <ul>
+                            <li><strong>Programming Foundation:</strong> CSIT101 (Introduction to Python) prepares you for the core CSIT111 course</li>
+                            <li><strong>Mathematical Preparation:</strong> Strong performance in MATH151 (Introductory Calculus) is essential for data science algorithms</li>
+                            <li><strong>Statistical Foundation:</strong> MATH103 (Elements of Probability) directly supports statistical modeling and machine learning</li>
+                            <li><strong>Computational Thinking:</strong> CSIT104 (Introduction to Computer Science) develops algorithmic thinking crucial for data science</li>
+                            <li><strong>Logical Reasoning:</strong> MATH155 (Mathematical Logic and Proofs) builds the analytical rigor needed for advanced coursework</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="math-requirement">
+                        <h4><i class="fas fa-info-circle"></i> Remember: This is Data Science, Not Traditional Economics</h4>
+                        <p>Your coursework will emphasize computational methods, statistical theory, and mathematical modeling over traditional economic theory. Expect programming assignments, algorithm analysis, and mathematical rigor comparable to Computer Science programs.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 5: Self-Assessment -->
+            <section class="section">
+                <div class="section-header">
+                    <h2><i class="fas fa-clipboard-check"></i> Self-Assessment Checklist</h2>
+                </div>
+                <div class="section-content">
+                    <p>Answer <strong>yes</strong> to <em>every</em> question before declaring Data Science and Economics <span class="term-highlight">MAJOR</span> or <span class="term-highlight">MINOR</span></p>
+                    
+                    <ul class="checklist">
+                        <li><i class="fas fa-check-circle"></i> Did I excel in Grade 12 mathematics, including calculus and statistics?</li>
+                        <li><i class="fas fa-check-circle"></i> Am I excited about programming and computational problem-solving?</li>
+                        <li><i class="fas fa-check-circle"></i> Do I enjoy working with data, finding patterns, and building predictive models?</li>
+                        <li><i class="fas fa-check-circle"></i> Am I comfortable with the same mathematical rigor as CS and Applied Math students?</li>
+                        <li><i class="fas fa-check-circle"></i> Do I want to learn economics through a quantitative, data-driven lens rather than traditional economic theory?</li>
+                        <li><i class="fas fa-check-circle"></i> Can I handle intensive programming assignments alongside complex mathematical concepts?</li>
+                    </ul> 
+
+                    <div class="math-requirement">
+                        <h4><i class="fas fa-info-circle"></i> If you answered "no" to any item</h4>
+                        <p>Consider traditional Economics, Business, or other programs. This Data Science program requires exceptional mathematical and computational readiness—there are no shortcuts or "easier" paths.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="cta-section">
+                <div class="container">
+                    <h3>Ready to Make an Informed Decision?</h3>
+                    <p>Data Science and Economics is intellectually demanding but prepares you for the future of quantitative analysis. You'll graduate with skills to tackle complex economic questions using cutting-edge data science methods—capabilities that are revolutionizing finance, policy, and business strategy.</p>
+                    
+                    <div class="cta-buttons">
+                        <a href="https://www.flame.edu.in/academics/schools-departments/computing-and-data-sciences" class="btn btn-primary" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                            Visit Department Website
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Data Science and Economics Department. Make an informed choice for your future.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleAccordion(element) {
+            const content = element.nextElementSibling;
+            const icon = element.querySelector('i');
+            
+            // Toggle active class on header
+            element.classList.toggle('active');
+            
+            // Toggle content visibility
+            if (content.style.display === 'block' || content.classList.contains('active')) {
+                content.style.display = 'none';
+                content.classList.remove('active');
+            } else {
+                content.style.display = 'block';
+                content.classList.add('active');
+            }
+        }
+
+        // Add smooth scrolling for any anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections for animation
+        document.querySelectorAll('.section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
