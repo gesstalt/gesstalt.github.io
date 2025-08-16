@@ -4,27 +4,9 @@
       "name": "Divya Sharma",
       "image": "images/Divya3.png",
       "tags": ["Image Retrieval", "Floor Plans"],
-      "profile": "http://individual.utoronto.ca/DivyaSharma/"
-    },
-    {
-      "name": "Shreya Goyal",
-      "image": "images/shreya.jpeg",
-      "tags": ["Image Interpretation", "Floor Plans"],
-      "profile": "https://www.linkedin.com/in/shreya-goyal-24585454/"
-    }
-  ],
-  "ongoing": [
-    {
-      "name": "Aitha Sudheer Kumar",
-      "image": "images/sudheer.JPG",
-      "tags": ["Industry 4.0", "Process Automation"],
-      "profile": "#"
-    },
-    {
-      "name": "Ankit Sinha",
-      "image": "images/ankit_phd.jpeg",
-      "tags": ["AR VR", "HCI"],
-      "profile": "#"
+      "profile": "http://individual.utoronto.ca/DivyaSharma/",
+      "coGuide": "http://home.iitj.ac.in/~goravb/",
+      "linkedin": "https://linkedin.com/in/divya-sharma"
     }
   ]
 }
