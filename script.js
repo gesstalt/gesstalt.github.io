@@ -1,4 +1,3 @@
-<script>
 async function loadStudents() {
   try {
     // Load JSON file
@@ -47,4 +46,3 @@ function renderStudents(list, containerId) {
 
 // Run generator after page loads
 document.addEventListener("DOMContentLoaded", loadStudents);
-</script>
