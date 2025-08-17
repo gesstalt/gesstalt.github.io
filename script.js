@@ -84,8 +84,8 @@ async function loadStudents() {
     const data = await res.json();
 
     // Ph.D
-    renderStudents((data.phd && data.phd.graduated) || [], 'graduated-container');
-    renderStudents((data.phd && data.phd.ongoing) || [], 'ongoing-container');
+    renderStudents((data.phd && data.phd.graduated) || [], 'phd-graduated-container');
+    renderStudents((data.phd && data.phd.ongoing) || [], 'phd-ongoing-container');
 
     // Masters
     renderMasters(data.masters || [], 'masters-container');
