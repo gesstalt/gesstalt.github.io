@@ -19,7 +19,6 @@
             text-align: left;
             font-family: 'Poiret One', cursive;
         }
-
         .fa {
             background-color: ;
             margin-left: -4px;
@@ -48,7 +47,6 @@
             border: 1px solid transparent;
             border-color: #7F7402;
             color: #000000;
-
         }
 
         .badge-primary {
@@ -86,195 +84,195 @@
             color: #000000;
         }
         /* Research Publications Section Styles */
-.publication-list {
-    list-style: none;
-    padding: 0;
-}
+        .publication-list {
+            list-style: none;
+            padding: 0;
+        }
 
-.publication-list li {
-    background-color: #fff;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: baseline; /* Align title and details to the baseline */
-}
+        .publication-list li {
+            background-color: #fff;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline; /* Align title and details to the baseline */
+        }
 
-.publication-title {
-    font-weight: bold;
-    color: #333;
-    flex-basis: 60%; /* Adjust as needed */
-}
+        .publication-title {
+            font-weight: bold;
+            color: #333;
+            flex-basis: 60%; /* Adjust as needed */
+        }
+        
+        .publication-details {
+            color: #777;
+            flex-basis: 35%; /* Adjust as needed */
+            font-size: 0.9rem;
+        }
 
-.publication-details {
-    color: #777;
-    flex-basis: 35%; /* Adjust as needed */
-    font-size: 0.9rem;
-}
+        .publication-list li a {
+            color: #007bff;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+        
+        .publication-list li a:hover {
+            text-decoration: underline;
+        }
 
-.publication-list li a {
-    color: #007bff;
-    text-decoration: none;
-    margin-left: 10px;
-}
+        .publication-list h3 {
+            font-size: 1.75rem;
+            color: #004085;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+        .publication-entry {
+            border: 1px solid #eee; /* Light border */
+            border-radius: 5px; /* Rounded corners */
+            padding: 15px; /* Inner space */
+            margin-bottom: 20px; /* Space between entries */
+            background-color: #fff; /* White background */
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.05); /* Subtle shadow */
+        }
 
-.publication-list li a:hover {
-    text-decoration: underline;
-}
+        .publication-title {
+            font-size: 1.1em;
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 5px;
+            color: #333; /* Darker color */
+        }
+        
+        .publication-authors {
+            font-size: 0.95em;
+            color: #555;
+            margin-bottom: 5px;
+        }
 
-.publication-list h3 {
-    font-size: 1.75rem;
-    color: #004085;
-    margin-top: 30px;
-    margin-bottom: 15px;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 5px;
-}
-.publication-entry {
-    border: 1px solid #eee; /* Light border */
-    border-radius: 5px; /* Rounded corners */
-    padding: 15px; /* Inner space */
-    margin-bottom: 20px; /* Space between entries */
-    background-color: #fff; /* White background */
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.05); /* Subtle shadow */
-}
+        .publication-venue,
+        .publication-details {
+            font-size: 0.9em;
+            color: #777;
+            margin-bottom: 3px;
+        }
+        
+        .publication-links {
+            margin-top: 10px;
+        }
 
-.publication-title {
-    font-size: 1.1em;
-    font-weight: bold;
-    margin-top: 0;
-    margin-bottom: 5px;
-    color: #333; /* Darker color */
-}
+        .publication-links a {
+            margin-right: 15px; /* Space between links */
+            text-decoration: none; /* Remove underline */
+            color: #007bff; /* Link color */
+        }
+        
+        .publication-links a:hover {
+            text-decoration: underline;
+        }
 
-.publication-authors {
-    font-size: 0.95em;
-    color: #555;
-    margin-bottom: 5px;
-}
+        /* Example: Style authors' name */
+        .publication-authors strong {
+            color: #000; /* Or a specific highlight color */
+        }
+        .publication-entry {
+            display: flex;
+            flex-direction: column; // Stack content by default
+        }
+        
+        .publication-links {
+            margin-top: 10px; // Adjust spacing
+            align-self: flex-end; // Align links to the end (right if container is wide)
+        }
 
-.publication-venue,
-.publication-details {
-    font-size: 0.9em;
-    color: #777;
-    margin-bottom: 3px;
-}
-
-.publication-links {
-    margin-top: 10px;
-}
-
-.publication-links a {
-    margin-right: 15px; /* Space between links */
-    text-decoration: none; /* Remove underline */
-    color: #007bff; /* Link color */
-}
-
-.publication-links a:hover {
-    text-decoration: underline;
-}
-
-/* Example: Style authors' name */
-.publication-authors strong {
-    color: #000; /* Or a specific highlight color */
-}
-.publication-entry {
-    display: flex;
-    flex-direction: column; // Stack content by default
-}
-
-.publication-links {
-    margin-top: 10px; // Adjust spacing
-    align-self: flex-end; // Align links to the end (right if container is wide)
-}
-
-// Media query to change layout on larger screens
-@media (min-width: 768px) {
-    .publication-entry {
-        flex-direction: row; // Side-by-side on larger screens
-        justify-content: space-between; // Distribute space
-        align-items: center; // Vertically align
-    }
-
-    .publication-content { // Wrap title, authors, venue in another div
-        flex-grow: 1; // Let content take available space
-        margin-right: 20px;
-    }
-
-    .publication-links {
-         margin-top: 0;
-    }
-}
+        // Media query to change layout on larger screens
+        @media (min-width: 768px) {
+            .publication-entry {
+                flex-direction: row; // Side-by-side on larger screens
+                justify-content: space-between; // Distribute space
+                align-items: center; // Vertically align
+            }
+        
+            .publication-content { // Wrap title, authors, venue in another div
+                flex-grow: 1; // Let content take available space
+                margin-right: 20px;
+            }
+        
+            .publication-links {
+                 margin-top: 0;
+            }
+        } /* Media query end */
     /* Education Section Styles */
-.education-entry {
-    border: 1px solid #eee; /* Light border, similar to publication-entry */
-    border-radius: 5px; /* Rounded corners, similar to publication-entry */
-    padding: 15px; /* Inner space, similar to publication-entry */
-    margin-bottom: 20px; /* Space between entries, similar to publication-entry */
-    background-color: #fff; /* White background, similar to publication-entry */
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.05); /* Subtle shadow, similar to publication-entry */
-    display: flex; /* Use flexbox for side-by-side layout of logo and text */
-    align-items: center; /* Vertically align items in the flex container */
-}
+        .education-entry {
+            border: 1px solid #eee; /* Light border, similar to publication-entry */
+            border-radius: 5px; /* Rounded corners, similar to publication-entry */
+            padding: 15px; /* Inner space, similar to publication-entry */
+            margin-bottom: 20px; /* Space between entries, similar to publication-entry */
+            background-color: #fff; /* White background, similar to publication-entry */
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.05); /* Subtle shadow, similar to publication-entry */
+            display: flex; /* Use flexbox for side-by-side layout of logo and text */
+            align-items: center; /* Vertically align items in the flex container */
+        }
 
-.education-logo {
-    margin-right: 20px; /* Space between the logo and the text details */
-    flex-shrink: 0; /* Prevent the logo image container from shrinking */
-    /* Add max-width or width if you need to control logo container size beyond image size */
-}
+        .education-logo {
+            margin-right: 20px; /* Space between the logo and the text details */
+            flex-shrink: 0; /* Prevent the logo image container from shrinking */
+            /* Add max-width or width if you need to control logo container size beyond image size */
+        }
+        
+        /* Style for the image within the logo container */
+        .education-logo img {
+            display: block; /* Remove extra space below the image */
+            /* The style="height: 150px;" from your HTML will control the image size */
+            /* You might want to add max-width: 100%; and height: auto; for responsiveness */
+        }
 
-/* Style for the image within the logo container */
-.education-logo img {
-    display: block; /* Remove extra space below the image */
-    /* The style="height: 150px;" from your HTML will control the image size */
-    /* You might want to add max-width: 100%; and height: auto; for responsiveness */
-}
 
+        .education-details-text {
+            flex-grow: 1; /* Allow the text content area to take up available space */
+            /* Add padding-left if needed, though margin-right on education-logo often suffices */
+        }
+        
+        .education-degree {
+            font-size: 1.1em; /* Similar to publication-title */
+            font-weight: bold; /* Bold degree name */
+            margin-top: 0; /* Remove default top margin */
+            margin-bottom: 5px; /* Space below the degree name */
+            color: #333; /* Darker color, similar to publication-title */
+        }
 
-.education-details-text {
-    flex-grow: 1; /* Allow the text content area to take up available space */
-    /* Add padding-left if needed, though margin-right on education-logo often suffices */
-}
+        .education-institution {
+            font-size: 0.95em; /* Slightly smaller than degree, similar to publication-authors */
+            color: #555; /* Slightly lighter color */
+            margin-bottom: 5px; /* Space below institution */
+        }
+        
+        .education-specialization {
+            font-size: 0.9em; /* Smaller font size, similar to publication-venue/details */
+            color: #777; /* Lighter color */
+            margin-bottom: 0; /* No margin below the last text element */
+        }
 
-.education-degree {
-    font-size: 1.1em; /* Similar to publication-title */
-    font-weight: bold; /* Bold degree name */
-    margin-top: 0; /* Remove default top margin */
-    margin-bottom: 5px; /* Space below the degree name */
-    color: #333; /* Darker color, similar to publication-title */
-}
-
-.education-institution {
-    font-size: 0.95em; /* Slightly smaller than degree, similar to publication-authors */
-    color: #555; /* Slightly lighter color */
-    margin-bottom: 5px; /* Space below institution */
-}
-
-.education-specialization {
-    font-size: 0.9em; /* Smaller font size, similar to publication-venue/details */
-    color: #777; /* Lighter color */
-    margin-bottom: 0; /* No margin below the last text element */
-}
-
-/* Optional: Add a media query to stack items on smaller screens */
-@media (max-width: 768px) {
-    .education-entry {
-        flex-direction: column; // Stack items vertically on small screens
-        align-items: flex-start; // Align items to the start (left)
-    }
-
-    .education-logo {
-        margin-right: 0; // Remove right margin
-        margin-bottom: 10px; // Add bottom margin
-    }
-
-    .education-details-text {
-        width: 100%; // Allow text to take full width
-    }
-}
+        /* Optional: Add a media query to stack items on smaller screens */
+        @media (max-width: 768px) {
+            .education-entry {
+                flex-direction: column; // Stack items vertically on small screens
+                align-items: flex-start; // Align items to the start (left)
+            }
+        
+            .education-logo {
+                margin-right: 0; // Remove right margin
+                margin-bottom: 10px; // Add bottom margin
+            }
+        
+            .education-details-text {
+                width: 100%; // Allow text to take full width
+            }
+        }
 
     </style>
     <script src="script.js" defer></script>
