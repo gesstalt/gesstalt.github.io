@@ -172,5 +172,15 @@
       "tags": ["Industry 4.0", "Anomaly Detection"],
       "profile": "https://sites.google.com/view/vikankshnath/home"
     }
+  ],
+  "interns": [
+    {
+      "name": "Ansh Kushwaha",
+      "image": "images/ansh_k.jpeg",
+      "degree": "B.Tech.",
+      "status": "In-Progress",
+      "tags": ["Machine Learning", "Computer Vision."],
+      "profile": "https://in.linkedin.com/in/ansh333k"
+    }
   ]
 }
