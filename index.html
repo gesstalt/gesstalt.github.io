@@ -382,43 +382,11 @@
                     Sponsored Projects
                 </a>
             </li>
-            <li class="nav-item dropdown">
-                <a
-                class="nav-link dropdown-toggle"
-                id="students-tab"
-                href="#"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-                >
+            <li class="nav-item">
+                <a class="nav-link" id="students-tab" data-toggle="tab" href="#students" role="tab" aria-controls="students" aria-selected="false">
                     Students
                 </a>
-                  <div class="dropdown-menu" aria-labelledby="students-tab">
-                    <a
-                      class="dropdown-item"
-                      id="stud-phd-tab"
-                      data-toggle="tab"
-                      href="#stud-phd"
-                      role="tab"
-                      aria-controls="stud-phd"
-                      aria-selected="false"
-                    >
-                      Ph.D
-                    </a>
-                    <a
-                      class="dropdown-item"
-                      id="stud-mtech-tab"
-                      data-toggle="tab"
-                      href="#stud-mtech"
-                      role="tab"
-                      aria-controls="stud-mtech"
-                      aria-selected="false"
-                    >
-                      Masters
-                    </a>
-                  </div>
-                </li>
+            </li>
         </ul>
         <!-- End of list -->
         <!-- Tab content beginning -->
@@ -1716,50 +1684,73 @@ study of South Asia: weddings/marriage rituals and practices, often considered t
             <!-- End of Projects -->
 
             <!-- Beginning of Ph.D. Students -->
-            <div class="tab-pane fade" id="stud-phd" role="tabpanel" aria-labelledby="stud-phd-tab">
-                
+            <div class="tab-pane fade" id="students" role="tabpanel" aria-labelledby="students-tab">
                 <br>
-               <div class="accordion" id="phdAccordion">
-    <!-- Graduated Students -->
-    <div class="card">
-        <div class="card-header" id="headingGrad">
-            <h2 class="mb-0">
-                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                    data-target="#collapseGrad" aria-expanded="false" aria-controls="collapseGrad">
-                    <img class="img-thumbnail" style="height: 50px;" src="images/graduated.png" alt="Graduated Students" />
-                    Graduated Students
-                </button>
-            </h2>
-        </div>
-        <div id="collapseGrad" class="collapse" aria-labelledby="headingGrad" data-parent="#phdAccordion">
-            <br>
-            <!-- Container for graduated students -->
-            <div id="graduated-container" class="row" style="display:flex;flex-wrap:wrap;"></div>
-        </div>
-    </div>
-    
-    <!-- Ongoing Students -->
-    <div class="card">
-        <div class="card-header" id="headingOngoing">
-            <h2 class="mb-0">
-                <button class="btn btn-link" type="button" data-toggle="collapse"
-                    data-target="#collapseOngoing" aria-expanded="true" aria-controls="collapseOngoing">
-                    <img class="img-thumbnail" style="height: 50px;" src="images/student.png" alt="Ongoing Students" />
-                    Ongoing Students
-                </button>
-            </h2>
-        </div>
-        <div id="collapseOngoing" class="collapse show" aria-labelledby="headingOngoing" data-parent="#phdAccordion">
-            <br>
-            <!-- Container for ongoing students -->
-            <div id="ongoing-container" class="row" style="display:flex;flex-wrap:wrap;"></div>
-        </div>
-    </div>
-</div>
-            <!-- End of phd-stud div -->
-            <div class="tab-pane fade" id="stud-mtech" role="tabpanel" aria-labelledby="stud-mtech-tab"> 
-                <div id="masters-container" class="row" style="display:flex;flex-wrap:wrap;"></div> 
-            </div>
+                <div class="accordion" id="studentsAccordion">
+                <!-- Graduated Students -->
+                <div class="card">
+                    <div class="card-header" id="headingPhDGrad">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                data-target="#collapsePhDGrad" aria-expanded="false" aria-controls="collapsePhDGrad">
+                                <img class="img-thumbnail" style="height: 50px;" src="images/graduated.png" alt="Ph,D, Graduated Students" />
+                                Ph.D — Graduated
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapsePhDGrad" class="collapse show" aria-labelledby="headingPhDGrad" data-parent="#studentsAccordion">
+                        <br>
+                        <!-- Container for graduated students -->
+                        <div id="phd-graduated-container" class="row" style="display:flex;flex-wrap:wrap;"></div>
+                    </div>
+                </div>
+                <!-- Ongoing PhD Students -->
+                <div class="card">
+                    <div class="card-header" id="headingPhDOngoing">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse"
+                                data-target="#collapsePhDOngoing" aria-expanded="true" aria-controls="collapsePhDOngoing">
+                                <img class="img-thumbnail" style="height: 50px;" src="images/student.png" alt="Ongoing Ph.D. Students" />
+                                Ongoing Students
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapsePhDOngoing" class="collapse show" aria-labelledby="headingPhDOngoing" data-parent="#studentsAccordion">
+                        <br>
+                        <!-- Container for ongoing students -->
+                        <div id="phd-ongoing-container" class="row" style="display:flex;flex-wrap:wrap;"></div>
+                    </div>
+                </div>
+                <!-- Masters -->
+                <div class="card">
+                    <div class="card-header" id="headingMasters">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseMasters" aria-expanded="false" aria-controls="collapseMasters">
+                          <img class="img-thumbnail" style="height:50px;" src="images/student.png" alt="Masters" />
+                          Masters
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapseMasters" class="collapse" aria-labelledby="headingMasters" data-parent="#studentsAccordion">
+                      <br>
+                      <div id="masters-container" class="row" style="display:flex;flex-wrap:wrap;"></div>
+                    </div>
+                </div>
+              <!-- Interns (optional) -->
+              <div class="card">
+                <div class="card-header" id="headingInterns">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseInterns" aria-expanded="false" aria-controls="collapseInterns">
+                      <img class="img-thumbnail" style="height:50px;" src="images/student.png" alt="Interns" />
+                      Interns
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapseInterns" class="collapse" aria-labelledby="headingInterns" data-parent="#studentsAccordion">
+                  <br>
+                  <div id="interns-container" class="row" style="display:flex;flex-wrap:wrap;"></div>
+                </div>
+              </div>
     </div> <!-- Tab-End of Content div-->
     </div> <!-- End of Container tab -->
     <hr>
