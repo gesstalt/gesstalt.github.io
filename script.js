@@ -1,48 +1,97 @@
-async function loadStudents() {
-  try {
-    // Load JSON file
-    const response = await fetch('students.json');
-    const data = await response.json();
+// script.js (standalone file; no <script> tags)
+// Keep your existing PhD rendering; add Masters rendering using the same JSON file.
 
-    // Render both groups
-    renderStudents(data.graduated, 'graduated-container');
-    renderStudents(data.ongoing, 'ongoing-container');
-  } catch (error) {
-    console.error("Error loading students:", error);
-  }
+console.log('script loaded');
+
+function badge(text, cls) {
+  return `<span class="badge badge-pill ${cls}">${text}</span>`;
 }
 
-function renderStudents(list, containerId) {
+function renderStudents(list = [], containerId) {
   const container = document.getElementById(containerId);
-  container.innerHTML = ""; // clear old content if any
-
+  if (!container) {
+    console.error('Container not found:', containerId);
+    return;
+  }
+  container.innerHTML = '';
   list
-    .sort((a, b) => a.name.localeCompare(b.name)) // ensure alphabetical order
+    .slice()
+    .sort((a, b) => (a.name || '').localeCompare(b.name || ''))
     .forEach(student => {
-      // Build card dynamically
-      const card = document.createElement("div");
-      card.className = "col-sm-3 mb-3"; // 4 per row
-
-      card.innerHTML = `
+      const col = document.createElement('div');
+      col.className = 'col-sm-3 mb-3';
+      const tagsHtml = (student.tags || [])
+        .map((t, i) => badge(t, i === 0 ? 'badge-primary' : 'badge-secondary'))
+        .join(' ');
+      const profileHtml = student.profile
+        ? `<a href="${student.profile}" class="badge badge-info" target="_blank" rel="noopener">Profile</a>`
+        : '';
+      col.innerHTML = `
         <div class="well text-center">
-          <img class="img-thumbnail" style="height: 150px; object-fit: cover;" 
-               src="${student.image}" alt="${student.name}" />
+          <img class="img-thumbnail" style="height:150px;object-fit:cover;" src="${student.image || ''}" alt="${student.name || ''}">
           <div class="caption mt-2">
-            <h5>${student.name}</h5>
-            ${
-              student.tags.map(
-                (tag, idx) =>
-                  `<span class="badge badge-pill ${idx === 0 ? "badge-primary" : "badge-secondary"}">${tag}</span>`
-              ).join(" ")
-            }
-            ${student.profile ? `<a href="${student.profile}" class="badge badge-info" target="_blank">Profile</a>` : ""}
+            <h5>${student.name || ''}</h5>
+            ${tagsHtml} ${profileHtml}
           </div>
         </div>
       `;
-
-      container.appendChild(card);
+      container.appendChild(col);
     });
 }
 
-// Run generator after page loads
-document.addEventListener("DOMContentLoaded", loadStudents);
+function renderMasters(list = [], containerId) {
+  const container = document.getElementById(containerId);
+  if (!container) {
+    console.error('Container not found:', containerId);
+    return;
+  }
+  container.innerHTML = '';
+  list
+    .slice()
+    .sort((a, b) => (a.name || '').localeCompare(b.name || ''))
+    .forEach(s => {
+      const col = document.createElement('div');
+      col.className = 'col-sm-3 mb-3';
+
+      const degreeHtml = s.degree ? badge(s.degree, 'badge-teach') : '';
+      const statusHtml = s.status
+        ? badge(s.status === 'Graduated' ? 'Graduated' : s.status, s.status === 'Graduated' ? 'badge-success' : 'badge-info')
+        : '';
+      const tagsHtml = (s.tags || [])
+        .map((t, i) => badge(t, i === 0 ? 'badge-primary' : 'badge-secondary'))
+        .join(' ');
+      const profileHtml = s.profile
+        ? `<a href="${s.profile}" class="badge badge-info" target="_blank" rel="noopener">Profile</a>`
+        : '';
+
+      col.innerHTML = `
+        <div class="well text-center">
+          <img class="img-thumbnail" style="height:150px;object-fit:cover;" src="${s.image || ''}" alt="${s.name || ''}">
+          <div class="caption mt-2">
+            <h5>${s.name || ''}</h5>
+            ${degreeHtml} ${statusHtml} ${tagsHtml} ${profileHtml}
+          </div>
+        </div>
+      `;
+      container.appendChild(col);
+    });
+}
+
+async function loadStudents() {
+  try {
+    const res = await fetch('students.json?ts=' + Date.now(), { cache: 'no-store' });
+    if (!res.ok) throw new Error('Failed to load students.json: ' + res.status + ' ' + res.statusText);
+    const data = await res.json();
+
+    // Ph.D
+    renderStudents((data.phd && data.phd.graduated) || [], 'graduated-container');
+    renderStudents((data.phd && data.phd.ongoing) || [], 'ongoing-container');
+
+    // Masters
+    renderMasters(data.masters || [], 'masters-container');
+  } catch (e) {
+    console.error('Error loading students:', e);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', loadStudents);
