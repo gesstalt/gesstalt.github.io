@@ -1,93 +1,176 @@
 {
-  "graduated": [
-    {
-      "name": "Divya Sharma",
-      "image": "images/Divya3.png",
-      "tags": ["Image Retrieval", "Floor Plans"],
-      "profile": "http://individual.utoronto.ca/DivyaSharma/"
-    },
-    {
-      "name": "Shreya Goyal",
-      "image": "images/shreya.jpeg",
-      "tags": ["Image Interpretation", "Floor Plans"],
-      "coGuide": "http://home.iitj.ac.in/~goravb/",
-      "profile": "https://www.linkedin.com/in/shreya-goyal-24585454/"
-    },
-    {
-      "name": "Rasika Gururaj Khade",
-      "image": "images/Rasika_khade.png",
-      "tags": ["Image Retrieval", "Floor Plans"],
-      "coGuide": "#",
-      "profile": "#"
-    },
-    {
-      "name": "Sharanya Ghosh",
-      "image": "images/sharanya.jpeg",
-      "tags": ["Digital Humanities", "Pedagogy"],
-      "coGuide": "http://home.iitj.ac.in/~parichay/",
-      "profile": "https://www.linkedin.com/in/sharanya-ghosh-%E0%A6%B6%E0%A6%B0%E0%A6%A3%E0%A7%8D%E0%A6%AF%E0%A6%BE-%E0%A6%98%E0%A7%8B%E0%A6%B7-35aaa929/"
-    }
-  ],
-  "ongoing": [
-    {
-      "name": "Aitha Sudheer Kumar",
-      "image": "images/sudheer.JPG",
-      "tags": ["Industry 4.0", "Process Automation"],
-      "coGuide": "http://home.iitj.ac.in/~kadesai/",
-      "profile": "#"
-    },
-    {
-      "name": "Amresh Singh",
-      "image": "images/Amresh.JPG",
-      "tags": ["AI for Education", "Education 4.0"],
-      "profile": "#"
-    },
+  "phd": {
+    "graduated": [
+      {
+        "name": "Divya Sharma",
+        "image": "images/Divya3.png",
+        "tags": ["Image Retrieval", "Floor Plans"],
+        "profile": "http://individual.utoronto.ca/DivyaSharma/"
+      },
+      {
+        "name": "Shreya Goyal",
+        "image": "images/shreya.jpeg",
+        "tags": ["Image Interpretation", "Floor Plans"],
+        "profile": "https://www.linkedin.com/in/shreya-goyal-24585454/"
+      },
+      {
+        "name": "Rasika Gururaj Khade",
+        "image": "images/Rasika_khade.png",
+        "tags": ["Image Retrieval", "Floor Plans"],
+        "profile": ""
+      },
+      {
+        "name": "Sharanya Ghosh",
+        "image": "images/sharanya.jpeg",
+        "tags": ["Digital Humanities", "Pedagogy"],
+        "profile": "https://www.linkedin.com/in/sharanya-ghosh-%E0%A6%B6%E0%A6%B0%E0%A6%A3%E0%A7%8D%E0%A6%AF%E0%A6%BE-%E0%A6%98%E0%A7%8B%E0%A6%B7-35aaa929/"
+      }
+    ],
+    "ongoing": [
+      {
+        "name": "Aitha Sudheer Kumar",
+        "image": "images/sudheer.JPG",
+        "tags": ["Industry 4.0", "Process Automation"],
+        "profile": ""
+      },
+      {
+        "name": "Amresh Singh",
+        "image": "images/Amresh.JPG",
+        "tags": ["AI for Education", "Education 4.0"],
+        "profile": ""
+      },
+      {
+        "name": "Ankit Sinha",
+        "image": "images/ankit_phd.jpeg",
+        "tags": ["AR VR", "HCI"],
+        "profile": ""
+      },
+      {
+        "name": "Gaurav Buddhawar",
+        "image": "images/gaurav_b.png",
+        "tags": ["Video Analysis", "Education 4.0"],
+        "profile": ""
+      },
+      {
+        "name": "Manali Patel",
+        "image": "images/Manali.jpg",
+        "tags": ["AI for Finance", "Graphs"],
+        "profile": ""
+      },
+      {
+        "name": "Nandini Saini",
+        "image": "images/nandini.jpg",
+        "tags": ["Image Analysis", "Object Detection"],
+        "profile": "https://sites.google.com/iitj.ac.in/nandinisaini/about?authuser=0"
+      },
+      {
+        "name": "Niveditta Batra",
+        "image": "images/niveditta.jpg",
+        "tags": ["Digital Humanities", "Migration"],
+        "profile": "https://sites.google.com/iitj.ac.in/nivedittabatra/home"
+      },
+      {
+        "name": "Sandeep Khanna",
+        "image": "images/sandeep.jpg",
+        "tags": ["AI Applications", "Food Computing"],
+        "profile": ""
+      },
+      {
+        "name": "Vishnu Bharadwaj",
+        "image": "images/vishnu.jpg",
+        "tags": ["Image Security", "Encryption"],
+        "profile": ""
+      }
+    ]
+  },
+  "masters": [
     {
       "name": "Ankit Sinha",
-      "image": "images/ankit_phd.jpeg",
-      "tags": ["AR VR", "HCI"],
-      "profile": "#"
+      "image": "images/ankit_rkm.jpg",
+      "degree": "M.Sc.",
+      "status": "In-Progress",
+      "tags": ["Machine Learning", "FinTech."],
+      "profile": ""
     },
     {
-      "name": "Gaurav Buddhawar",
-      "image": "images/gaurav_b.png",
-      "tags": ["Video Analysis", "Education 4.0"],
-      "coGuide": "#",
-      "profile": "#"
+      "name": "Atanu Saha",
+      "image": "images/atanu_rkm.png",
+      "degree": "M.Sc.",
+      "status": "In-Progress",
+      "tags": ["Computer Vision", "AI Applications"],
+      "profile": ""
     },
     {
-      "name": "Manali Patel",
-      "image": "images/Manali.jpg",
-      "tags": ["AI for Finance", "Graphs"],
-      "profile": "#"
+      "name": "Gaurav Kumar",
+      "image": "images/gauram-mtech.jpg",
+      "degree": "M.Tech.",
+      "status": "Graduated",
+      "tags": ["Medical Image", "Diabetic Retinopathy"],
+      "profile": ""
     },
     {
-      "name": "Nandini Saini",
-      "image": "images/nandini.jpg",
-      "tags": ["Image Ananlysis", "Object Detection"],
-      "coGuide": "http://home.iitj.ac.in/~debasis/",
-      "profile": "https://sites.google.com/iitj.ac.in/nandinisaini/about?authuser=0"
+      "name": "Neelofar Hassan",
+      "image": "images/Neelofar.png",
+      "degree": "M.Tech.",
+      "status": "Graduated",
+      "tags": ["Image Analytics", "Smart Agriculture"],
+      "profile": ""
     },
     {
-      "name": "Niveditta Batra",
-      "image": "images/niveditta.jpg",
-      "tags": ["Digital Humanities", "Migration"],
-      "coGuide": "https://mayurakshic.github.io/",
-      "profile": "https://sites.google.com/iitj.ac.in/nivedittabatra/home"
+      "name": "Sagnik Basak",
+      "image": "images/sagnik.png",
+      "degree": "M.Sc.",
+      "status": "Ongoing",
+      "tags": ["Document Image", "Multimodal Analysis"],
+      "profile": ""
     },
     {
-      "name": "Sandeep Khanna",
-      "image": "images/sandeep.jpg",
-      "tags": ["AI Applications", "Food Computing"],
-      "coGuide": "http://home.iitj.ac.in/~suman/",
-      "profile": "#"
+      "name": "Sonali Jolly",
+      "image": "images/sonali.webp",
+      "degree": "M.Tech.",
+      "status": "Graduated",
+      "tags": ["Document Image", "Education"],
+      "profile": ""
     },
     {
-      "name": "Vishnu Bharadwaj",
-      "image": "images/vishnu.jpg",
-      "tags": ["Image Security", "Encryption"],
-      "coGuide": "http://home.iitj.ac.in/~goravb/",
-      "profile": "#"
+      "name": "Suman Das",
+      "image": "images/suman_das.jfif",
+      "degree": "M.Sc.",
+      "status": "Graduated",
+      "tags": ["Digital Humanities", "Cultural Heritage"],
+      "profile": ""
+    },
+    {
+      "name": "Somsunder Bamrara",
+      "image": "images/som-msc-dh.jpeg",
+      "degree": "M.Sc.",
+      "status": "Graduated",
+      "tags": ["Digital Humanities", "Immersive Experience"],
+      "profile": ""
+    },
+    {
+      "name": "Tuhin Patra",
+      "image": "images/TuhinPatra.jpg",
+      "degree": "M.Sc.",
+      "status": "Ongoing",
+      "tags": ["Document Image", "Diagrammatic Reasoning"],
+      "profile": ""
+    },
+    {
+      "name": "Vaibhavi Gupta",
+      "image": "images/Vaibhavi_ photo.jpg",
+      "degree": "M.Tech.",
+      "status": "Graduated",
+      "tags": ["Document Image", "Comics"],
+      "profile": ""
+    },
+    {
+      "name": "Vikanksh Nath",
+      "image": "images/Vikanksh_Mtech19_21.jpg",
+      "degree": "M.Tech.",
+      "status": "Graduated",
+      "tags": ["Industry 4.0", "Anomaly Detection"],
+      "profile": "https://sites.google.com/view/vikankshnath/home"
     }
   ]
 }
