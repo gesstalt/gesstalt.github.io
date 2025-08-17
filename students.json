@@ -88,7 +88,7 @@
       "name": "Ankit Sinha",
       "image": "images/ankit_rkm.jpg",
       "degree": "M.Sc.",
-      "status": "In-Progress",
+      "status": "Graduated",
       "tags": ["Machine Learning", "FinTech."],
       "profile": ""
     },
@@ -96,7 +96,7 @@
       "name": "Atanu Saha",
       "image": "images/atanu_rkm.png",
       "degree": "M.Sc.",
-      "status": "In-Progress",
+      "status": "Graduated",
       "tags": ["Computer Vision", "AI Applications"],
       "profile": ""
     },
@@ -120,7 +120,7 @@
       "name": "Sagnik Basak",
       "image": "images/sagnik.png",
       "degree": "M.Sc.",
-      "status": "Ongoing",
+      "status": "Graduated",
       "tags": ["Document Image", "Multimodal Analysis"],
       "profile": ""
     },
@@ -152,7 +152,7 @@
       "name": "Tuhin Patra",
       "image": "images/TuhinPatra.jpg",
       "degree": "M.Sc.",
-      "status": "Ongoing",
+      "status": "Graduated",
       "tags": ["Document Image", "Diagrammatic Reasoning"],
       "profile": ""
     },
