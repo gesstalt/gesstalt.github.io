@@ -383,16 +383,42 @@
                 </a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" id="students-tab" data-toggle="dropdown" role="dropdown" href="#">
+                <a
+                class="nav-link dropdown-toggle"
+                id="students-tab"
+                href="#"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >
                     Students
                 </a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" id="stud-phd-tab" data-toggle="tab" role="tab" aria-controls="stud-phd"
-                        href="#stud-phd">Ph.D</a>
-                    <a class="dropdown-item" id="stud-mtech-tab" data-toggle="tab" role="tab" aria-controls="stud-mtech"
-                        href="#stud-mtech">Masters</a>
-                </div>
-            </li>
+                  <div class="dropdown-menu" aria-labelledby="students-tab">
+                    <a
+                      class="dropdown-item"
+                      id="stud-phd-tab"
+                      data-toggle="tab"
+                      href="#stud-phd"
+                      role="tab"
+                      aria-controls="stud-phd"
+                      aria-selected="false"
+                    >
+                      Ph.D
+                    </a>
+                    <a
+                      class="dropdown-item"
+                      id="stud-mtech-tab"
+                      data-toggle="tab"
+                      href="#stud-mtech"
+                      role="tab"
+                      aria-controls="stud-mtech"
+                      aria-selected="false"
+                    >
+                      Masters
+                    </a>
+                  </div>
+                </li>
         </ul>
         <!-- End of list -->
         <!-- Tab content beginning -->
@@ -1693,7 +1719,7 @@ study of South Asia: weddings/marriage rituals and practices, often considered t
             <div class="tab-pane fade" id="stud-phd" role="tabpanel" aria-labelledby="stud-phd-tab">
                 
                 <br>
-               <div class="accordion" id="accordionExample">
+               <div class="accordion" id="phdAccordion">
     <!-- Graduated Students -->
     <div class="card">
         <div class="card-header" id="headingGrad">
@@ -1705,7 +1731,7 @@ study of South Asia: weddings/marriage rituals and practices, often considered t
                 </button>
             </h2>
         </div>
-        <div id="collapseGrad" class="collapse" aria-labelledby="headingGrad" data-parent="#accordionExample">
+        <div id="collapseGrad" class="collapse" aria-labelledby="headingGrad" data-parent="#phdAccordion">
             <br>
             <!-- Container for graduated students -->
             <div id="graduated-container" class="row" style="display:flex;flex-wrap:wrap;"></div>
@@ -1723,7 +1749,7 @@ study of South Asia: weddings/marriage rituals and practices, often considered t
                 </button>
             </h2>
         </div>
-        <div id="collapseOngoing" class="collapse show" aria-labelledby="headingOngoing" data-parent="#accordionExample">
+        <div id="collapseOngoing" class="collapse show" aria-labelledby="headingOngoing" data-parent="#phdAccordion">
             <br>
             <!-- Container for ongoing students -->
             <div id="ongoing-container" class="row" style="display:flex;flex-wrap:wrap;"></div>
