@@ -306,18 +306,16 @@
                 margin: 0 10px;
             }
         }
-        .video-row {
+.video-row {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    background: black; /* Fallback if video fails */
+    background: black;
 }
 
-.video-row video {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover; /* Makes the video fill the container */
+.video-row iframe {
+    display: block; /* Ensures the element is treated as a block */
+    margin: 0 auto; /* Centers the iframe horizontally */
 }
 
     </style>
