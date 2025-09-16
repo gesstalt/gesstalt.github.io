@@ -307,15 +307,22 @@
             }
         }
 .video-row {
+    position: relative;
     width: 100%;
-    max-width: 1200px;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
     margin: 0 auto;
-    background: black;
+    max-width: 1200px;
 }
 
 .video-row iframe {
     display: block; /* Ensures the element is treated as a block */
     margin: 0 auto; /* Centers the iframe horizontally */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
     </style>
@@ -352,13 +359,13 @@
         </div>
 
     <!-- After your <header> and before your summary section -->
-<div class="video-row">
-    <!--<video autoplay loop muted playsinline>
-        <source src="ICDAR_DocVR_Video_2025.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    -->
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/7PYj3A46WcQ?si=mdyM3Vxr3Ga8qfHH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+<div class="video-container">
+    <iframe src="https://www.youtube.com/embed/7PYj3A46WcQ?si=mdyM3Vxr3Ga8qfHH" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>
     </iframe>
 </div>
 
