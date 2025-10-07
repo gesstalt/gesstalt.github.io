@@ -175,10 +175,16 @@
   ],
   "interns": [
     {
+      "name": "Atanu Saha",
+      "image": "images/atanu_rkm.png",
+      "degree": "M.Sc.",
+      "tags": ["Computer Vision", "AI Applications"],
+      "profile": "https://www.linkedin.com/in/atanu-saha-4aa183210/"
+    },
+    {
       "name": "Ansh Kushwaha",
       "image": "images/ansh_k.jpeg",
       "degree": "B.Tech.",
-      "status": "In-Progress",
       "tags": ["Machine Learning", "Computer Vision."],
       "profile": "https://in.linkedin.com/in/ansh333k"
     }
