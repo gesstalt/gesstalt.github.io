@@ -20,6 +20,12 @@
         "profile": ""
       },
       {
+        "name": "Gaurav Buddhawar",
+        "image": "images/gaurav_b.png",
+        "tags": ["Video Analysis", "Education 4.0"],
+        "profile": ""
+      },
+      {
         "name": "Sharanya Ghosh",
         "image": "images/sharanya.jpeg",
         "tags": ["Digital Humanities", "Pedagogy"],
@@ -43,12 +49,6 @@
         "name": "Ankit Sinha",
         "image": "images/ankit_phd.jpeg",
         "tags": ["AR VR", "HCI"],
-        "profile": ""
-      },
-      {
-        "name": "Gaurav Buddhawar",
-        "image": "images/gaurav_b.png",
-        "tags": ["Video Analysis", "Education 4.0"],
         "profile": ""
       },
       {
