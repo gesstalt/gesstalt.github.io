@@ -26,6 +26,12 @@
         "profile": ""
       },
       {
+        "name": "Nandini Saini",
+        "image": "images/nandini.jpg",
+        "tags": ["Image Analysis", "Object Detection"],
+        "profile": "https://sites.google.com/iitj.ac.in/nandinisaini/about?authuser=0"
+      },
+      {
         "name": "Sharanya Ghosh",
         "image": "images/sharanya.jpeg",
         "tags": ["Digital Humanities", "Pedagogy"],
@@ -56,12 +62,6 @@
         "image": "images/Manali.jpg",
         "tags": ["AI for Finance", "Graphs"],
         "profile": ""
-      },
-      {
-        "name": "Nandini Saini",
-        "image": "images/nandini.jpg",
-        "tags": ["Image Analysis", "Object Detection"],
-        "profile": "https://sites.google.com/iitj.ac.in/nandinisaini/about?authuser=0"
       },
       {
         "name": "Niveditta Batra",
