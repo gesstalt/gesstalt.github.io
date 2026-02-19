@@ -32,6 +32,12 @@
         "profile": "https://sites.google.com/iitj.ac.in/nandinisaini/about?authuser=0"
       },
       {
+        "name": "Sandeep Khanna",
+        "image": "images/sandeep.jpg",
+        "tags": ["AI Applications", "Food Computing"],
+        "profile": ""
+      },
+      {
         "name": "Sharanya Ghosh",
         "image": "images/sharanya.jpeg",
         "tags": ["Digital Humanities", "Pedagogy"],
@@ -68,12 +74,6 @@
         "image": "images/niveditta.jpg",
         "tags": ["Digital Humanities", "Migration"],
         "profile": "https://sites.google.com/iitj.ac.in/nivedittabatra/home"
-      },
-      {
-        "name": "Sandeep Khanna",
-        "image": "images/sandeep.jpg",
-        "tags": ["AI Applications", "Food Computing"],
-        "profile": ""
       },
       {
         "name": "Vishnu Bharadwaj",
