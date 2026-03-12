@@ -84,6 +84,22 @@
     ]
   },
   "masters": [
+     {
+      "name": "Swarnendu Pan",
+      "image": "images/swarnendu_rkm.jpg",
+      "degree": "M.Sc.",
+      "status": "Ongoing",
+      "tags": ["Computer Vision", "Satellite Image"],
+      "profile": "https://www.linkedin.com/in/swarnendu-pan007/"
+    },
+     {
+      "name": "Subhradip Bhattacharya",
+      "image": "images/subhra_rkm.jpg",
+      "degree": "M.Sc.",
+      "status": "Ongoing",
+      "tags": ["Document Image", "Layout Analysis"],
+      "profile": "https://www.linkedin.com/in/subhradip2003/"
+    },
     {
       "name": "Ankit Sinha",
       "image": "images/ankit_rkm.jpg",
