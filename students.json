@@ -86,7 +86,7 @@
   "masters": [
      {
       "name": "Swarnendu Pan",
-      "image": "images/swarnendu_rkm.jpg",
+      "image": "images/swarnendu_rkm.jpeg",
       "degree": "M.Sc.",
       "status": "Ongoing",
       "tags": ["Computer Vision", "Satellite Image"],
@@ -94,7 +94,7 @@
     },
      {
       "name": "Subhradip Bhattacharya",
-      "image": "images/subhra_rkm.jpg",
+      "image": "images/subhra_rkm.png",
       "degree": "M.Sc.",
       "status": "Ongoing",
       "tags": ["Document Image", "Layout Analysis"],
