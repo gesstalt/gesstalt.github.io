@@ -42,6 +42,12 @@
         "image": "images/sharanya.jpeg",
         "tags": ["Digital Humanities", "Pedagogy"],
         "profile": "https://www.linkedin.com/in/sharanya-ghosh-%E0%A6%B6%E0%A6%B0%E0%A6%A3%E0%A7%8D%E0%A6%AF%E0%A6%BE-%E0%A6%98%E0%A7%8B%E0%A6%B7-35aaa929/"
+      },
+      {
+        "name": "Vishnu Bharadwaj",
+        "image": "images/vishnu.jpg",
+        "tags": ["Image Security", "Encryption"],
+        "profile": ""
       }
     ],
     "ongoing": [
@@ -74,12 +80,6 @@
         "image": "images/niveditta.jpg",
         "tags": ["Digital Humanities", "Migration"],
         "profile": "https://sites.google.com/iitj.ac.in/nivedittabatra/home"
-      },
-      {
-        "name": "Vishnu Bharadwaj",
-        "image": "images/vishnu.jpg",
-        "tags": ["Image Security", "Encryption"],
-        "profile": ""
       }
     ]
   },
