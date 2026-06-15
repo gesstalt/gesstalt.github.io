@@ -210,6 +210,13 @@
       "degree": "B.S.",
       "tags": ["Deep Learning", "Document Image Analysis"],
       "profile": "https://in.linkedin.com/in/amisha-mishra-13b862220"
+    },
+     {
+      "name": "Neekita Prusty",
+      "image": "images/Neekita.jpg",
+      "degree": "M.Tech.",
+      "tags": ["AR","VR"],
+      "profile": "https://www.linkedin.com/in/neekita-prusty-a2770b210/"
     }
   ]
 }
