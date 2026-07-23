@@ -326,6 +326,113 @@
             transform: scale(1.05);
         }
 
+        /* Teaching Tab Modern Styling */
+#teaching .card-header button {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #1e3a8a;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+    text-align: left;
+}
+
+#teaching .card-header button:hover {
+    background: transparent;
+    color: #3b82f6;
+}
+
+.course-list-container {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.course-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.85rem 1rem;
+    margin-bottom: 0.5rem;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    transition: all 0.2s ease-in-out;
+}
+
+.course-item:hover {
+    background-color: #ffffff;
+    border-color: #cbd5e1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+    transform: translateX(3px);
+}
+
+.course-info {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    font-size: 1rem;
+    color: #334155;
+}
+
+.course-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    background: #eff6ff;
+    color: #2563eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.course-title {
+    font-weight: 500;
+}
+
+.course-code {
+    color: #64748b;
+    font-size: 0.88rem;
+}
+
+.year-badges {
+    display: flex;
+    gap: 0.35rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.badge-year {
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 0.35rem 0.65rem;
+    border-radius: 12px;
+    background-color: #e0f2fe;
+    color: #0369a1;
+    border: 1px solid #bae6fd;
+}
+
+.badge-year-past {
+    background-color: #f1f5f9;
+    color: #475569;
+    border: 1px solid #e2e8f0;
+}
+
+@media (max-width: 576px) {
+    .course-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    .year-badges {
+        justify-content: flex-start;
+    }
+}
+
     </style>
     <script src="script.js" defer></script>
 </head>
@@ -470,10 +577,7 @@
 
                 <p>
                     My current research spans <strong>Computer Vision, Document Image Understanding, Machine Unlearning, and Spatial Computing</strong>. 
-                    I am actively involved in interdisciplinary platforms such as 
-                    <a href="http://iitj.ac.in/dh/" target="_blank">
-                    Digital Humanities
-                    </a>, contributing to structural layout extraction, historical text analysis, cultural heritage preservation, and immersive AR/VR environments.
+                    I was actively involved in interdisciplinary area of Digital Humanities, contributing to structural layout extraction, historical text analysis, cultural heritage preservation, and immersive AR/VR environments.
                 </p>
             
                 <p>
@@ -597,113 +701,293 @@
             <!-- End of Education -->
 
             <div class="tab-pane fade" id="teaching" role="tabpanel" aria-labelledby="teaching-tab">
-                <br>
-                <div class="accordion" id="accordionExample">
-                    <div class="card">
-                        <div class="card-header" id="headingTwo">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                                    data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    <img class="img-thumbnail" style="height: 50px;" src="images/flame-logo.png" alt="FLAME-Logo" /> FLAME University
-                                </button>
-                            </h2>
-                        </div> <!-- End of Card header -->
-                        <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo"
-                            data-parent="#accordionExample">
-                            <div class="card-body">
-                                <ul style="font-size:2vw;">
-                                    <li> Introduction to Data Visualization (DTSC341), 
-                                        <span class="badge badge-info">2024-2025</span> 
-                                    </li>
-                                    <li> Machine Learning for Data Science - II (DTSC302/ ECON544), 
-                                        <span class="badge badge-info">2024-2025</span> 
-                                    </li>
-                                    <li> Databases for Data Science (DTSC221), 
-                                        <span class="badge badge-teach">2023-2024</span> 
-                                    </li>
-                                    <li> Fundamental of Computer Graphics (CSIT304), 
-                                        <span class="badge badge-teach">2022-2023</span>
-                                        <span class="badge badge-teach">2023-2024</span> 
-                                        <span class="badge badge-info">2024-2025</span> 
-                                    </li>
-                                    <li> Principles of Machine Learning (CSIT332), 
-                                        <span class="badge badge-teach">2022-2023</span> 
-                                    </li>
-                                    <li> Principles of Programming Language (CSIT302), 
-                                        <span class="badge badge-teach">2023-2024</span> 
-                                        <span class="badge badge-teach">2022-2023</span> 
-                                    </li>
-                                </ul>
-                            </div> <!-- End of Card Body -->
-                        </div> <!-- End of Collapse Show -->
-                    </div> <!-- End of Card (Teaching at FLAME) -->
-                    <div class="card">
-                        <div class="card-header" id="headingOne">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link" type="button" data-toggle="collapse"
-                                    data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    <img class="img-thumbnail" style="height: 50px;" src="images/iitj-logo.png" alt="IITJ-Logo" />
-                                    Indian Institute of Technology Jodhpur
-                                </button>
-                            </h2>
-                        </div> <!-- End of Card header -->
-
-                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
-                            data-parent="#accordionExample">
-                            <div class="card-body">
-                                <ul style="font-size:2vw;">
-                                    <li> Computer Programming (CS111) <span class="badge badge-teach">2017-2018</span>,
-                                        <span class="badge badge-teach">2018-2019</span>
-                                    </li>
-                                    <li> Database Systems (CS322)- <span class="badge badge-teach">2016-2017</span>,
-                                        <span class="badge badge-teach">2017-2018</span>
-                                    </li>
-                                    <li> Software Engineering (CS223) <span class="badge badge-teach">2015-2016</span>,
-                                        <span class="badge badge-teach">2016-2017</span>, <span
-                                            class="badge badge-teach">2017-2018</span>
-                                    </li>
-                                    <li> Neural Network and Deep Learning (CS662)- <span
-                                            class="badge badge-teach">2016-2017</span> </li>
-                                    <li> Object Oriented Analysis and Design (CS212) - <span
-                                            class="badge badge-teach">2015-2016</span>, <span
-                                            class="badge badge-teach">2016-2017</span></li>
-                                    <li> Digital Image Analysis (CS654) - <span
-                                            class="badge badge-teach">2015-2016</span>, <span
-                                            class="badge badge-secondary">2019</span></li>
-                                    <li> Computer Graphics (CS552)- <span
-                                            class="badge badge-teach">2015-2016</span><span
-                                            class="badge badge-teach">2017-2018</span></li>
-                                    <li> Discrete Mathematics (CS112)- <span class="badge badge-teach">2018-2019</span>
-                                    </li>
-                                    <li> Computer Organization and Architecture (CS221)- <span
-                                            class="badge badge-teach">2018-2019</span>, <span
-                                            class="badge badge-teach">2019-2020</span></li>
-                                    <li> Compiler Design (CS312), <span class="badge badge-secondary">2018</span>, <span
-                                            class="badge badge-teach">2019-2020</span>, <span
-                                            class="badge badge-teach">2020-2021</span></li>
-                                    <li> Data and Knowledge representations (DHL7012), <span
-                                            class="badge badge-teach">2019-2020</span>, <span
-                                            class="badge badge-teach">2020-2021</span></li>
-                                    <li> Computer Architecture (CSL7020), <span
-                                            class="badge badge-teach">2019-2020</span>
-                                    <li> Foundations of Digital Humanities (DHL5XX0), <span
-                                            class="badge badge-teach">2020-2021</span> </li>
-                                    <li> Machine Learning for Digital Humanities (DHL5XX0), <span
-                                            class="badge badge-teach">2020-2021</span> </li>
-                                    <li> Principles of Programming Language (CSL3040), <span
-                                            class="badge badge-teach">2021-2022</span> </li>
-                                    <li> Social Media Application Development (DHP7010), <span
-                                            class="badge badge-teach">2021-2022</span> </li>
-
-                                </ul>
-                            </div> <!-- End of Card Body -->
-                        </div> <!-- End of Collapse Show -->
-                    </div> <!-- End of Card (Teaching at IITJ) -->
-
-                </div> <!-- End of Accordion -->
-            </div> <!-- End of Teaching Tab -->
+    <br>
+    <div class="accordion" id="accordionExample">
+        
+        <!-- FLAME University Card -->
+        <div class="card border-light shadow-sm mb-3">
+            <div class="card-header bg-white" id="headingTwo">
+                <h2 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse"
+                        data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                        <img class="img-thumbnail" style="height: 42px;" src="images/flame-logo.png" alt="FLAME Logo" />
+                        <span>FLAME University</span>
+                    </button>
+                </h2>
+            </div>
             
-            <!-- End of Teaching -->
+            <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body">
+                    <ul class="course-list-container">
+                        
+                        <li class="course-item">
+                            <div class="course-info">
+                                <div class="course-icon"><i class="fa fa-line-chart"></i></div>
+                                <div>
+                                    <span class="course-title">Introduction to Data Visualization</span>
+                                    <span class="course-code">(DTSC341)</span>
+                                </div>
+                            </div>
+                            <div class="year-badges">
+                                <span class="badge-year">2024-2025</span>
+                            </div>
+                        </li>
+
+                        <li class="course-item">
+                            <div class="course-info">
+                                <div class="course-icon"><i class="fa fa-cogs"></i></div>
+                                <div>
+                                    <span class="course-title">Machine Learning for Data Science - II</span>
+                                    <span class="course-code">(DTSC302 / ECON544)</span>
+                                </div>
+                            </div>
+                            <div class="year-badges">
+                                <span class="badge-year">2024-2025</span>
+                            </div>
+                        </li>
+
+                        <li class="course-item">
+                            <div class="course-info">
+                                <div class="course-icon"><i class="fa fa-database"></i></div>
+                                <div>
+                                    <span class="course-title">Databases for Data Science</span>
+                                    <span class="course-code">(DTSC221)</span>
+                                </div>
+                            </div>
+                            <div class="year-badges">
+                                <span class="badge-year badge-year-past">2023-2024</span>
+                            </div>
+                        </li>
+
+                        <li class="course-item">
+                            <div class="course-info">
+                                <div class="course-icon"><i class="fa fa-desktop"></i></div>
+                                <div>
+                                    <span class="course-title">Fundamentals of Computer Graphics</span>
+                                    <span class="course-code">(CSIT304)</span>
+                                </div>
+                            </div>
+                            <div class="year-badges">
+                                <span class="badge-year badge-year-past">2022-2023</span>
+                                <span class="badge-year badge-year-past">2023-2024</span>
+                                <span class="badge-year">2024-2025</span>
+                            </div>
+                        </li>
+
+                        <li class="course-item">
+                            <div class="course-info">
+                                <div class="course-icon"><i class="fa fa-brain"></i></div>
+                                <div>
+                                    <span class="course-title">Principles of Machine Learning</span>
+                                    <span class="course-code">(CSIT332)</span>
+                                </div>
+                            </div>
+                            <div class="year-badges">
+                                <span class="badge-year badge-year-past">2022-2023</span>
+                            </div>
+                        </li>
+
+                        <li class="course-item">
+                            <div class="course-info">
+                                <div class="course-icon"><i class="fa fa-code"></i></div>
+                                <div>
+                                    <span class="course-title">Principles of Programming Languages</span>
+                                    <span class="course-code">(CSIT302)</span>
+                                </div>
+                            </div>
+                            <div class="year-badges">
+                                <span class="badge-year badge-year-past">2022-2023</span>
+                                <span class="badge-year badge-year-past">2023-2024</span>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- IIT Jodhpur Card -->
+        <div class="card border-light shadow-sm">
+            <div class="card-header bg-white" id="headingOne">
+                <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <img class="img-thumbnail" style="height: 42px;" src="images/iitj-logo.png" alt="IITJ Logo" />
+                        <span>Indian Institute of Technology Jodhpur</span>
+                    </button>
+                </h2>
+            </div>
+
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                    <ul class="course-list-container">
+                        
+                        <li class="course-item">
+                            <div class="course-info">
+                                <div class="course-icon"><i class="fa fa-code"></i></div>
+                                <div>
+                                    <span class="course-title">Computer Programming</span>
+                                    <span class="course-code">(CS111)</span>
+                                </div>
+                            </div>
+                            <div class="year-badges">
+                                <span class="badge-year badge-year-past">2017-2018</span>
+                                <span class="badge-year badge-year-past">2018-2019</span>
+                            </div>
+                        </li>
+
+                        <li class="course-item">
+                            <div class="course-info">
+                                <div class="course-icon"><i class="fa fa-database"></i></div>
+                                <div>
+                                    <span class="course-title">Database Systems</span>
+                                    <span class="course-code">(CS322)</span>
+                                </div>
+                            </div>
+                            <div class="year-badges">
+                                <span class="badge-year badge-year-past">2016-2017</span>
+                                <span class="badge-year badge-year-past">2017-2018</span>
+                            </div>
+                        </li>
+
+                        <li class="course-item">
+                            <div class="course-info">
+                                <div class="course-icon"><i class="fa fa-cubes"></i></div>
+                                <div>
+                                    <span class="course-title">Software Engineering</span>
+                                    <span class="course-code">(CS223)</span>
+                                </div>
+                            </div>
+                            <div class="year-badges">
+                                <span class="badge-year badge-year-past">2015-2018</span>
+                            </div>
+                        </li>
+
+                        <li class="course-item">
+                            <div class="course-info">
+                                <div class="course-icon"><i class="fa fa-sitemap"></i></div>
+                                <div>
+                                    <span class="course-title">Neural Networks and Deep Learning</span>
+                                    <span class="course-code">(CS662)</span>
+                                </div>
+                            </div>
+                            <div class="year-badges">
+                                <span class="badge-year badge-year-past">2016-2017</span>
+                            </div>
+                        </li>
+
+                        <li class="course-item">
+                            <div class="course-info">
+                                <div class="course-icon"><i class="fa fa-object-group"></i></div>
+                                <div>
+                                    <span class="course-title">Object Oriented Analysis and Design</span>
+                                    <span class="course-code">(CS212)</span>
+                                </div>
+                            </div>
+                            <div class="year-badges">
+                                <span class="badge-year badge-year-past">2015-2017</span>
+                            </div>
+                        </li>
+
+                        <li class="course-item">
+                            <div class="course-info">
+                                <div class="course-icon"><i class="fa fa-picture-o"></i></div>
+                                <div>
+                                    <span class="course-title">Digital Image Analysis</span>
+                                    <span class="course-code">(CS654)</span>
+                                </div>
+                            </div>
+                            <div class="year-badges">
+                                <span class="badge-year badge-year-past">2015-2016</span>
+                                <span class="badge-year badge-year-past">2019</span>
+                            </div>
+                        </li>
+
+                        <li class="course-item">
+                            <div class="course-info">
+                                <div class="course-icon"><i class="fa fa-desktop"></i></div>
+                                <div>
+                                    <span class="course-title">Computer Graphics</span>
+                                    <span class="course-code">(CS552)</span>
+                                </div>
+                            </div>
+                            <div class="year-badges">
+                                <span class="badge-year badge-year-past">2015-2018</span>
+                            </div>
+                        </li>
+
+                        <li class="course-item">
+                            <div class="course-info">
+                                <div class="course-icon"><i class="fa fa-calculator"></i></div>
+                                <div>
+                                    <span class="course-title">Discrete Mathematics</span>
+                                    <span class="course-code">(CS112)</span>
+                                </div>
+                            </div>
+                            <div class="year-badges">
+                                <span class="badge-year badge-year-past">2018-2019</span>
+                            </div>
+                        </li>
+
+                        <li class="course-item">
+                            <div class="course-info">
+                                <div class="course-icon"><i class="fa fa-server"></i></div>
+                                <div>
+                                    <span class="course-title">Computer Organization & Architecture</span>
+                                    <span class="course-code">(CS221 / CSL7020)</span>
+                                </div>
+                            </div>
+                            <div class="year-badges">
+                                <span class="badge-year badge-year-past">2018-2020</span>
+                            </div>
+                        </li>
+
+                        <li class="course-item">
+                            <div class="course-info">
+                                <div class="course-icon"><i class="fa fa-terminal"></i></div>
+                                <div>
+                                    <span class="course-title">Compiler Design</span>
+                                    <span class="course-code">(CS312)</span>
+                                </div>
+                            </div>
+                            <div class="year-badges">
+                                <span class="badge-year badge-year-past">2018-2021</span>
+                            </div>
+                        </li>
+
+                        <li class="course-item">
+                            <div class="course-info">
+                                <div class="course-icon"><i class="fa fa-book"></i></div>
+                                <div>
+                                    <span class="course-title">Foundations of Digital Humanities</span>
+                                    <span class="course-code">(DHL5XX0 / DHL7012)</span>
+                                </div>
+                            </div>
+                            <div class="year-badges">
+                                <span class="badge-year badge-year-past">2019-2021</span>
+                            </div>
+                        </li>
+
+                        <li class="course-item">
+                            <div class="course-info">
+                                <div class="course-icon"><i class="fa fa-globe"></i></div>
+                                <div>
+                                    <span class="course-title">Social Media Application Development</span>
+                                    <span class="course-code">(DHP7010)</span>
+                                </div>
+                            </div>
+                            <div class="year-badges">
+                                <span class="badge-year badge-year-past">2021-2022</span>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
 
             <div class="tab-pane fade" id="research" role="tabpanel" aria-labelledby="research-tab">
                 <br>
