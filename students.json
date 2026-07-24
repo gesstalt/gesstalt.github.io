@@ -68,20 +68,20 @@
       {
         "name": "Ankit Sinha",
         "image": "images/ankit_phd.jpeg",
-        "tags": ["AR VR", "HCI"],
+        "tags": ["Documnet Image Analysis","AR VR", "HCI"],
         "profile": ""
       },
       {
         "name": "Manali Patel",
         "image": "images/Manali.jpg",
-        "tags": ["AI for Finance", "Graphs"],
+        "tags": ["FinTech", "Multimodal", "GNN"],
         "status": "Thesis Submitted",
         "profile": ""
       },
       {
         "name": "Niveditta Batra",
         "image": "images/niveditta.jpg",
-        "tags": ["Digital Humanities", "Migration"],
+        "tags": ["Digital Humanities", "Migration", "Deep Learning"],
         "status": "Thesis Submitted",
         "profile": "https://sites.google.com/iitj.ac.in/nivedittabatra/home"
       }
