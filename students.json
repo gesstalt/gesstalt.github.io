@@ -55,30 +55,35 @@
         "name": "Aitha Sudheer Kumar",
         "image": "images/sudheer.JPG",
         "tags": ["Industry 4.0", "Process Automation"],
+        "status": "Thesis Submitted",
         "profile": ""
       },
       {
         "name": "Amresh Kumar Singh",
         "image": "images/Amresh.JPG",
         "tags": ["Diagrammatic Reasoning", "Documnet Image Analysis"],
+        "status": "Thesis Submitted",
         "profile": ""
       },
       {
         "name": "Ankit Sinha",
         "image": "images/ankit_phd.jpeg",
         "tags": ["AR VR", "HCI"],
+        "status": "Ongoing",
         "profile": ""
       },
       {
         "name": "Manali Patel",
         "image": "images/Manali.jpg",
         "tags": ["AI for Finance", "Graphs"],
+        "status": "Thesis Submitted",
         "profile": ""
       },
       {
         "name": "Niveditta Batra",
         "image": "images/niveditta.jpg",
         "tags": ["Digital Humanities", "Migration"],
+        "status": "Thesis Submitted",
         "profile": "https://sites.google.com/iitj.ac.in/nivedittabatra/home"
       }
     ]
