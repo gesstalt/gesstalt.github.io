@@ -19,6 +19,12 @@
         "tags": ["Image Retrieval", "Floor Plans"],
         "profile": ""
       },
+            {
+        "name": "Manali Patel",
+        "image": "images/Manali.jpg",
+        "tags": ["FinTech", "Multimodal", "GNN"],
+        "profile": "https://www.linkedin.com/in/manali-patel-3bb94a188"
+      },
       {
         "name": "Gaurav Buddhawar",
         "image": "images/gaurav_b.png",
@@ -69,14 +75,13 @@
         "name": "Ankit Sinha",
         "image": "images/ankit_phd.jpeg",
         "tags": ["Documnet Image Analysis","AR VR", "HCI"],
-        "profile": ""
+        "profile": "linkedin.com/in/ankit-sinha-016166215"
       },
       {
-        "name": "Manali Patel",
-        "image": "images/Manali.jpg",
-        "tags": ["FinTech", "Multimodal", "GNN"],
-        "status": "Thesis Submitted",
-        "profile": ""
+        "name": "Girdhar Patil",
+        "image": "images/girdhar_phd.jpeg",
+        "tags": ["Documnet Image Analysis","OCR", "Cultural Heritage"],
+        "profile": "https://www.linkedin.com/in/girdhar-patil-57a333204"
       },
       {
         "name": "Niveditta Batra",
