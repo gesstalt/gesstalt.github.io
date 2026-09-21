@@ -59,7 +59,6 @@ sup {
         <div class="container">
             <nav class="nav justify-content-center flex-column flex-sm-row">
                 <a class="nav-link text-dark font-weight-bold" href="#about">Overview</a>
-                <a class="nav-link text-dark font-weight-bold" href="#sponsored">Sponsored Project</a>
                 <a class="nav-link text-dark font-weight-bold" href="#datasets">Datasets</a>
                 <a class="nav-link text-dark font-weight-bold" href="#publications">Publications</a>
             </nav>
@@ -102,7 +101,7 @@ sup {
         <section id="about">
             <h3 class="section-title">Project Description</h3>
             <div class="jumbotron bg-white shadow-sm" align="justify">
-                <p>Optical Music Recognition (OMR) is a field of research that focuses on using machine learning and computer vision to automatically recognize and decode musical scores from scanned or digital document images into machine-readable formats (such as MusicXML or MIDI).</p>
+                <p>Optical Music Recognition (OMR) is a field of research that focuses on using machine learning, computer vision, and immersive XR technologies to automatically recognize, decode, and interact with musical scores from scanned or digital document images into machine-readable formats (such as MusicXML or MIDI).</p>
                 <p>Decoding complex musical notations typically involves multi-stage processing steps:</p>
                 <ol>
                     <li>
@@ -112,21 +111,8 @@ sup {
                         <strong>Mid-level Analysis:</strong> Establishing spatial and structural relationships among musical symbols (e.g., mapping notes to correct staff lines and measuring pitches).
                     </li>
                     <li>
-                        <strong>High-level Analysis:</strong> Synthesizing structural semantics, semantic formatting, and full digital score generation.
+                        <strong>High-level Analysis:</strong> Synthesizing structural semantics, semantic formatting, and full digital score generation and immersive XR workspace translation.
                     </li>
-                </ol>
-            </div>
-        </section>
-
-        <!-- Sponsored Project Section -->
-        <section id="sponsored">
-            <h3 class="section-title">Sponsored Project</h3>
-            <div class="jumbotron bg-white shadow-sm" align="justify">
-                <p class="font-weight-bold">Deep Learning Frameworks for Multi-Style Optical Music Score Transcription and Retrieval</p>
-                <br />
-                <ol>
-                    <li><strong>Funding Agency:</strong> Science and Engineering Research Board (SERB), India (Example placeholder)</li>
-                    <li><strong>Duration:</strong> 3 years (2021-2024)</li>
                 </ol>
             </div>
         </section>
@@ -159,13 +145,46 @@ sup {
         <!-- Publications Section -->
         <section id="publications" class="mb-5">
             <h3 class="section-title">Publications</h3>
+            
+            <!-- ICDAR 2026 Featured Paper -->
+            <div class="jumbotron bg-white shadow-sm mb-4">
+                <div class="row align-items-center">
+                    <div class="col-lg-2 text-center mb-3 mb-lg-0">
+                        <img src="../images/omr_architecture.png" alt="ICDAR 2026 Paper Thumbnail" class="img-thumbnail" width="200" height="200">
+                    </div>
+                    <div class="col-lg-10">
+                        <h4 class="text-dark">Multi-Modal Heterogeneous Music Notation Recognition from Documents: A Framework for Real-Time Symbolic-to-Immersive Mappings</h4>
+                        <p class="mt-2">
+                            Ankit Sinha, Atanu Saha, <strong>Chiranjoy Chattopadhyay</strong>, Rahul Kumar Ray<br>
+                            <em>International Conference on Document Analysis and Recognition (ICDAR), Vienna, Austria, August-September, 2026.</em>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ICDAR 2025 Featured Paper -->
+            <div class="jumbotron bg-white shadow-sm mb-4">
+                <div class="row align-items-center">
+                    <div class="col-lg-2 text-center mb-3 mb-lg-0">
+                        <img src="../images/piano_vr_key.png" alt="ICDAR 2025 Paper Thumbnail" class="img-thumbnail" width="200" height="200">
+                    </div>
+                    <div class="col-lg-10">
+                        <h4 class="text-dark">From Notes to Keys: A VR Learning Environment for Sheet Music Interpretation</h4>
+                        <p class="mt-2">
+                            Sandeep Khanna, Atanu Saha, Rahul Kumar Ray, Rakesh Patibanda, <strong>Chiranjoy Chattopadhyay</strong><br>
+                            <em>International Conference on Document Analysis and Recognition (ICDAR), September, 2025.</em>
+                            <hr>
+                            <a class="btn btn-primary btn-sm" href="./icdar_2025.html" role="button">
+                                View Full Project Page
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Publications -->
             <div class="jumbotron bg-white shadow-sm">
                 <ul>
-                    <li>
-                        Author Name(s), <strong>Chiranjoy Chattopadhyay</strong>;
-                        "A Deep Learning Approach for Multi-Style Optical Music Recognition",
-                        Accepted in International Conference on Document Analysis and Recognition (ICDAR), 2025.
-                    </li>
                     <li>
                         Author Name(s), <strong>Chiranjoy Chattopadhyay</strong>;
                         "Layout Analysis and Symbol Spotting in Historical Music Scores",
